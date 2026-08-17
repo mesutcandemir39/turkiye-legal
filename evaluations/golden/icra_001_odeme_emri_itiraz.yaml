@@ -1,0 +1,18 @@
+# Golden Test — LLM katmani. icra-iflas/skills/icra-dosya-triyaji/SKILL.md'ye karsi calisir.
+
+test_id: icra_001
+skill_path: icra-iflas/skills/icra-dosya-triyaji/SKILL.md
+input_scenario: >
+  Borçlu bir ödeme emri tebliğ aldı, tarih 3 gün önce. Belge türü açıkça
+  "ödeme emri" olarak belirtiliyor.
+expected_behavior: >
+  Sistem, İİK m.62 kapsamında 7 günlük itiraz süresini tebliğ tarihinden
+  itibaren hesaplayıp son tarihi açıkça vurgulamalı; tek kaynaktan
+  doğrulama notunu (mevzuat.gov.tr'den ayrıca teyit) eklemeli.
+must_include:
+  - "2004"
+  - "İİK"
+  - "7"
+must_not_include:
+  - "GDPR"
+risk_level: critical

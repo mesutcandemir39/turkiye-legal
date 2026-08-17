@@ -1,0 +1,22 @@
+# Golden Test — LLM katmani (bkz. docs/ARCHITECTURE_DECISIONS.md ADR-007)
+# kvkk-uyum/skills/acik-riza-denetimi/SKILL.md'ye karsi calisir.
+
+test_id: kvkk_005
+skill_path: kvkk-uyum/skills/acik-riza-denetimi/SKILL.md
+input_scenario: >
+  Web sitesinde bültene kayıt formu var; "E-bültenlerimizi almak
+  istemiyorsanız aşağıdaki kutunun işaretini kaldırın" ifadesiyle onay
+  kutusu ZATEN İŞARETLİ olarak geliyor (opt-out tasarım). Ayrıca formda
+  hangi verilerin ne amaçla işleneceğine dair önceden bir bilgilendirme
+  yok.
+expected_behavior: >
+  Sistem, önceden işaretlenmiş onay kutusunun KVKK m.5 anlamında geçerli
+  "tereddütsüz açık irade beyanı" oluşturmadığını (zımni rıza riski)
+  açıkça tespit etmeli; ayrıca bilgilendirmeye dayanma unsurunun eksik
+  olduğunu da belirtmeli.
+must_include:
+  - "6698"
+  - "m.5"
+must_not_include:
+  - "GDPR"
+risk_level: high

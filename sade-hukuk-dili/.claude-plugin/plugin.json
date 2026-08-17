@@ -1,0 +1,15 @@
+{
+  "name": "sade-hukuk-dili",
+  "displayName": "Sade Hukuk Dili",
+  "version": "0.1.0",
+  "description": "Sade Hukuk Dili alanında 11 beceri: dilekce sadelestirme, dogruluk denetimi risk, hukuki terim sozlugu ve 8 tane daha.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "sade",
+    "hukuk",
+    "dili"
+  ]
+}

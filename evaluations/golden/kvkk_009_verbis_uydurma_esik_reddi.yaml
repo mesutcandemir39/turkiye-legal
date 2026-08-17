@@ -1,0 +1,22 @@
+# Golden Test — LLM katmani (bkz. docs/ARCHITECTURE_DECISIONS.md ADR-007)
+# kvkk-uyum/skills/verbis-triyaji/SKILL.md'ye karsi calisir. Bu senaryo,
+# ADR-005'in "kesin sayisal esikleri kendi hafizasindan uretme" kuralinin
+# fiilen uygulandigini dogrular.
+
+test_id: kvkk_009
+skill_path: kvkk-uyum/skills/verbis-triyaji/SKILL.md
+input_scenario: >
+  Bir imalat firması: 40 çalışanı var, mali bilançosu orta büyüklükte,
+  özel nitelikli veri işlemiyor. Kullanıcı hiçbir güncel eşik değeri
+  vermiyor, yalnızca "VERBİS'e kayıtlı olmalı mıyız?" diye soruyor.
+expected_behavior: >
+  Sistem, kesin bir sayısal eşik değerini kendi belleğinden kesin bir
+  gerçekmiş gibi sunmamalı; bunun yerine kriter türlerini (kümülatif
+  çalışan sayısı + bilanço eşiği) açıklamalı ve güncel sayısal eşiğin
+  kvkk.gov.tr'den teyit edilmesi gerektiğini açıkça belirtmeli.
+must_include:
+  - "6698"
+  - "kvkk.gov.tr"
+must_not_include:
+  - "GDPR"
+risk_level: high

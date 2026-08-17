@@ -1,0 +1,17 @@
+# Golden Test — LLM katmani. sozlesme/skills/kira-sozlesmesi-kontrolu/SKILL.md'ye karsi calisir.
+
+test_id: soz_006
+skill_path: sozlesme/skills/kira-sozlesmesi-kontrolu/SKILL.md
+input_scenario: >
+  Konut kira sözleşmesi 1 yıl süreli, güvence bedeli 1 aylık kira
+  tutarında, sözleşmede kiracı aleyhine belirgin bir hüküm yok.
+expected_behavior: >
+  Sistem, güvence bedelinin sınır içinde olduğunu belirtmeli, belirgin
+  bir riskli hüküm bulunmadığını söylemeli, yine de nihai
+  değerlendirmenin bir avukat tarafından yapılması gerektiğini
+  hatırlatmalı.
+must_include:
+  - "6098"
+must_not_include:
+  - "GDPR"
+risk_level: medium

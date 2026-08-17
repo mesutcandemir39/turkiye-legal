@@ -1,0 +1,59 @@
+# actions/labeler v5 konfigürasyonu — dosya yoluna göre otomatik etiketleme.
+
+"domain: kvkk":
+  - changed-files:
+      - any-glob-to-any-file: "kvkk-uyum/**"
+
+"domain: is-hukuku":
+  - changed-files:
+      - any-glob-to-any-file: "is-hukuku/**"
+
+"domain: sozlesme":
+  - changed-files:
+      - any-glob-to-any-file: "sozlesme/**"
+
+"domain: icra-iflas":
+  - changed-files:
+      - any-glob-to-any-file: "icra-iflas/**"
+
+"domain: mevzuat-takip":
+  - changed-files:
+      - any-glob-to-any-file: "mevzuat-takip/**"
+
+"domain: dava-takip":
+  - changed-files:
+      - any-glob-to-any-file: "dava-takip/**"
+
+"domain: ticaret":
+  - changed-files:
+      - any-glob-to-any-file: "ticaret-sirketler/**"
+
+"domain: fikri-mulkiyet":
+  - changed-files:
+      - any-glob-to-any-file: "fikri-mulkiyet/**"
+
+"domain: idare-vergi":
+  - changed-files:
+      - any-glob-to-any-file: "idare-vergi/**"
+
+"status: legal-approval-needed":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/skills/**"
+          - "**/agents/**"
+          - "**/references/**"
+          - "sources/**"
+          - "evaluations/golden/**"
+
+"status: dev-approval-needed":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "scripts/**"
+          - ".github/workflows/**"
+          - ".devcontainer/**"
+
+"type: documentation":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "docs/**"
+          - "**/*.md"

@@ -1,0 +1,20 @@
+{
+  "name": "dava-takip",
+  "displayName": "Dava Takip",
+  "version": "0.1.0",
+  "description": "6100 sayılı HMK kapsamında dava evrakı intake sınıflandırması, dilekçe yapı/kalite denetimi, karşı argüman üretimi, delil haritası çıkarma, müvekkile sade dil açıklaması ve duruşma hazırlığı sağlayan skill/agent'lar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "dava",
+    "dilekce",
+    "hmk",
+    "intake",
+    "usul-hukuku",
+    "karsi-arguman",
+    "delil-haritasi",
+    "durusma"
+  ]
+}

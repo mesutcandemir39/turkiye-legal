@@ -1,0 +1,15 @@
+{
+  "name": "hukuk-muhakemesi",
+  "displayName": "Hukuk Muhakemesi",
+  "version": "0.1.0",
+  "description": "Hukuk Muhakemesi alanında 11 beceri: cevap replik duplik, dava dilekcesi mimarisi, dava sarti arabuluculuk ve 8 tane daha. İlgili mevzuat: 6100 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "hukuk",
+    "muhakemesi",
+    "6100"
+  ]
+}

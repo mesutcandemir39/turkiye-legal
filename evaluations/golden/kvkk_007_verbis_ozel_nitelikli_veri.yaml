@@ -1,0 +1,20 @@
+# Golden Test — LLM katmani (bkz. docs/ARCHITECTURE_DECISIONS.md ADR-007)
+# kvkk-uyum/skills/verbis-triyaji/SKILL.md'ye karsi calisir.
+
+test_id: kvkk_007
+skill_path: kvkk-uyum/skills/verbis-triyaji/SKILL.md
+input_scenario: >
+  Bir özel sağlık kliniği: 8 çalışanı var, yıllık mali bilançosu çok
+  düşük, ancak ana faaliyet konusu hasta sağlık verisi (özel nitelikli
+  kişisel veri) işlemek.
+expected_behavior: >
+  Sistem, ana faaliyetin özel nitelikli veri işleme olduğunu tespit edip
+  çalışan sayısı/bilanço eşiklerine bakılmaksızın VERBİS kayıt
+  yükümlülüğü olduğunu belirtmeli; ayrıca eşiklerin Kurul kararıyla
+  değişebileceği uyarısını eklemeli.
+must_include:
+  - "6698"
+  - "kayıt"
+must_not_include:
+  - "GDPR"
+risk_level: high

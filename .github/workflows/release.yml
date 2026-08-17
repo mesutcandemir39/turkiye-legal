@@ -1,0 +1,67 @@
+name: Release
+
+# Yalnız v* etiketi (tag) atıldığında çalışır. Sürüm politikası:
+# temiz sürüm (v0.0.1, v1.2.0) → prerelease: false, Latest/Stable.
+# -alpha / -beta / -rc son eki → prerelease: true.
+# Detay: docs (Faz 5) ve README "Sürüm ve Güncelleme Politikası".
+
+on:
+  push:
+    tags:
+      - "v*"
+
+# DIKKAT: contents: write YALNIZ job duzeyinde tanimlanir, workflow
+# duzeyinde DEGIL (OpenSSF Scorecard Token-Permissions kontrolu bunu
+# gercek CI calistirmasinda yakaladi — en az yetki ilkesi geregi ust
+# duzey varsayilan "read" kalmali).
+permissions:
+  contents: read
+
+jobs:
+  publish-release:
+    name: GitHub Release oluştur
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Tag türünü belirle (stable / prerelease)
+        id: tagtype
+        run: |
+          TAG="${GITHUB_REF#refs/tags/}"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          if [[ "$TAG" =~ -(alpha|beta|rc)([0-9]*)?$ ]]; then
+            echo "prerelease=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "prerelease=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: CHANGELOG'dan bu sürümün notlarını çıkar
+        id: notes
+        run: |
+          TAG="${{ steps.tagtype.outputs.tag }}"
+          VERSION="${TAG#v}"
+          # CHANGELOG.md içinde "## [VERSION]" başlığı ile bir sonraki "## [" arasını al.
+          # DİKKAT: eşleşme index() ile YAPILIR, ~ regex ile DEĞİL — "[" ve "]"
+          # awk regex'inde karakter sınıfı anlamına gelir ve $0 ~ ver kullanılırsa
+          # sürüm numarası hiçbir zaman eşleşmez (bu proje bunu ampirik olarak yakaladı).
+          awk -v ver="## [$VERSION]" '
+            index($0, ver) == 1 {found=1; print; next}
+            found && /^## \[/ {exit}
+            found {print}
+          ' CHANGELOG.md > release_notes.md
+          if [ ! -s release_notes.md ]; then
+            echo "_CHANGELOG.md içinde $VERSION için bir bölüm bulunamadı; lütfen release notlarını elle düzenleyin._" > release_notes.md
+          fi
+
+      - name: GitHub Release yayınla
+        uses: softprops/action-gh-release@c95fe1489396fe8a9eb87c0abf8aa5b2ef267fda # v2.2.1
+        with:
+          tag_name: ${{ steps.tagtype.outputs.tag }}
+          name: ${{ steps.tagtype.outputs.tag }}
+          body_path: release_notes.md
+          prerelease: ${{ steps.tagtype.outputs.prerelease }}
+          generate_release_notes: false

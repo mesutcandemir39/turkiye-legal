@@ -1,0 +1,15 @@
+{
+  "name": "tasarim-hukuku",
+  "displayName": "Tasarım Hukuku",
+  "version": "0.1.0",
+  "description": "Tasarım Hukuku alanında 11 beceri: gorev yetki ve usul, hak sahipligi ve calisan tasarimlari, hukumsuzluk davasi ve 8 tane daha. İlgili mevzuat: 6769 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "tasarim",
+    "hukuku",
+    "6769"
+  ]
+}

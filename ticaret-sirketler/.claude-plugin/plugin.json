@@ -1,0 +1,17 @@
+{
+  "name": "ticaret-sirketler",
+  "displayName": "Ticaret ve Şirketler",
+  "version": "0.1.0",
+  "description": "6102 sayılı TTK kapsamında genel kurul/karar belge kontrolü ve şirket belgesi triyajı sağlayan skill. Tier B — dar kapsamlı.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ticaret-hukuku",
+    "6102",
+    "ttk",
+    "genel-kurul",
+    "sirketler"
+  ]
+}

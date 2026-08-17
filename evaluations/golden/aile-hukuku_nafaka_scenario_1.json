@@ -1,0 +1,9 @@
+{
+  "plugin": "aile-hukuku",
+  "skill": "nafaka-turleri-ve-hesap",
+  "scenario": "Boşanma kesinleştikten sonra eş nafakası talebinde, talep eden kusurun daha ağır olup olmadığı sorgulanıyor",
+  "input": "Koca, boşanma davasında 6 ay oyalanmakla suçlanıyor. Eş, boşanma sonrası yoksulluk nafakası talep ediyor. Koca kusuru ağır mı?",
+  "expected_output": "Yoksulluk nafakası (TMK m.175) talep edilebilir ancak kusur dengesi incelenmelidir. Tedbir nafakası vs. yoksulluk nafakası farkı açıklanmalı.",
+  "mcp_required": ["turkiye-legal-mevzuat-mcp"],
+  "golden_check": "Çıktı TMK m.175 ve m.176'ya atıf yapmış mı? MCP'den doğru madde metni mi?"
+}

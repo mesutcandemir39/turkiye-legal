@@ -1,0 +1,17 @@
+# Golden Test — LLM katmani. is-hukuku/skills/fazla-mesai-hesaplayici/SKILL.md'ye karsi calisir.
+
+test_id: is_010
+skill_path: is-hukuku/skills/fazla-mesai-hesaplayici/SKILL.md
+input_scenario: >
+  İşçi haftada 50 saat çalışıyor, denkleştirme esası uygulanmıyor,
+  saatlik normal ücreti 200 TL.
+expected_behavior: >
+  Sistem, 45 saati aşan 5 saatin fazla çalışma olduğunu, bu saatlerin
+  %50 zamlı (saatlik 300 TL) ücretlendirilmesi gerektiğini 4857 m.41
+  uyarınca doğru hesaplamalı.
+must_include:
+  - "4857"
+  - "%50"
+must_not_include:
+  - "GDPR"
+risk_level: high

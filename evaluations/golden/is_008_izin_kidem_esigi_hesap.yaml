@@ -1,0 +1,17 @@
+# Golden Test — LLM katmani. is-hukuku/skills/yillik-izin-hesaplayici/SKILL.md'ye karsi calisir.
+
+test_id: is_008
+skill_path: is-hukuku/skills/yillik-izin-hesaplayici/SKILL.md
+input_scenario: >
+  İşçi 7 yıldır aynı işyerinde çalışıyor, yaşı 35 (yaş istisnası
+  kapsamında değil).
+expected_behavior: >
+  Sistem, 5-15 yıl arası kıdem kademesine göre asgari 20 gün yıllık
+  izin hakkını doğru şekilde uygulamalı ve hangi kademeye göre
+  hesaplandığını (5 yıldan fazla, 15 yıldan az) açıklamalı.
+must_include:
+  - "4857"
+  - "20"
+must_not_include:
+  - "GDPR"
+risk_level: medium

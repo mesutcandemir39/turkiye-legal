@@ -1,0 +1,19 @@
+# Golden Test — LLM katmani. is-hukuku/skills/fazla-mesai-hesaplayici/SKILL.md'ye karsi calisir.
+
+test_id: is_011
+skill_path: is-hukuku/skills/fazla-mesai-hesaplayici/SKILL.md
+input_scenario: >
+  İşçi bu hafta 50 saat çalıştı, ancak sözleşmesinde m.63 kapsamında
+  denkleştirme esası tanımlı ve işçinin haftalık ortalama çalışma
+  süresi 45 saati aşmıyor (bazı haftalar az, bazı haftalar fazla).
+expected_behavior: >
+  Sistem, denkleştirme esası uygulandığında tek bir haftanın 45 saati
+  aşmasının otomatik olarak fazla çalışma sayılmadığını, ortalamaya
+  bakılması gerektiğini açıkça belirtmeli — kullanıcıya yeterli bilgi
+  yoksa kesin fazla mesai hesabı yapmamalı.
+must_include:
+  - "4857"
+  - "denkleştirme"
+must_not_include:
+  - "GDPR"
+risk_level: high

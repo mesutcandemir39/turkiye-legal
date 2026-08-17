@@ -1,0 +1,17 @@
+{
+  "name": "fikri-mulkiyet-dava",
+  "displayName": "Fikri Mülkiyet Davaları",
+  "version": "0.1.0",
+  "description": "Fikri Mülkiyet Davaları alanında 12 beceri: ceza boyutu marka telif, gorev yetki yargi yolu, hukumsuzluk iptal davalari ve 9 tane daha. İlgili mevzuat: 5846, 6100, 6769 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "fikri",
+    "mulkiyet",
+    "dava",
+    "5846",
+    "6100"
+  ]
+}

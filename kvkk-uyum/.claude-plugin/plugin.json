@@ -1,0 +1,16 @@
+{
+  "name": "kvkk-uyum",
+  "displayName": "KVKK Uyum",
+  "version": "0.1.0",
+  "description": "6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında aydınlatma metni ve veri işleme süreçlerini denetleyen skill'ler.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "kvkk",
+    "6698",
+    "veri-koruma",
+    "aydinlatma-metni"
+  ]
+}

@@ -1,0 +1,79 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Node ---
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+
+# --- Editor / OS ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# --- Gizli bilgi: asla commit'lenmez ---
+# API anahtarları, LLM değerlendirme çalıştırmaları için gerekli olsa dahi.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.yaml
+
+# --- Değerlendirme çıktıları ---
+# Golden test çalıştırma raporları yerel kalır; CI kendi artifact'ını üretir.
+evaluations/reports/
+evaluations/.cache/
+
+# --- HUKUKİ VERİ UYARISI ---
+# Gerçek müvekkil evrakı, dava dosyası veya kişisel veri içeren hiçbir dosya
+# bu depoya girmez. Yerel denemeler için aşağıdaki dizin kullanılır ve
+# git tarafından tamamen yok sayılır.
+ornekler-yerel/
+*.gercek.md
+
+# Development/Implementation Files (Internal Use Only)
+docs/development/
+scripts/features/
+scripts/counsel-os/
+designs/
+COUNSEL_OS_*.md
+IMPLEMENTATION_ROADMAP_*.md
+IMPLEMENTATION_STATUS.md
+QUICK_START.md
+tests/test_counsel_os_integration.py
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dahili planlama ve geliştirme dosyaları (yayınlanmaz)
+FEATURE_IMPLEMENTATION_GUIDE.md
+IMPLEMENTATION_SUMMARY.md
+MCP_ROADMAP.md
+MEVZUAT_INTEGRATION.md
+REAL_TIME_VALIDATION_SPEC.md
+SYSTEM_ANALYSIS.md
+README_OLD.md
+ROADMAP.md
+tests/test_counsel_os_integration.py
+
+# MCP sunucu sanal ortamları
+mcp/*/.venv/
+mcp/*/uv.lock

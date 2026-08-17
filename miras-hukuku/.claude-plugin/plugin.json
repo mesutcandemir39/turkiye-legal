@@ -1,0 +1,15 @@
+{
+  "name": "miras-hukuku",
+  "displayName": "Miras Hukuku",
+  "version": "0.1.0",
+  "description": "Miras Hukuku alanında 11 beceri: dava usul gorev yetki ve sureler, denklestirme ve iade, miras iliskisinde isbat ve delil ve 8 tane daha. İlgili mevzuat: 4721 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "miras",
+    "hukuku",
+    "4721"
+  ]
+}

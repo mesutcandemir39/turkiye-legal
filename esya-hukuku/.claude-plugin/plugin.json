@@ -1,0 +1,15 @@
+{
+  "name": "esya-hukuku",
+  "displayName": "Eşya Hukuku",
+  "version": "0.1.0",
+  "description": "Eşya Hukuku alanında 11 beceri: dava usul gorev yetki tedbir, el atmanin onlenmesi mudahalenin meni, irtifak haklari ve 8 tane daha. İlgili mevzuat: 4721 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "esya",
+    "hukuku",
+    "4721"
+  ]
+}

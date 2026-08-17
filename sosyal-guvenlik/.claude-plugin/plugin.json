@@ -1,0 +1,15 @@
+{
+  "name": "sosyal-guvenlik",
+  "displayName": "Sosyal Güvenlik",
+  "version": "0.1.0",
+  "description": "Sosyal Güvenlik alanında 12 beceri: basvuru dilekce ve itiraz, emeklilik aylik baglama, genel saglik sigortasi ve 9 tane daha. İlgili mevzuat: 5510 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "sosyal",
+    "guvenlik",
+    "5510"
+  ]
+}

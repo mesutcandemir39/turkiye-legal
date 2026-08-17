@@ -1,0 +1,18 @@
+# Golden Test — LLM katmani. is-hukuku/skills/is-sozlesmesi-review/SKILL.md'ye karsi calisir.
+
+test_id: is_004
+skill_path: is-hukuku/skills/is-sozlesmesi-review/SKILL.md
+input_scenario: >
+  İş sözleşmesinde "deneme süresi 6 aydır" ifadesi var, toplu iş
+  sözleşmesine hiçbir atıf yok.
+expected_behavior: >
+  Sistem, deneme süresinin 4857 m.15'teki azami 2 aylık sınırı (toplu iş
+  sözleşmesiyle en fazla 4 aya çıkabildiğini) aştığını ve toplu iş
+  sözleşmesi referansı olmadan bu hükmün kanuna aykırı olduğunu açıkça
+  işaretlemeli.
+must_include:
+  - "4857"
+  - "deneme"
+must_not_include:
+  - "GDPR"
+risk_level: high

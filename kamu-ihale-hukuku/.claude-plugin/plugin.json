@@ -1,0 +1,17 @@
+{
+  "name": "kamu-ihale-hukuku",
+  "displayName": "Kamu İhale Hukuku",
+  "version": "0.1.0",
+  "description": "Kamu İhale Hukuku alanında 12 beceri: asiri dusuk teklif, ihale iptali ve itirazen sonuc, ihale sozlesmesi 4735 ve 9 tane daha. İlgili mevzuat: 4734, 4735 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "kamu",
+    "ihale",
+    "hukuku",
+    "4734",
+    "4735"
+  ]
+}

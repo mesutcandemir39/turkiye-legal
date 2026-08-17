@@ -1,0 +1,78 @@
+# Süre Hesabı Kural Tablosu — cekirdek
+#
+# BU DOSYA, docs/ARCHITECTURE_DECISIONS.md ADR-006'nin veri kaynağıdır.
+# cekirdek/scripts/sure_hesapla.py, hesaplamalarını BURADAKİ sabitlere dayandırır;
+# LLM tarih aritmetiği yapmaz.
+#
+# KAPSAM UYARISI: Bu ilk sürüm yalnızca (a) HMK'ya tabi genel hukuk yargılamasındaki
+# adli tatil kuralını ve (b) 2429 sayılı Kanun'daki SABİT tarihli resmî tatilleri
+# kapsar. Dini bayramlar (Ramazan/Kurban Bayramı) kameri takvime bağlıdır ve
+# harici bir takvim kaynağı gerektirir — bkz. asagidaki "kapsam_disi" blogu.
+# İİK, İYUK gibi diğer kanunların kendi süre/tatil rejimleri AYRIDIR ve henüz
+# bu dosyaya eklenmemiştir (Faz 4 sonrası genişletme).
+
+adli_tatil:
+  kural: >
+    Adli tatil her yıl 20 Temmuz'da başlar, 31 Ağustos'ta sona erer.
+    Yeni adli yıl 1 Eylül'de başlar.
+  baslangic: { ay: 7, gun: 20 }
+  bitis: { ay: 8, gun: 31 }
+  kaynak:
+    tur: kanun
+    numara: "6100"
+    ad: "Hukuk Muhakemeleri Kanunu"
+    madde: "102"
+  dogrulama_notu: "2026-08-17 tarihinde bağımsız web kaynaklarıyla doğrulandı."
+
+adli_tatile_rastlayan_sure_uzatmasi:
+  kural: >
+    Adli tatile tabi dava ve işlerde, bu Kanun'da belirlenen sürelerin bitimi
+    adli tatile rastlarsa, bu süreler ayrıca bir karara gerek olmaksızın adli
+    tatilin bittiği günden (1 Eylül) itibaren bir hafta (7 gün) uzamış sayılır.
+    Sonuç: adli tatil döneminde biten bir süre, o yılın 8 Eylül tarihine
+    (dahil) uzar.
+  hesaplama_formulu: "1 Eylul + 7 gun = 8 Eylul (yil sabit, artik yil etkisi yok)"
+  kaynak:
+    tur: kanun
+    numara: "6100"
+    ad: "Hukuk Muhakemeleri Kanunu"
+    madde: "104"
+  dogrulama_notu: "2026-08-17 tarihinde bağımsız web kaynaklarıyla doğrulandı (örnek hesaplamayla teyit edildi: 1 Eylül + 7 gün = 8 Eylül)."
+  onemli_sinir: >
+    Bu uzatma yalnızca ADLİ TATİLE TABİ dava/işler içindir (HMK m.103'te
+    sayılan ihtiyati tedbir, ihtiyati haciz vb. tatile tabi OLMAYAN işler
+    hariçtir). sure_hesapla.py bu ayrımı OTOMATİK YAPMAZ — çağıran skill'in
+    işin adli tatile tabi olup olmadığını ayrıca belirtmesi gerekir.
+
+resmi_tatiller_sabit_tarihli:
+  kural: >
+    2429 sayılı Kanun madde 2 uyarınca aşağıdaki günler, yıldan yıla tarihi
+    değişmeyen (sabit) genel tatil günleridir.
+  kaynak:
+    tur: kanun
+    numara: "2429"
+    ad: "Ulusal Bayram ve Genel Tatiller Hakkında Kanun"
+    madde: "2"
+  dogrulama_notu: "2026-08-17 tarihinde bağımsız web kaynaklarıyla doğrulandı."
+  gunler:
+    - { ay: 1, gun: 1, ad: "Yılbaşı" }
+    - { ay: 4, gun: 23, ad: "Ulusal Egemenlik ve Çocuk Bayramı" }
+    - { ay: 5, gun: 1, ad: "Emek ve Dayanışma Günü" }
+    - { ay: 5, gun: 19, ad: "Atatürk'ü Anma, Gençlik ve Spor Bayramı" }
+    - { ay: 7, gun: 15, ad: "Demokrasi ve Millî Birlik Günü" }
+    - { ay: 8, gun: 30, ad: "Zafer Bayramı" }
+    - { ay: 10, gun: 29, ad: "Cumhuriyet Bayramı" }
+
+kapsam_disi:
+  - konu: "Ramazan Bayramı, Kurban Bayramı"
+    neden: >
+      Kameri (Hicri) takvime bağlı, yıldan yıla Gregoryen takvimde farklı
+      tarihlere denk gelir. Bu proje herhangi bir yıl için bu tarihleri
+      SABİT olarak kodlamaz — bu, tam olarak halüsinasyon riski taşıyan
+      türden bir veridir (ADR-005). Gerçek kullanımda harici, güncel bir
+      kameri takvim kaynağına (örn. Diyanet İşleri Başkanlığı) bağlanmak
+      gerekir; bu bağlantı NOT_IMPLEMENTED durumundadır.
+  - konu: "İcra ve İflas Kanunu (İİK) süre/tatil rejimi"
+    neden: "Ayrı ve kendine özgü kurallar içerir; icra-iflas plugin'i için ayrıca eklenecektir."
+  - konu: "İdari Yargılama Usulü Kanunu (İYUK) süre rejimi"
+    neden: "İdari yargıda HMK'daki adli tatil kavramı aynı şekilde uygulanmaz; idare-vergi plugin'i için ayrıca değerlendirilecektir."

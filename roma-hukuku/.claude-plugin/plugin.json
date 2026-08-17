@@ -1,0 +1,14 @@
+{
+  "name": "roma-hukuku",
+  "displayName": "Roma Hukuku",
+  "version": "0.1.0",
+  "description": "Roma Hukuku alanında 10 beceri: akademik kaynak hijyeni, ayni sahsi hak eskidogmatik, eshya miras kokleri ve 7 tane daha.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "roma",
+    "hukuku"
+  ]
+}

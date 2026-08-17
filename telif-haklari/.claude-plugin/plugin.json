@@ -1,0 +1,15 @@
+{
+  "name": "telif-haklari",
+  "displayName": "Telif Hakları",
+  "version": "0.1.0",
+  "description": "Telif Hakları alanında 11 beceri: baglantili haklar meslek birlikleri, ceza sorumlulugu, dava usul gorev yetki ve 8 tane daha. İlgili mevzuat: 5846 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "telif",
+    "haklari",
+    "5846"
+  ]
+}

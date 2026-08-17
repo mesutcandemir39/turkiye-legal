@@ -1,0 +1,15 @@
+{
+  "name": "rekabet-hukuku",
+  "displayName": "Rekabet Hukuku",
+  "version": "0.1.0",
+  "description": "Rekabet Hukuku alanında 11 beceri: birlesme devralma izni, hakim durum kotuye kullanma, idari para cezasi hesabi ve 8 tane daha. İlgili mevzuat: 4054 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "rekabet",
+    "hukuku",
+    "4054"
+  ]
+}

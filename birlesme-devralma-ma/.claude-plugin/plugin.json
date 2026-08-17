@@ -1,0 +1,16 @@
+{
+  "name": "birlesme-devralma-ma",
+  "displayName": "Birleşme ve Devralma",
+  "version": "0.1.0",
+  "description": "Birleşme ve Devralma alanında 12 beceri: beyan tekefful ve tazminat, deger bedel mekanizmasi, hukuki due diligence ve 9 tane daha. İlgili mevzuat: 4054, 6102, 6362 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "birlesme",
+    "devralma",
+    "4054",
+    "6102"
+  ]
+}

@@ -1,0 +1,56 @@
+# v0.5.0 İthalatı Öncesinde Doğrulanması Gereken Kanunlar
+# (Upstream kataloğunda var, bizim defterimizde yok)
+# Doğrulama sırası: mevzuat.gov.tr + ilgili kurum sayfası
+
+# ÖNCELİK 1 (kritik, sık kullanılan)
+6284   # Ailenin Korunması ve Kadına Karşı Şiddetin Önlenmesine Dair Kanun
+5510   # Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu
+5411   # Bankacılık Kanunu
+5846   # Fikir ve Sanat Eserleri Kanunu (FSEK)
+6356   # Sendikalar ve Toplu İş Sözleşmesi Kanunu
+2577   # İdari Yargılama Usulü Kanunu (İYUK)
+
+# ÖNCELİK 2 (sık, ama ikincil)
+5520   # Kurumlar Vergisi Kanunu
+193    # Gelir Vergisi Kanunu
+213    # Vergi Usul Kanunu
+3065   # Katma Değer Vergisi Kanunu
+6362   # Sermaye Piyasası Kanunu
+4054   # Rekabetin Korunması Hakkında Kanun
+
+# ÖNCELİK 3 (durumsal, işlem gerektir)
+5326   # Kabahatler Kanunu
+5651   # Elektronik Ticaretin Düzenlenmesine Dair Kanun (ETK)
+6769   # Sınai Mülkiyet Kanunu (SMK)
+6458   # Yabancılar ve Uluslararası Koruma Kanunu (YUKK)
+2872   # Çevre Kanunu
+3194   # İmar Kanunu
+5275   # Ceza ve Güvenlik Tedbirlerinin İnfazı Hakkında Kanun
+5941   # Çek Kanunu
+6325   # Hukuk Uyuşmazlıklarında Arabuluculuk Kanunu
+
+# ÖNCELİK 4 (az sık, özel konu)
+1219   # [Doğrulanacak - Banka Müfettişleri Kanunu mi?]
+1262   # [Doğrulanacak - Mimar Kanunu mi?]
+2644   # [Doğrulanacak - Telekomunikasyon Kanunu vb?]
+3359   # [Doğrulanacak]
+3402   # [Doğrulanacak]
+4458   # [Gümrük Kanunu?]
+4646   # [Doğrulanacak]
+4686   # [Doğrulanacak]
+4735   # [Doğrulanacak]
+5187   # [Doğrulanacak]
+5549   # [Doğrulanacak]
+5684   # [Doğrulanacak]
+5809   # [Doğrulanacak]
+6197   # [Doğrulanacak]
+6216   # [Doğrulanacak]
+6222   # [Doğrulanacak]
+634    # [Kat Mülkiyeti Kanunu (KMK) mu?]
+1      # [Sadece "TMK m.1" formunda, tam kanun sayısı değil]
+
+# NOT: Bu liste Haiku 4.5'in Görev 04'ünde doğrulayacağı kaynaklar.
+# Doğrulanan ve kanunlar.yaml'a eklenen her kayıt için:
+# - mevzuat.gov.tr linkini ekle
+# - Resmî Gazete tarih/sayısını ekle
+# - son_dogrulama alanına "2026-MM-DD (Haiku mevzuat MCP doğrulaması)" yaz

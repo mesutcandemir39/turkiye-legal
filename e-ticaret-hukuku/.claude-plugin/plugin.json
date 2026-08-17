@@ -1,0 +1,16 @@
+{
+  "name": "e-ticaret-hukuku",
+  "displayName": "E-Ticaret Hukuku",
+  "version": "0.1.0",
+  "description": "E-Ticaret Hukuku alanında 11 beceri: araci hizmet saglayici platform, e ticaret kvkk veri, e ticaret sozlesme taslagi ve 8 tane daha. İlgili mevzuat: 6502, 6563, 6698 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ticaret",
+    "hukuku",
+    "6502",
+    "6563"
+  ]
+}

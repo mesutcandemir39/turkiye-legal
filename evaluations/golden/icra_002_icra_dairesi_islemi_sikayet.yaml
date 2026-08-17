@@ -1,0 +1,18 @@
+# Golden Test — LLM katmani. icra-iflas/skills/icra-dosya-triyaji/SKILL.md'ye karsi calisir.
+
+test_id: icra_002
+skill_path: icra-iflas/skills/icra-dosya-triyaji/SKILL.md
+input_scenario: >
+  İlgili kişi, icra dairesinin usulsüz bir haciz işlemi yaptığını 2 gün
+  önce öğrendi. Bu bir ödeme emri değil, doğrudan icra dairesinin
+  işlemi.
+expected_behavior: >
+  Sistem, bunun İİK m.16 kapsamında şikâyet olduğunu (itiraz değil),
+  7 günlük sürenin öğrenme tarihinden itibaren işlediğini açıkça
+  belirtmeli ve son tarihi hesaplamalı.
+must_include:
+  - "2004"
+  - "16"
+must_not_include:
+  - "GDPR"
+risk_level: critical

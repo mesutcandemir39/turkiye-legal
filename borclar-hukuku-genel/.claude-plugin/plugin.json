@@ -1,0 +1,16 @@
+{
+  "name": "borclar-hukuku-genel",
+  "displayName": "Borçlar Hukuku — Genel",
+  "version": "0.1.0",
+  "description": "Borçlar Hukuku — Genel alanında 13 beceri: borca aykirilik tazminat, borclu temerrudu, cezai sart ve teminat ve 10 tane daha. İlgili mevzuat: 6098 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "borclar",
+    "hukuku",
+    "genel",
+    "6098"
+  ]
+}

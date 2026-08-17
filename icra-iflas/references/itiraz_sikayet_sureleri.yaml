@@ -1,0 +1,34 @@
+# İtiraz / Şikâyet Süreleri Tablosu — 2004 sayılı İİK
+#
+# TEK KAYNAK UYARISI: Bu iki kural, arama motoru çapraz doğrulaması
+# YAPILAMADAN (bu oturumda WebSearch aracı erişilemez durumdaydı), tek bir
+# güvenilir kaynaktan (av-saimincekas.com, kanun metninden doğrudan alıntı
+# içeren sayfa) doğrudan kanun metni alıntısıyla doğrulanmıştır. Bir sonraki
+# katkıcı, ikinci bağımsız bir kaynakla (mevzuat.gov.tr veya benzeri resmi
+# kaynak) teyit etmelidir — bu, good-first-legal-issue niteliğindedir.
+
+odeme_emrine_itiraz:
+  kural: >
+    İtiraz etmek isteyen borçlu, itirazını, ödeme emrinin tebliği tarihinden
+    itibaren yedi gün içinde dilekçe ile veya sözlü olarak icra dairesine
+    bildirmek zorundadır.
+  sure: "7 gün (ödeme emrinin tebliğ tarihinden itibaren)"
+  kaynak:
+    tur: kanun
+    numara: "2004"
+    ad: "İcra ve İflas Kanunu"
+    madde: "62"
+  dogrulama_notu: "2026-08-17 — tek kaynaktan (doğrudan madde metni alıntısı) doğrulandı; ikinci bağımsız kaynakla teyit BEKLENIYOR."
+
+icra_mahkemesine_sikayet:
+  kural: >
+    Şikâyet, işlemin öğrenildiği tarihten itibaren yedi gün içinde yapılır.
+    İSTİSNA: bir hakkın yerine getirilmemesinden veya sebepsiz sürüncemede
+    bırakılmasından dolayı HER ZAMAN şikâyet olunabilir (süreye tabi değildir).
+  sure: "7 gün (işlemin öğrenildiği tarihten itibaren) — istisnası için yukarı bak"
+  kaynak:
+    tur: kanun
+    numara: "2004"
+    ad: "İcra ve İflas Kanunu"
+    madde: "16"
+  dogrulama_notu: "2026-08-17 — tek kaynaktan (doğrudan madde metni alıntısı) doğrulandı; ikinci bağımsız kaynakla teyit BEKLENIYOR."

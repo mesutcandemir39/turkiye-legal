@@ -1,0 +1,14 @@
+{
+  "name": "hukuki-mutalaa",
+  "displayName": "Hukuki Mütalaa",
+  "version": "0.1.0",
+  "description": "Hukuki Mütalaa alanında 12 beceri: altlama subsumption teknigi, cikar catismasi ve mutalaa etigi, gorev yetki ve yargi yolu ve 9 tane daha.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "hukuki",
+    "mutalaa"
+  ]
+}

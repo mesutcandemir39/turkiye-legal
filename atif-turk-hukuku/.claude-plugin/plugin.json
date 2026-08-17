@@ -1,0 +1,15 @@
+{
+  "name": "atif-turk-hukuku",
+  "displayName": "Atıf ve Kaynak Hijyeni",
+  "version": "0.1.0",
+  "description": "Atıf ve Kaynak Hijyeni alanında 10 beceri: atif katmanlari ve kanit degeri, dilden norma yanlis atif onleme, dogrulama kontrol listesi teslim oncesi ve 7 tane daha.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "atif",
+    "turk",
+    "hukuku"
+  ]
+}

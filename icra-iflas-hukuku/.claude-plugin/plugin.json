@@ -1,0 +1,16 @@
+{
+  "name": "icra-iflas-hukuku",
+  "displayName": "İcra ve İflas Hukuku",
+  "version": "0.1.0",
+  "description": "İcra ve İflas Hukuku alanında 13 beceri: borclu savunma stratejisi ve icra suclari, haciz kiymet takdiri ve satis, iflas yollari ve masasi ve 10 tane daha. İlgili mevzuat: 2004 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "icra",
+    "iflas",
+    "hukuku",
+    "2004"
+  ]
+}

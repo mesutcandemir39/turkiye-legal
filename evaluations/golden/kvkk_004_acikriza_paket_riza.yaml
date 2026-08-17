@@ -1,0 +1,21 @@
+# Golden Test — LLM katmani (bkz. docs/ARCHITECTURE_DECISIONS.md ADR-007)
+# kvkk-uyum/skills/acik-riza-denetimi/SKILL.md'ye karsi calisir.
+
+test_id: kvkk_004
+skill_path: kvkk-uyum/skills/acik-riza-denetimi/SKILL.md
+input_scenario: >
+  Rıza formunda tek bir onay kutusu var: "Kişisel verilerimin pazarlama
+  faaliyetlerinde kullanılmasına, üçüncü taraflarla paylaşılmasına ve
+  profilleme yapılmasına onay veriyorum." Kutu önceden işaretli değil,
+  kullanıcı aktif olarak işaretliyor.
+expected_behavior: >
+  Sistem, birden fazla farklı işleme amacının (pazarlama, üçüncü taraf
+  paylaşımı, profilleme) tek bir onay kutusunda toplandığını tespit
+  edip bunun "paket rıza" riski olduğunu ve "belirli bir konuya ilişkin
+  olma" unsurunu ihlal ettiğini açıkça belirtmeli, KVKK m.5 atfı yapmalı.
+must_include:
+  - "6698"
+  - "m.5"
+must_not_include:
+  - "GDPR"
+risk_level: high

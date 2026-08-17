@@ -1,0 +1,16 @@
+{
+  "name": "vergi-davalari",
+  "displayName": "Vergi Davaları",
+  "version": "0.1.0",
+  "description": "Vergi Davaları alanında 14 beceri: dava dilekcesi ve layihalar, dilekce sablonlari, idari cozum uzlasma duzeltme ve 11 tane daha. İlgili mevzuat: 213, 2577 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "vergi",
+    "davalari",
+    "213",
+    "2577"
+  ]
+}

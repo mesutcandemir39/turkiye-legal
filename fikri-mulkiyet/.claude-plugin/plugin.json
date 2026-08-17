@@ -1,0 +1,18 @@
+{
+  "name": "fikri-mulkiyet",
+  "displayName": "Fikri Mülkiyet",
+  "version": "0.1.0",
+  "description": "Açık kaynak lisans uyumluluğu (MIT/GPL/Apache vb.) denetimini 5846 sayılı FSEK ve genel lisanslama kuralları çerçevesinde yapan skill.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "fikri-mulkiyet",
+    "oss",
+    "lisans",
+    "fsek",
+    "5846",
+    "6769"
+  ]
+}

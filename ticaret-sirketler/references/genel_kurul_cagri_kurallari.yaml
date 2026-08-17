@@ -1,0 +1,78 @@
+# Genel Kurul Çağrı Kuralları — TTK m.414
+kaynak:
+  tur: kanun
+  numara: "6102"
+  ad: "Türk Ticaret Kanunu"
+  madde: "414"
+dogrulama_notu: "2026-08-17 tarihinde bağımsız web kaynaklarıyla doğrulandı."
+
+cagri_suresi:
+  kural: >
+    Genel kurul çağrısı, ilan ve toplantı günleri HARİÇ olmak üzere,
+    toplantı tarihinden en az iki hafta önce yapılmalıdır.
+  sure_hafta: 2
+  haric_tutulanlar: "ilan günü ve toplantı günü hesaba katılmaz"
+
+cagrisiz_genel_kurul_istisnasi:
+  kural: >
+    Bütün pay sahipleri veya temsilcileri, aralarından hiçbirinin
+    itirazı olmaksızın toplantıda hazır bulunursa, genel kurul çağrısız
+    olarak da toplanabilir — bu durumda ilan ve süre şartları aranmaz.
+
+cagri_sekli:
+  kural: >
+    Çağrı, esas sözleşmede gösterilen şekilde, şirketin internet
+    sitesinde ve Türkiye Ticaret Sicili Gazetesi'nde yayımlanan ilanla
+    yapılır. Pay defterinde kayıtlı ve adresini bildiren pay sahiplerine
+    ayrıca iadeli taahhütlü mektupla bildirim yapılır.
+
+# --- Toplantı ve karar nisapları (TTK m.418 ve m.421) ---
+# 2026-08-17 tarihinde bağımsız web kaynaklarıyla dogrulandi (önceden
+# ROADMAP'te "doğrulanamadı" olarak işaretliydi, good-first-legal-issue
+# statüsünden çıkarıldı).
+
+olagan_genel_kurul_nisabi:
+  kaynak_madde: "418"
+  ilk_toplanti:
+    kural: >
+      Kanunda veya esas sözleşmede aksine daha ağır bir nisap
+      öngörülmemişse, genel kurul, sermayenin en az DÖRTTE BİRİNİ
+      (1/4) temsil eden payların sahiplerinin veya temsilcilerinin
+      varlığıyla toplanır. Bu nisabın toplantı süresince korunması
+      şarttır.
+    toplanti_nisabi_pay: "1/4"
+  ikinci_toplanti:
+    kural: >
+      İlk toplantıda bu nisaba ulaşılamazsa, ikinci toplantının
+      yapılabilmesi için herhangi bir nisap ARANMAZ.
+    toplanti_nisabi_pay: null
+  karar_nisabi:
+    kural: "Kararlar, toplantıda hazır bulunan oyların ÇOĞUNLUĞU ile alınır."
+
+esas_sozlesme_degisikligi_nisabi:
+  kaynak_madde: "421"
+  ilk_toplanti:
+    kural: >
+      Kanunda veya esas sözleşmede aksine hüküm yoksa, esas sözleşmeyi
+      değiştiren kararlar, sermayenin en az YARISININ (1/2) temsil
+      edildiği genel kurulda alınır.
+    toplanti_nisabi_pay: "1/2"
+  ikinci_toplanti:
+    kural: >
+      İlk toplantıda bu nisap sağlanamazsa, en geç bir ay içinde
+      yapılacak ikinci toplantı için nisap, sermayenin en az ÜÇTE
+      BİRİDİR (1/3).
+    toplanti_nisabi_pay: "1/3"
+  karar_nisabi:
+    kural: "Kararlar, toplantıda hazır bulunan oyların ÇOĞUNLUĞU ile alınır."
+  agirlastirma_kurali: >
+    Bu nisaplar esas sözleşmeyle AĞIRLAŞTIRILABİLİR ama HAFİFLETİLEMEZ.
+    Bu nisapları düşüren veya nispi çoğunluk öngören esas sözleşme
+    hükümleri GEÇERSİZDİR.
+  not: >
+    m.421, işletme konusunun tamamen değiştirilmesi, yükümlülüklerin
+    artırılması veya tasfiye gibi bazı çok köklü kararlar için daha da
+    yüksek (ağırlaştırılmış) nisaplar öngörebilir — bu skill yalnızca
+    m.421'in genel (varsayılan) esas sözleşme değişikliği nisabını
+    uygular; işletme konusu değişikliği/tasfiye gibi özel durumlarda
+    kullanıcıyı ayrıca bir avukata yönlendir.

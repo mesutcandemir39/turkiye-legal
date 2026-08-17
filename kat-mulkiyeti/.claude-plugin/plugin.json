@@ -1,0 +1,16 @@
+{
+  "name": "kat-mulkiyeti",
+  "displayName": "Kat Mülkiyeti",
+  "version": "0.1.0",
+  "description": "Kat Mülkiyeti alanında 12 beceri: aidat ve ortak gider, dava usul gorev yetki icra, devre mulk ve kat mulkiyetinin sona ermesi ve 9 tane daha. İlgili mevzuat: 4721, 634 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "kat",
+    "mulkiyeti",
+    "4721",
+    "634"
+  ]
+}

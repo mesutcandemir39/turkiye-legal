@@ -1,0 +1,16 @@
+{
+  "name": "is-hukuku-bireysel",
+  "displayName": "İş Hukuku — Bireysel",
+  "version": "0.1.0",
+  "description": "İş Hukuku — Bireysel alanında 11 beceri: belge taslak ihtar fesih sozlesme, dava usul gorev yetki arabuluculuk, fesih denetim semasi ve 8 tane daha. İlgili mevzuat: 4857, 6098 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "hukuku",
+    "bireysel",
+    "4857",
+    "6098"
+  ]
+}

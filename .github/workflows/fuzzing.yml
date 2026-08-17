@@ -1,0 +1,45 @@
+name: Fuzzing
+
+# atheris (libFuzzer tabanli Python fuzzer) ile cekirdek/scripts/veri_maskele.py
+# fonksiyonlarina kisa sureli, gercek bir fuzz taramasi yapar. Bu, guvenilmeyen
+# belge metnini isleyen fonksiyonlarin cokme/sonsuz-dongu uretmedigini dogrular.
+#
+# NOT: atheris yalnizca Linux'ta guvenilir sekilde kurulur; bu workflow bu
+# yuzden yalnizca ubuntu-latest'te calisir.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cekirdek/scripts/veri_maskele.py"
+      - "fuzz/**"
+      - ".github/workflows/fuzzing.yml"
+  schedule:
+    - cron: "0 4 * * 0" # her Pazar 04:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  fuzz:
+    name: veri_maskele.py kisa fuzz taramasi
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.3.0
+        with:
+          python-version: "3.11"
+
+      - name: atheris kur
+        run: pip install --require-hashes -r scripts/requirements-fuzz.lock.txt
+
+      - name: Kisa fuzz taramasi calistir (60 saniye)
+        run: |
+          python fuzz/fuzz_veri_maskele.py -max_total_time=60 -print_final_stats=1
+
+      - name: Sonuc
+        if: always()
+        run: echo "Fuzz taramasi tamamlandi — cokme/assert hatasi olmadan bitti ise gecerlidir."

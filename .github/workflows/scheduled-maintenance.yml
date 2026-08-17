@@ -1,0 +1,111 @@
+name: Zamanlanmış Bakım
+
+# Haftalık depo sağlık kontrolü — deterministik, harici API veya AI token
+# KULLANMAZ. Yalnızca depodaki doğrulayıcı script'leri çalıştırır.
+#
+# Issue yalnızca GERÇEK bir bozulma tespit edilirse açılır. Sağlıklı bir
+# haftada hiçbir şey açılmaz — bildirim gürültüsü üretmez.
+
+on:
+  schedule:
+    - cron: "0 7 * * 1" # Her Pazartesi 07:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  health-check:
+    name: Depo sağlık kontrolü
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.3.0
+        with:
+          python-version: "3.11"
+
+      - name: Bağımlılıkları kur
+        run: pip install --require-hashes -r scripts/requirements.lock.txt
+
+      - name: Doğrulayıcıları çalıştır
+        id: check
+        continue-on-error: true
+        run: |
+          {
+            echo "## Şema doğrulaması"
+            python scripts/validate/validate_skills.py --strict 2>&1 | tail -20
+            echo ""
+            echo "## Kaynak defteri doğrulaması"
+            python scripts/validate/validate_sources.py 2>&1 | tail -20
+            echo ""
+            echo "## Prompt lint"
+            python scripts/validate/lint_prompts.py 2>&1 | tail -20
+          } > health_report.txt 2>&1 || echo "FAILED" >> health_report.txt
+
+          if grep -q "FAILED\|HATA\|ERROR" health_report.txt; then
+            echo "healthy=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "healthy=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Statik testleri çalıştır
+        id: tests
+        continue-on-error: true
+        run: |
+          if pytest evaluations/static/ -q > test_report.txt 2>&1; then
+            echo "passing=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "passing=false" >> "$GITHUB_OUTPUT"
+            tail -30 test_report.txt >> health_report.txt
+          fi
+
+      # Issue YALNIZCA gercek bir bozulma varsa acilir.
+      - name: Bozulma varsa issue aç
+        if: steps.check.outputs.healthy == 'false' || steps.tests.outputs.passing == 'false'
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        with:
+          script: |
+            const fs = require('fs');
+            let report = '';
+            try { report = fs.readFileSync('health_report.txt', 'utf8').slice(0, 5000); }
+            catch (e) { report = 'Rapor okunamadı.'; }
+
+            const today = new Date().toISOString().slice(0, 10);
+            const title = `Haftalık sağlık kontrolü başarısız — ${today}`;
+
+            // Ayni konuda acik bir issue varsa yenisini acma, mevcuda yorum yaz.
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'otomatik: sağlık kontrolü',
+            });
+
+            const body = [
+              'Haftalık otomatik sağlık kontrolü bir bozulma tespit etti.',
+              '',
+              '```',
+              report,
+              '```',
+              '',
+              '_Bu kontrol deterministiktir; dil modeli veya harici API kullanmaz._',
+            ].join('\n');
+
+            if (existing.data.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.data[0].number,
+                body: `### ${today}\n\n${body}`,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['otomatik: sağlık kontrolü', 'type: bug'],
+              });
+            }

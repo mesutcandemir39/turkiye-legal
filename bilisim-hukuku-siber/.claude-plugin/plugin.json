@@ -1,0 +1,17 @@
+{
+  "name": "bilisim-hukuku-siber",
+  "displayName": "Bilişim ve Siber Hukuk",
+  "version": "0.1.0",
+  "description": "Bilişim ve Siber Hukuk alanında 12 beceri: 5651 icerik erisim engelleme, bilisim suclari tck 243 245, dijital delil elde etme degerlendirme ve 9 tane daha. İlgili mevzuat: 5237, 5651, 6698 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "bilisim",
+    "hukuku",
+    "siber",
+    "5237",
+    "5651"
+  ]
+}

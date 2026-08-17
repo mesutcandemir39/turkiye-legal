@@ -1,0 +1,16 @@
+{
+  "name": "tapu-kadastro",
+  "displayName": "Tapu ve Kadastro",
+  "version": "0.1.0",
+  "description": "Tapu ve Kadastro alanında 11 beceri: el atmanin onlenmesi ve ecrimisil, gorev yetki ve husumet, ipotek ve tasinmaz rehni ve 8 tane daha. İlgili mevzuat: 2644, 3402, 4721 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "tapu",
+    "kadastro",
+    "2644",
+    "3402"
+  ]
+}

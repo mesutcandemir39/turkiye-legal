@@ -1,0 +1,64 @@
+---
+argument-hint: ''
+description: KVKK m.12 kapsamında teknik ve idari güvenlik tedbirlerinin Kurul rehberine
+  göre denetlenmesi veya tedbir boşluklarının tespiti gerektiğinde kullanılır.
+name: veri-guvenligi-tedbir-denetimi
+turkiye_legal:
+  attribution:
+    license: Apache-2.0
+    original_author: Mesut Can Demir
+    original_repository: https://github.com/mesutcandemir39/turkiye-legal
+  category: litigation
+  inputs:
+  - '[giriş tanımlanmadı — beceri gövdesinden çıkarılacak]'
+  jurisdiction:
+    country: TR
+    legal_system: civil_law
+    scope:
+    - TR
+  outputs:
+  - '[çıktı tanımlanmadı — beceri gövdesinden çıkarılacak]'
+  requires_human_review: false
+  risk_level: medium
+  sources:
+  - ad: Kişisel Verilerin Korunması Kanunu
+    numara: '6698'
+    tur: kanun
+  version: 0.1.0
+user-invocable: true
+---
+
+
+# Veri Güvenliği ve Teknik-İdari Tedbir Denetimi
+
+## Görev
+KVKK m.12/1 uyarınca veri sorumlusunun aldığı teknik ve idari tedbirleri Kurul'un Teknik ve İdari Tedbirler Rehberi ölçütünde denetlemek; boşlukları risk seviyesine göre işaretlemek. Bu beceri hukuki uyumu güvenlik kontrolleriyle köprüler.
+
+## Soğuk başlangıç (intake)
+1. Verilere kimler erişiyor; yetki ve erişim kontrolü (rol bazlı) tanımlı mı?
+2. Veriler şifreleniyor mu (durağan/iletimde); yedekleme ve loglama var mı?
+3. Çalışanlarla gizlilik taahhüdü ve KVKK farkındalık eğitimi yapılıyor mu?
+4. Veri işleyenlerle (bulut, dış hizmet) m.12 sözleşmesi ve güvenlik denetimi var mı?
+
+## Denetim şeması
+1. **İdari tedbirler**: Kişisel veri envanteri, kurumsal politikalar, gizlilik taahhütleri, erişim yetki matrisi, eğitim ve farkındalık programı, veri işleyenlerle m.12 sözleşmeleri ve denetim hakkı. Her biri "var/eksik" işaretlenir.
+2. **Teknik tedbirler**: Yetkilendirme ve kimlik doğrulama, ağ güvenliği, şifreleme, log tutma, sızma testi/zafiyet taraması, yedekleme, anti-virüs/güvenlik duvarı, silme/yok etme altyapısı. Özel nitelikli veride (m.6) Kurul ek tedbir bekler (örn. şifreleme ve daha sıkı erişim kontrolü).
+3. **Veri işleyen zinciri**: Bulut/SaaS ve dış hizmet sağlayıcılarla yazılı m.12 sözleşmesi, sorumluluk paylaşımı ve denetim yetkisi kontrol edilir; sözleşmesiz işleyen yüksek risk bulgusudur.
+4. **Orantılılık**: Tedbirler verinin niteliği ve riskiyle orantılı olmalı; eksik tedbir, ihlal halinde m.18 ve tazminat sorumluluğunu ağırlaştırır.
+5. **Ara sonuç**: Güvenlik tedbiri eksikliği yalnızca ihlal anında değil, denetimde de m.12 ihlali olarak skorlanır.
+
+İspat yükü: Uygun tedbirlerin alındığını veri sorumlusu belge ve kayıtla ispatlar; tedbirlerin yokluğu ihlalde kusur karinesini güçlendirir.
+
+## Çıktı modülleri
+- Teknik/idari tedbir kontrol listesi (Rehber kalemleriyle eşleşen, Uygun/Eksik).
+- Veri işleyen sözleşme ve güvenlik denetim durum tablosu.
+- Tedbir boşluğu risk haritası ve öncelikli aksiyon listesi.
+
+
+
+## Kaynak kuralı (katı)
+
+- **İçtihat yalnızca doğrulanmış künyeyle.** Her karar mahkeme + daire + **esas/karar numarası** + tarih + doğrulanabilir kaynak ile.
+- **MCP araçları varsa resmî metni onlardan çek.** `turkiye-legal-mevzuat-mcp` kuruluysa `madde_getir` / `kanun_metni_getir` ile getir; `turkiye-legal-ictihat-mcp` kuruluysa `ictihat_ara` / `karar_getir` ile.
+- **Varsayımları açıkça işaretle.**
+

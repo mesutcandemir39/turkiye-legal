@@ -1,0 +1,17 @@
+# Golden Test — LLM katmani. sozlesme/skills/gizlilik-hizmet-sozlesmesi-taramasi/SKILL.md'ye karsi calisir.
+
+test_id: soz_008
+skill_path: sozlesme/skills/gizlilik-hizmet-sozlesmesi-taramasi/SKILL.md
+input_scenario: >
+  Danışmanlık sözleşmesinde "danışman, sözleşme bitiminden itibaren 10
+  yıl boyunca Türkiye'nin herhangi bir yerinde aynı sektörde hiçbir
+  şirkete danışmanlık veremez" şeklinde bir rekabet yasağı hükmü var.
+expected_behavior: >
+  Sistem, bu rekabet yasağının süre (10 yıl) ve coğrafi kapsam
+  (tüm Türkiye) açısından ölçüsüz olduğunu, makul bir süre ve kapsamla
+  sınırlandırılması gerektiğini açıkça işaretlemeli.
+must_include:
+  - "6098"
+must_not_include:
+  - "GDPR"
+risk_level: high

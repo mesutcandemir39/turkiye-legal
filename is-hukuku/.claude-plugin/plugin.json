@@ -1,0 +1,18 @@
+{
+  "name": "is-hukuku",
+  "displayName": "İş Hukuku",
+  "version": "0.1.0",
+  "description": "4857 sayılı İş Kanunu kapsamında iş sözleşmesi review, fesih/ihbar-kıdem triyajı ve işe iade süre kontrolü sağlayan skill'ler.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "is-hukuku",
+    "4857",
+    "fesih",
+    "ihbar",
+    "kidem",
+    "ise-iade"
+  ]
+}

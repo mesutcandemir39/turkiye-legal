@@ -1,0 +1,15 @@
+{
+  "name": "marka-hukuku",
+  "displayName": "Marka Hukuku",
+  "version": "0.1.0",
+  "description": "Marka Hukuku alanında 13 beceri: hukumsuzluk ve iptal, ihtiyati tedbir delil tespiti, karistirilma ihtimali nispi ret ve 10 tane daha. İlgili mevzuat: 6769 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "marka",
+    "hukuku",
+    "6769"
+  ]
+}

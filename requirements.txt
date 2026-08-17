@@ -1,0 +1,23 @@
+# Turkish Legal — Gerekli Paketler
+
+# Core
+PyYAML>=6.0
+Jinja2>=3.1.0
+
+# MCP Sunucuları
+anthropic-sdk>=0.7.0
+
+# Validation
+jsonschema>=4.17.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Optimization
+black>=23.0.0
+flake8>=5.0.0
+
+# Documentation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0

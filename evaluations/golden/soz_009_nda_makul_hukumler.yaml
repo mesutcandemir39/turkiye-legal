@@ -1,0 +1,18 @@
+# Golden Test — LLM katmani. sozlesme/skills/gizlilik-hizmet-sozlesmesi-taramasi/SKILL.md'ye karsi calisir.
+
+test_id: soz_009
+skill_path: sozlesme/skills/gizlilik-hizmet-sozlesmesi-taramasi/SKILL.md
+input_scenario: >
+  NDA'da gizlilik süresi sözleşme bitiminden itibaren 2 yıl, rekabet
+  yasağı yok, cezai şart gerçekleşen zararla orantılı, makul bir
+  tutarda sabitlenmiş.
+expected_behavior: >
+  Sistem, gizlilik süresinin makul olduğunu, cezai şartın orantılı
+  göründüğünü belirtmeli, belirgin bir dengesizlik bulmamalı, yine de
+  nihai değerlendirmenin avukat tarafından yapılması gerektiğini
+  hatırlatmalı.
+must_include:
+  - "6098"
+must_not_include:
+  - "GDPR"
+risk_level: medium

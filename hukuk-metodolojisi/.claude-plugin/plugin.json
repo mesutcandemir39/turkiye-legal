@@ -1,0 +1,15 @@
+{
+  "name": "hukuk-metodolojisi",
+  "displayName": "Hukuk Metodolojisi",
+  "version": "0.1.0",
+  "description": "Hukuk Metodolojisi alanında 11 beceri: anayasaya uygun yorum ve temel haklar, durustluk kurali ve hakkin kotuye kullanilmasi, gerekceli hukuki akil yurutme metni ve 8 tane daha. İlgili mevzuat: 4721 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "hukuk",
+    "metodolojisi",
+    "4721"
+  ]
+}

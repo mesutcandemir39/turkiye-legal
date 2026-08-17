@@ -1,0 +1,21 @@
+# İdari Dava Açma Süreleri — 2577 sayılı İYUK m.7
+kaynak:
+  tur: kanun
+  numara: "2577"
+  ad: "İdari Yargılama Usulü Kanunu"
+  madde: "7"
+dogrulama_notu: "2026-08-17 tarihinde bağımsız web kaynaklarıyla doğrulandı."
+
+genel_sure:
+  kural: >
+    Özel kanunlarında ayrı süre gösterilmeyen hallerde, dava açma süresi
+    Danıştay'da ve idare mahkemelerinde altmış gün, vergi mahkemelerinde
+    otuz gündür. Süre, yazılı bildirimin yapıldığı tarihi izleyen günden
+    itibaren işlemeye başlar.
+  danistay_idare_mahkemesi_gun: 60
+  vergi_mahkemesi_gun: 30
+  onemli_sinir: >
+    Bu, GENEL süredir. Birçok özel kanun (vergi mevzuatı, imar mevzuatı vb.)
+    kendi özel dava açma süresini öngörebilir — bu durumda özel kanun
+    uygulanır, İYUK m.7'deki genel süre değil. Skill bu ayrımı kullanıcıya
+    mutlaka hatırlatmalıdır.

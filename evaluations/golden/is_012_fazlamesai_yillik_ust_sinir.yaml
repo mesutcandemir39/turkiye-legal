@@ -1,0 +1,18 @@
+# Golden Test — LLM katmani. is-hukuku/skills/fazla-mesai-hesaplayici/SKILL.md'ye karsi calisir.
+
+test_id: is_012
+skill_path: is-hukuku/skills/fazla-mesai-hesaplayici/SKILL.md
+input_scenario: >
+  İşçinin yıl içindeki toplam fazla çalışma saati şu ana kadar 265
+  saat; bu hafta 10 saat daha fazla mesai yaptırılmak isteniyor
+  (denkleştirme yok).
+expected_behavior: >
+  Sistem, yıllık 270 saatlik üst sınırın (4857 m.41) bu ek 10 saatle
+  aşılacağını (275 saat) tespit edip bunun kanuna aykırı olacağını
+  açıkça uyarmalı.
+must_include:
+  - "4857"
+  - "270"
+must_not_include:
+  - "GDPR"
+risk_level: high

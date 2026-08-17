@@ -1,0 +1,16 @@
+{
+  "name": "kiymetli-evrak",
+  "displayName": "Kıymetli Evrak",
+  "version": "0.1.0",
+  "description": "Kıymetli Evrak alanında 11 beceri: aval musteselsil sorumluluk, bono police unsurlar, cek hukuku ve 8 tane daha. İlgili mevzuat: 5941, 6102 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "kiymetli",
+    "evrak",
+    "5941",
+    "6102"
+  ]
+}

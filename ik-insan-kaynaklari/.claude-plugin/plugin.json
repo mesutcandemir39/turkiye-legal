@@ -1,0 +1,16 @@
+{
+  "name": "ik-insan-kaynaklari",
+  "displayName": "İnsan Kaynakları",
+  "version": "0.1.0",
+  "description": "İnsan Kaynakları alanında 11 beceri: calisan kvkk uyumu, calismacosullarinda degisiklik m22, cikis ibra ve rekabet sonrasi ve 8 tane daha. İlgili mevzuat: 4857, 6698 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "insan",
+    "kaynaklari",
+    "4857",
+    "6698"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "turkiye-legal geliştirme ortamı",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+
+  "postCreateCommand": "pip install -r scripts/requirements.txt && npm install --prefix scripts 2>/dev/null || true",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-mermaid",
+        "github.vscode-pull-request-github",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": ["evaluations/static"],
+        "editor.formatOnSave": true,
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff"
+        },
+        "files.eol": "\n",
+        "files.insertFinalNewline": true
+      }
+    }
+  },
+
+  "remoteUser": "vscode",
+
+  "postAttachCommand": {
+    "hosgeldin": "echo '⚖️  turkiye-legal geliştirme ortamına hoş geldiniz. Başlamak için: python scripts/validate/validate_skills.py --help'"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "aile-hukuku",
+  "displayName": "Aile Hukuku",
+  "version": "0.1.0",
+  "description": "Aile Hukuku alanında 10 beceri: bosanma sebepleri ve kusur, dilekce ve protokol taslagi, gorev yetki ve usul ve 7 tane daha. İlgili mevzuat: 4721, 6284 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "aile",
+    "hukuku",
+    "4721",
+    "6284"
+  ]
+}

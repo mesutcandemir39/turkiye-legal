@@ -1,0 +1,15 @@
+{
+  "name": "kabahatler-hukuku",
+  "displayName": "Kabahatler Hukuku",
+  "version": "0.1.0",
+  "description": "Kabahatler Hukuku alanında 11 beceri: basvuru dilekcesi taslagi, basvuru yolu sulh ceza, idari para cezasi denetim semasi ve 8 tane daha. İlgili mevzuat: 5326 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "kabahatler",
+    "hukuku",
+    "5326"
+  ]
+}

@@ -1,0 +1,19 @@
+# Golden Test — LLM katmani. sozlesme/skills/riskli-hukum-taramasi/SKILL.md'ye karsi calisir.
+
+test_id: soz_002
+skill_path: sozlesme/skills/riskli-hukum-taramasi/SKILL.md
+input_scenario: >
+  Sözleşmede taraflar arasında ayrıca özel olarak müzakere edilmiş,
+  el yazısıyla eklenmiş ve her iki tarafça da parafe edilmiş bir madde
+  var; kullanıcı bunun karşılıklı pazarlık sonucu eklendiğini açıkça
+  belirtiyor.
+expected_behavior: >
+  Sistem, özel olarak müzakere edilmiş hükümlerin GİK niteliğinde
+  olmadığını (dolayısıyla TBK m.20-21'in GİK denetiminin doğrudan
+  uygulanmayacağını) belirtmeli, yine de nihai değerlendirmenin bir
+  avukat tarafından yapılması gerektiğini hatırlatmalı.
+must_include:
+  - "6098"
+must_not_include:
+  - "GDPR"
+risk_level: medium

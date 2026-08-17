@@ -1,0 +1,16 @@
+{
+  "name": "sermaye-piyasasi-hukuku",
+  "displayName": "Sermaye Piyasası Hukuku",
+  "version": "0.1.0",
+  "description": "Sermaye Piyasası Hukuku alanında 12 beceri: bilgi suistimali iceriden ogrenenler, halka arz ve izahname, idari yaptirim ve iptal davasi ve 9 tane daha. İlgili mevzuat: 6362 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "sermaye",
+    "piyasasi",
+    "hukuku",
+    "6362"
+  ]
+}

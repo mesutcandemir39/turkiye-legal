@@ -1,0 +1,16 @@
+{
+  "name": "hukuk-felsefesi-genel-teori",
+  "displayName": "Hukuk Felsefesi ve Genel Teori",
+  "version": "0.1.0",
+  "description": "Hukuk Felsefesi ve Genel Teori alanında 10 beceri: argumantasyon ve altlama, dogal hukuk ve adalet, hak ve yukumluluk teorisi ve 7 tane daha.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "hukuk",
+    "felsefesi",
+    "genel",
+    "teori"
+  ]
+}

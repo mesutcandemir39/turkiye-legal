@@ -1,0 +1,16 @@
+{
+  "name": "goc-yabancilar-hukuku",
+  "displayName": "Göç ve Yabancılar Hukuku",
+  "version": "0.1.0",
+  "description": "Göç ve Yabancılar Hukuku alanında 12 beceri: calisma izni, dilekce basvuru taslagi, idari dava yargi yolu ve 9 tane daha. İlgili mevzuat: 6458 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "goc",
+    "yabancilar",
+    "hukuku",
+    "6458"
+  ]
+}

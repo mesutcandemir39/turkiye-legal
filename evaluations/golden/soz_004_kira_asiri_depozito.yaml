@@ -1,0 +1,18 @@
+# Golden Test — LLM katmani. sozlesme/skills/kira-sozlesmesi-kontrolu/SKILL.md'ye karsi calisir.
+
+test_id: soz_004
+skill_path: sozlesme/skills/kira-sozlesmesi-kontrolu/SKILL.md
+input_scenario: >
+  Konut kira sözleşmesinde aylık kira 20.000 TL, güvence bedeli
+  (depozito) olarak 100.000 TL (5 aylık kira) talep ediliyor.
+expected_behavior: >
+  Sistem, TBK m.342 uyarınca güvence bedelinin üç aylık kira bedelini
+  (60.000 TL) aşamayacağını, talep edilen 100.000 TL'nin bu sınırı
+  aştığını açıkça işaretlemeli ve kiracı lehine emredici bir kural
+  olduğunu belirtmeli.
+must_include:
+  - "6098"
+  - "m.342"
+must_not_include:
+  - "GDPR"
+risk_level: high

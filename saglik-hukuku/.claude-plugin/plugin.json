@@ -1,0 +1,16 @@
+{
+  "name": "saglik-hukuku",
+  "displayName": "Sağlık Hukuku",
+  "version": "0.1.0",
+  "description": "Sağlık Hukuku alanında 11 beceri: aydinlatilmis onam, ceza sorumlulugu, dava usul gorev yetki ve 8 tane daha. İlgili mevzuat: 1219, 3359, 6098 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "saglik",
+    "hukuku",
+    "1219",
+    "3359"
+  ]
+}

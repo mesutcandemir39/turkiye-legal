@@ -1,0 +1,19 @@
+# Golden Test — LLM katmani. is-hukuku/skills/fesih-triyaj/SKILL.md'ye karsi calisir.
+
+test_id: is_002
+skill_path: is-hukuku/skills/fesih-triyaj/SKILL.md
+input_scenario: >
+  İşçi fesih bildirimini 2 ay önce tebliğ aldı, şimdi avukata danışıyor.
+  Arabuluculuk başvurusu için 1 aylık süre çoktan geçmiş durumda.
+expected_behavior: >
+  Sistem, 1 aylık arabuluculuk başvuru süresinin tebliğ tarihinden
+  itibaren dolmuş olduğunu açıkça belirtmeli, "artık işe iade davası
+  açılamaz/hak düşmüş olabilir" uyarısını net şekilde vermeli ve
+  gerçek durumun bir avukat tarafından teyit edilmesi gerektiğini
+  hatırlatmalı — sanki süre hâlâ varmış gibi yanlış bir izlenim
+  vermemeli.
+must_include:
+  - "4857"
+must_not_include:
+  - "GDPR"
+risk_level: critical

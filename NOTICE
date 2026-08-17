@@ -1,0 +1,32 @@
+turkiye-legal
+Copyright 2026 Mesut Can Demir
+
+Bu ürün Apache License, Version 2.0 kapsamında lisanslanmıştır.
+Lisansın tam metni için "LICENSE" dosyasına bakınız.
+
+================================================================================
+ATIF (Apache License 2.0, Madde 4(d) gereği)
+================================================================================
+
+Bu proje Mesut Can Demir tarafından kurulmuş ve mimarisi tasarlanmıştır.
+Bu depo yeniden dağıtıldığında (fork, kopya, türev eser), bu NOTICE
+dosyasının değişmeden korunması Apache License 2.0 Madde 4(d) gereği
+zorunludur.
+
+Orijinal depo:  https://github.com/mesutcandemir39/turkiye-legal
+Orijinal yazar: Mesut Can Demir
+
+================================================================================
+TİCARİ MARKA BİLDİRİMİ
+================================================================================
+
+turkiye-legal, Anthropic'in resmi bir ürünü DEĞİLDİR; Anthropic tarafından
+desteklenmemekte veya onaylanmamaktadır. "Claude" ve "Anthropic" ilgili
+sahiplerinin ticari markalarıdır.
+
+================================================================================
+DEĞİŞİKLİK BİLDİRİMİ
+================================================================================
+
+Bu depodaki dosyalar üzerinde yapılan değişiklikler "CHANGELOG.md"
+dosyasında ve git commit geçmişinde kayıtlıdır.

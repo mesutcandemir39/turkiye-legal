@@ -1,0 +1,6 @@
+pyyaml>=6.0
+jsonschema>=4.23
+# DIKKAT: pytest>=9.0.3 zorunlu — 9.0.3 oncesi surumler PYSEC-2026-1845 /
+# GHSA-6w46-j5rx-g56g (tmpdir handling) acigina sahiptir. Alt sinir bilincli
+# olarak yukselti, "en az" degil "guvenli en az" anlaminda.
+pytest>=9.0.3

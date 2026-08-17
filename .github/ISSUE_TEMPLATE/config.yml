@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Güvenlik açığı bildirimi (kritik / gizli)
+    url: https://github.com/mesutcandemir39/turkiye-legal/security/advisories/new
+    about: "Prompt injection, veri sızıntısı veya benzeri kritik güvenlik açıklarını LÜTFEN public issue olarak açmayın. Bu bağlantıyı kullanın. Detay: SECURITY.md"
+  - name: 💬 Genel soru / tartışma
+    url: https://github.com/mesutcandemir39/turkiye-legal/discussions
+    about: "Bug veya somut bir talep değil de genel bir soru mu sormak istiyorsunuz? Discussions'ı kullanın."

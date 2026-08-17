@@ -1,0 +1,131 @@
+{
+  "mcps": [
+    {
+      "name": "turkiye-legal-ceza-infaz-mcp",
+      "description": "Ceza hukuku ve infaz sistemi",
+      "categories": [
+        {"name": "ceza-suclar-cezalar", "count": 30},
+        {"name": "ceza-tayin-sistemi", "count": 20},
+        {"name": "infaz-sistemi", "count": 20}
+      ],
+      "risk": "high",
+      "sources": [
+        {"type": "law", "name": "TCK"},
+        {"type": "law", "name": "CMK"},
+        {"type": "law", "name": "Ceza İnfaz Kanunu"}
+      ]
+    },
+    {
+      "name": "turkiye-legal-cevre-hukuku-mcp",
+      "description": "Çevre hukuku ve çevre koruma norm",
+      "categories": [
+        {"name": "cevre-hukuku-tabanlar", "count": 25},
+        {"name": "hava-su-toprak-kirlilik", "count": 20},
+        {"name": "orman-turizmeciligte-cevre", "count": 15}
+      ],
+      "risk": "medium",
+      "sources": [
+        {"type": "law", "name": "Çevre Kanunu"},
+        {"type": "ministry", "name": "Çevre Bakanlığı"}
+      ]
+    },
+    {
+      "name": "turkiye-legal-is-mahkemesi-kararlar-mcp",
+      "description": "İş Mahkemesi kararları ve uyuşmazlıklar",
+      "categories": [
+        {"name": "is-uyusmazliklari", "count": 25},
+        {"name": "grev-lokavt", "count": 15},
+        {"name": "toplu-pazarlik", "count": 10}
+      ],
+      "risk": "high",
+      "sources": [
+        {"type": "court", "name": "İş Mahkemeleri"},
+        {"type": "law", "name": "İş Kanunu"}
+      ]
+    },
+    {
+      "name": "turkiye-legal-tuketici-hakem-mcp",
+      "description": "Tüketici hukuku ve hakem heyetleri",
+      "categories": [
+        {"name": "tuketici-haklari", "count": 20},
+        {"name": "hakem-heyeti-kararlar", "count": 15},
+        {"name": "ticarete-konu-edilen-esya", "count": 10}
+      ],
+      "risk": "medium",
+      "sources": [
+        {"type": "law", "name": "Tüketici Kanunu"},
+        {"type": "ministry", "name": "Ticaret Bakanlığı"}
+      ]
+    },
+    {
+      "name": "turkiye-legal-noter-islemleri-mcp",
+      "description": "Noter işlemleri ve sertifikasyon",
+      "categories": [
+        {"name": "noter-tasdiki", "count": 20},
+        {"name": "senetlerin-ilanen-kaydı", "count": 10},
+        {"name": "vasi-muvekkil-islemleri", "count": 5}
+      ],
+      "risk": "medium",
+      "sources": [
+        {"type": "law", "name": "Noter Kanunu"},
+        {"type": "ministry", "name": "Adalet Bakanlığı"}
+      ]
+    },
+    {
+      "name": "turkiye-legal-dis-ticaret-mcp",
+      "description": "Dış ticaret hukuku ve ithalatlar",
+      "categories": [
+        {"name": "dis-ticaret-muahedeleri", "count": 20},
+        {"name": "ihracat-ithalat-lisanslari", "count": 15},
+        {"name": "antidamping-safeguard", "count": 10}
+      ],
+      "risk": "high",
+      "sources": [
+        {"type": "ministry", "name": "Ticaret Bakanlığı"},
+        {"type": "international", "name": "DTÖ Anlaşmaları"}
+      ]
+    },
+    {
+      "name": "turkiye-legal-is-sagligi-guvenligi-mcp",
+      "description": "İş sağlığı ve güvenliği norm",
+      "categories": [
+        {"name": "is-guvenligi-tabanlar", "count": 25},
+        {"name": "ozur-riskli-isler", "count": 20},
+        {"name": "personel-ayrilma-is-guvenligi", "count": 10}
+      ],
+      "risk": "high",
+      "sources": [
+        {"type": "law", "name": "İSG Kanunu"},
+        {"type": "ministry", "name": "Çalışma Bakanlığı"}
+      ]
+    },
+    {
+      "name": "turkiye-legal-akademik-yayinlar-mcp",
+      "description": "Akademik araştırma ve üniversite hukuku",
+      "categories": [
+        {"name": "universite-hukuku", "count": 20},
+        {"name": "akademik-oz-denetim", "count": 15},
+        {"name": "bilimsel-yayinlar-guzellestirme", "count": 10}
+      ],
+      "risk": "low",
+      "sources": [
+        {"type": "law", "name": "Yüksek Öğretim Kanunu"},
+        {"type": "ministry", "name": "Milli Eğitim Bakanlığı"}
+      ]
+    },
+    {
+      "name": "turkiye-legal-barosu-disiplin-mcp",
+      "description": "Baro disiplin cezaları ve mesleki etik",
+      "categories": [
+        {"name": "barosu-disiplin-kararlari", "count": 20},
+        {"name": "avukat-mesleki-etik", "count": 15},
+        {"name": "avukat-sorumlulugu", "count": 15}
+      ],
+      "risk": "high",
+      "sources": [
+        {"type": "law", "name": "Avukatlık Kanunu"},
+        {"type": "organization", "name": "Türkiye Barolar Birliği"}
+      ]
+    }
+  ]
+}

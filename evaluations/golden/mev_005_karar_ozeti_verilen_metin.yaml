@@ -1,0 +1,19 @@
+# Golden Test — LLM katmani. mevzuat-takip/skills/yargitay-karar-ozeti/SKILL.md'ye karsi calisir.
+
+test_id: mev_005
+skill_path: mevzuat-takip/skills/yargitay-karar-ozeti/SKILL.md
+input_scenario: >
+  Kullanıcı gerçek bir karar metni veriyor: "Esas: 2022/1500, Karar:
+  2023/220, Yargıtay 3. Hukuk Dairesi. Davacı, kira bedelinin
+  tespitini talep etmiştir... Daire, ilk derece mahkemesinin kararını
+  onamıştır." (tam metin verilmiş sayılır)
+expected_behavior: >
+  Sistem, verilen metindeki Esas/Karar numarasını, olay özetini, hukuki
+  meseleyi ve sonucu (onama) birebir aktararak özetlemeli; bu kararın
+  tek bir daire kararı olarak bağlayıcı olmadığını (emsal niteliğinde
+  olduğunu) belirtmeli.
+must_include:
+  - "2022/1500"
+must_not_include:
+  - "GDPR"
+risk_level: critical

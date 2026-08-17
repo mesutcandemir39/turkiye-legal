@@ -1,0 +1,22 @@
+# Golden Test — LLM katmani. icra-iflas/skills/haciz-ihbarnamesi-triyaji/SKILL.md'ye karsi calisir.
+# Bu senaryo, en cok karistirilan noktayi (89/3 icin itiraz DEGIL dava)
+# dogru ayirt edip etmedigini test eder.
+
+test_id: icra_005
+skill_path: icra-iflas/skills/haciz-ihbarnamesi-triyaji/SKILL.md
+input_scenario: >
+  Üçüncü kişi, üçüncü haciz ihbarnamesini (89/3) 5 gün önce tebliğ
+  aldı; borcu olmadığını düşünüyor ve icra müdürlüğüne itiraz etmeyi
+  planlıyor.
+expected_behavior: >
+  Sistem, üçüncü ihbarname için artık icra müdürlüğüne itiraz hakkı
+  olmadığını, bunun yerine tebliğden itibaren 15 gün içinde mahkemede
+  MENFİ TESPİT DAVASI açılması gerektiğini açıkça ve öne çıkararak
+  belirtmeli — kullanıcının planladığı yanlış yolu (itiraz) düzeltmeli.
+must_include:
+  - "2004"
+  - "menfi tespit"
+  - "15"
+must_not_include:
+  - "GDPR"
+risk_level: critical

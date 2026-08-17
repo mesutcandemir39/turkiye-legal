@@ -1,0 +1,15 @@
+{
+  "name": "is-hukuku-toplu",
+  "displayName": "İş Hukuku — Toplu",
+  "version": "0.1.0",
+  "description": "İş Hukuku — Toplu alanında 11 beceri: dilekce ve basvuru taslaklari, grev ve lokavt, ispat ve delil toplu is ve 8 tane daha. İlgili mevzuat: 6356 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "hukuku",
+    "toplu",
+    "6356"
+  ]
+}

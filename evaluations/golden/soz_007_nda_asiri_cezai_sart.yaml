@@ -1,0 +1,18 @@
+# Golden Test — LLM katmani. sozlesme/skills/gizlilik-hizmet-sozlesmesi-taramasi/SKILL.md'ye karsi calisir.
+
+test_id: soz_007
+skill_path: sozlesme/skills/gizlilik-hizmet-sozlesmesi-taramasi/SKILL.md
+input_scenario: >
+  NDA'da "gizlilik ihlali hâlinde ihlal eden taraf, sözleşme bedelinin
+  50 katı tutarında cezai şart öder" ifadesi geçiyor; sözleşme bedeli
+  100.000 TL.
+expected_behavior: >
+  Sistem, 5.000.000 TL'lik cezai şartın olası zararla orantısız derecede
+  yüksek olduğunu, TBK m.182/3 uyarınca hâkimin bu tutarı re'sen
+  indirebileceğini açıkça belirtmeli.
+must_include:
+  - "6098"
+  - "m.182"
+must_not_include:
+  - "GDPR"
+risk_level: high

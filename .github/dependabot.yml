@@ -1,0 +1,32 @@
+version: 2
+
+# Rutin sürüm yükseltme PR'ları KAPALI (open-pull-requests-limit: 0).
+# Dependabot güvenlik güncellemeleri bundan bağımsızdır ve AÇIK kalır —
+# bir bağımlılıkta gerçek bir güvenlik açığı bulunduğunda yine PR açılır.
+# Böylece depo gürültüsüz kalır ama güvenlik uyarıları kaybolmaz.
+#
+# Rutin yükseltmeleri geri açmak için: open-pull-requests-limit değerini
+# 5 gibi bir sayıya çekin.
+
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 0
+    labels:
+      - "type: enhancement"
+      - "status: dev-approval-needed"
+    commit-message:
+      prefix: "chore(actions)"
+
+  - package-ecosystem: "pip"
+    directory: "/scripts"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 0
+    labels:
+      - "type: enhancement"
+      - "status: dev-approval-needed"
+    commit-message:
+      prefix: "chore(deps)"

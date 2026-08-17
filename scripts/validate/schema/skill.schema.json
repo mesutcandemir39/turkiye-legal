@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/mesutcandemir39/turkiye-legal/scripts/validate/schema/skill.schema.json",
+  "title": "turkiye-legal SKILL.md frontmatter şeması",
+  "description": "Bkz. docs/ARCHITECTURE_DECISIONS.md ADR-004. Bu şema, SKILL.md YAML frontmatter'ının tamamını doğrular. additionalProperties=false BİLİNÇLİ olarak kapalı bırakılmıştır ki Claude Code'un okuduğu üst düzey alanlar (name, description, argument-hint, user-invocable) ile bizim turkiye_legal: bloğumuz karışmasın.",
+  "type": "object",
+  "required": ["name", "description", "turkiye_legal"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "kebab-case skill adı"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1024,
+      "description": "Claude Code tetikleme sinyali"
+    },
+    "argument-hint": {
+      "type": "string"
+    },
+    "user-invocable": {
+      "type": "boolean"
+    },
+    "turkiye_legal": {
+      "type": "object",
+      "required": [
+        "version",
+        "category",
+        "jurisdiction",
+        "risk_level",
+        "requires_human_review",
+        "inputs",
+        "outputs",
+        "sources",
+        "attribution"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdiction": {
+          "type": "object",
+          "required": ["country", "legal_system", "scope"],
+          "additionalProperties": false,
+          "properties": {
+            "country": {
+              "const": "TR",
+              "description": "Şu an yalnızca TR desteklenir; ADR-003 gereği bu proje Türk hukukuna odaklıdır."
+            },
+            "legal_system": {
+              "const": "civil_law"
+            },
+            "scope": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "risk_level": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "critical"]
+        },
+        "requires_human_review": {
+          "type": "boolean"
+        },
+        "inputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "outputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "sources": {
+          "type": "array",
+          "description": "Boş olabilir yalnızca category='meta' (örn. cekirdek'in protokol dosyaları) ise; aksi hâlde en az bir atıf beklenir ve validate_sources.py bu atıfları sources/ defterine karşı denetler.",
+          "items": {
+            "type": "object",
+            "required": ["tur", "numara", "ad"],
+            "additionalProperties": false,
+            "properties": {
+              "tur": {
+                "type": "string",
+                "enum": ["anayasa", "kanun", "kararname", "yonetmelik", "teblig", "genelge", "ictihat", "doktrin"]
+              },
+              "numara": {
+                "type": "string",
+                "description": "Kanun/karar numarası; içtihat için Esas/Karar no birleşik yazılabilir. DİKKAT: alan adı bilinçli olarak 'numara' — 'no' YAML 1.1'de unquoted kullanıldığında boolean False'a çözümlenir (bkz. scripts/validate/validate_skills.py başlığı)."
+              },
+              "ad": {
+                "type": "string"
+              },
+              "madde": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "attribution": {
+          "type": "object",
+          "required": ["original_author", "original_repository", "license"],
+          "additionalProperties": false,
+          "properties": {
+            "original_author": { "const": "Mesut Can Demir" },
+            "original_repository": {
+              "const": "https://github.com/mesutcandemir39/turkiye-legal"
+            },
+            "license": { "const": "Apache-2.0" },
+            "upstream": { "type": "string" }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "risk_level": { "enum": ["high", "critical"] } }
+          },
+          "then": {
+            "properties": { "requires_human_review": { "const": true } }
+          }
+        }
+      ]
+    }
+  }
+}
