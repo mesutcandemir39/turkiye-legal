@@ -1,0 +1,18 @@
+{
+  "name": "idare-vergi",
+  "displayName": "İdare ve Vergi",
+  "version": "0.1.0",
+  "description": "2577 sayılı İYUK ve 213 sayılı VUK kapsamında idari işlem/dava triyajı sağlayan skill. Tier B — dar kapsamlı, topluluk katkısına açık.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "idare-hukuku",
+    "vergi",
+    "2577",
+    "213",
+    "iyuk",
+    "vuk"
+  ]
+}

@@ -1,0 +1,74 @@
+name: Güvenlik Taraması
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Her Pazartesi 06:00 UTC — bağımlılık ve statik analiz taraması
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  codeql:
+    name: CodeQL statik analiz
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    strategy:
+      matrix:
+        # DİKKAT: "javascript-typescript" buraya EKLEMEYİN — bu repoda hiç
+        # JS/TS kaynak dosyası yok (yalnız Python + YAML + Markdown). CodeQL
+        # bos bir dil icin "fatal error" ile basarisiz olur (ampirik olarak
+        # dogrulandi: v0.1.0 oncesi CI'da tespit edildi). Gercek bir JS/TS
+        # script eklendiginde bu listeye geri eklenebilir.
+        language: ["python"]
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: github/codeql-action/init@51f77329afa6477de8c49fc9c7046c15b9a4e79d # v3.29.5 (SHA gercek API ile dogrulandi)
+        with:
+          languages: ${{ matrix.language }}
+      - uses: github/codeql-action/analyze@51f77329afa6477de8c49fc9c7046c15b9a4e79d # v3.29.5 (SHA gercek API ile dogrulandi)
+
+  scorecard:
+    name: OpenSSF Scorecard
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: read
+      security-events: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: ossf/scorecard-action@62b2cac7ed8198b15735ed49ab1e5cf35480ba46 # v2.4.0
+        with:
+          results_file: results.sarif
+          results_format: sarif
+          publish_results: true
+      - uses: github/codeql-action/upload-sarif@51f77329afa6477de8c49fc9c7046c15b9a4e79d # v3.29.5 (SHA gercek API ile dogrulandi)
+        with:
+          sarif_file: results.sarif
+
+  tool-scope-lint:
+    name: Hooks / araç yetkisi denetimi
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.3.0
+        with:
+          python-version: "3.11"
+      - name: Bağımlılıkları kur
+        run: pip install --require-hashes -r scripts/requirements.lock.txt
+      - name: hooks/ içindeki shell çağrılarını denetle
+        run: python scripts/validate/lint_tool_scope.py --strict
+
+  # NOT: pull_request_target BİLİNÇLİ OLARAK KULLANILMAZ.
+  # Bu tetikleyici, fork'tan gelen koda depo yazma yetkili bir bağlamda
+  # (secrets erişimi dahil) çalışma imkânı verir ve token sızıntısına yol açan
+  # bilinen bir saldırı yüzeyidir. Detay: docs/ARCHITECTURE_DECISIONS.md ADR-008.

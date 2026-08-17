@@ -1,0 +1,37 @@
+# Fazla Çalışma Kuralları — 4857 sayılı İş Kanunu m.41
+kaynak:
+  tur: kanun
+  numara: "4857"
+  ad: "İş Kanunu"
+  madde: "41"
+dogrulama_notu: "2026-08-17 tarihinde bağımsız web kaynaklarıyla doğrulandı."
+
+tanim:
+  kural: "Fazla çalışma, haftalık 45 saati aşan çalışmadır."
+  haftalik_esik_saat: 45
+
+ucret:
+  kural: >
+    Her bir saat fazla çalışma için ödenecek ücret, normal çalışma
+    ücretinin saatlik miktarının yüzde elli (%50) yükseltilmesi
+    suretiyle hesaplanır.
+  zam_orani_yuzde: 50
+
+yillik_ust_sinir:
+  kural: "Fazla çalışmanın yıllık toplamı 270 saati geçemez."
+  saat: 270
+
+denklestirme_istisnasi:
+  kural: >
+    m.63 kapsamında denkleştirme esası uygulanan hallerde, işçinin
+    haftalık ortalama çalışma süresi normal haftalık iş süresini
+    (genellikle 45 saat) aşmamak kaydıyla, bazı haftalarda 45 saati
+    aşsa dahi bu çalışma fazla çalışma SAYILMAZ. Bu istisna, sözleşmede
+    veya toplu iş sözleşmesinde denkleştirme düzenlemesi olup olmadığına
+    bağlıdır.
+
+kapsam_disi:
+  - konu: "Fazla sürelerle çalışma (haftalık iş süresinin sözleşmeyle 45 saatin altında belirlendiği hallerde, 45 saate kadar olan çalışma — m.41 farklı bir zam oranı öngörür: %25)"
+    neden: "Bu ayrı bir kavramdır (fazla çalışma değil, 'fazla sürelerle çalışma'); bu ilk sürümde ele alınmamıştır, ikinci bağımsız kaynakla doğrulanıp eklenecektir."
+  - konu: "Gece çalışması, hafta tatili çalışması gibi özel fazla çalışma türleri"
+    neden: "Ayrı hükümlere tabidir, bu skill kapsamı dışındadır."

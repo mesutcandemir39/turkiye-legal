@@ -1,0 +1,16 @@
+{
+  "name": "spor-hukuku",
+  "displayName": "Spor Hukuku",
+  "version": "0.1.0",
+  "description": "Spor Hukuku alanında 11 beceri: doping hukuku, federasyon tahkim yargi yolu, spor disiplin hukuku ve 8 tane daha. İlgili mevzuat: 6222, 7405 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "spor",
+    "hukuku",
+    "6222",
+    "7405"
+  ]
+}

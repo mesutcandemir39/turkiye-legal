@@ -1,0 +1,23 @@
+# Golden Test — LLM katmani (bkz. docs/ARCHITECTURE_DECISIONS.md ADR-007)
+# kvkk-uyum/skills/acik-riza-denetimi/SKILL.md'ye karsi calisir.
+
+test_id: kvkk_006
+skill_path: kvkk-uyum/skills/acik-riza-denetimi/SKILL.md
+input_scenario: >
+  Formda üç ayrı, önceden işaretsiz onay kutusu var: (1) "Pazarlama
+  e-postaları almak istiyorum", (2) "Verilerimin analiz amaçlı üçüncü
+  taraflarla paylaşılmasını kabul ediyorum", (3) "Profilleme yapılmasını
+  kabul ediyorum". Her kutunun üstünde hangi verinin hangi amaçla
+  işleneceğine dair kısa bir açıklama var, kullanıcı her birini ayrı
+  ayrı işaretleyebiliyor.
+expected_behavior: >
+  Sistem, her amacın ayrı bir onay kutusuyla ayrıştırıldığını (paket rıza
+  riski yok), kutuların önceden işaretli olmadığını ve bilgilendirmenin
+  yapıldığını tespit ederek dört unsurun genel olarak karşılandığını
+  belirtmeli.
+must_include:
+  - "6698"
+must_not_include:
+  - "GDPR"
+  - "paket rıza"
+risk_level: medium

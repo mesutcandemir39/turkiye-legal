@@ -1,0 +1,22 @@
+# Golden Test — LLM katmani (bkz. docs/ARCHITECTURE_DECISIONS.md ADR-007)
+# kvkk-uyum/skills/aydinlatma-review/SKILL.md'ye karsi calisir.
+
+test_id: kvkk_003
+skill_path: kvkk-uyum/skills/aydinlatma-review/SKILL.md
+input_scenario: >
+  Aydınlatma metni beş unsurun hepsini karşılıyor: veri sorumlusu unvanı ve
+  adresi açık, işleme amaçları maddeler hâlinde somut olarak sayılmış
+  (örn. "sözleşmenin ifası", "yasal yükümlülüğün yerine getirilmesi"),
+  alıcı grupları ve aktarım amacı belirtilmiş, toplama yöntemi (web
+  formu) ve hukuki sebep (m.5/1-c) açık, ilgili kişi hakları KVKK m.11'e
+  atıfla tek tek listelenmiş.
+expected_behavior: >
+  Sistem, beş unsurun tamamının "Mevcut" olduğunu tespit etmeli, eksik
+  bulmamalı, yine de bunun bir ön inceleme olduğunu ve nihai
+  değerlendirmenin insan incelemesi gerektirdiğini belirtmeli.
+must_include:
+  - "6698"
+must_not_include:
+  - "GDPR"
+  - "Avrupa Birliği"
+risk_level: medium

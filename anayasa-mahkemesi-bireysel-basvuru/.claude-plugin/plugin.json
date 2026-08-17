@@ -1,0 +1,18 @@
+{
+  "name": "anayasa-mahkemesi-bireysel-basvuru",
+  "displayName": "AYM Bireysel Başvuru",
+  "version": "0.1.0",
+  "description": "AYM Bireysel Başvuru alanında 12 beceri: adil yargilanma hakki, basvuru formu ve dilekce, basvuru yollarinin tuketilmesi ve 9 tane daha. İlgili mevzuat: 2709, 6216 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "anayasa",
+    "mahkemesi",
+    "bireysel",
+    "basvuru",
+    "2709",
+    "6216"
+  ]
+}

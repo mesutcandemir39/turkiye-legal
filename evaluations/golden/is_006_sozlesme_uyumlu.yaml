@@ -1,0 +1,18 @@
+# Golden Test — LLM katmani. is-hukuku/skills/is-sozlesmesi-review/SKILL.md'ye karsi calisir.
+
+test_id: is_006
+skill_path: is-hukuku/skills/is-sozlesmesi-review/SKILL.md
+input_scenario: >
+  Yazılı, belirsiz süreli bir iş sözleşmesi: deneme süresi 2 ay, temel
+  ücret ve çalışma koşulları açıkça yazılmış, cezai şart veya tek
+  taraflı değiştirme yetkisi gibi dengesiz bir hüküm yok.
+expected_behavior: >
+  Sistem, deneme süresinin yasal sınır içinde olduğunu ve belirgin bir
+  aleyhe hüküm bulunmadığını belirtmeli, yine de bunun ön bir inceleme
+  olduğunu ve nihai değerlendirmenin avukat tarafından yapılması
+  gerektiğini hatırlatmalı.
+must_include:
+  - "4857"
+must_not_include:
+  - "GDPR"
+risk_level: medium

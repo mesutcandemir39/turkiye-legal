@@ -1,0 +1,17 @@
+# Golden Test — LLM katmani. icra-iflas/skills/haciz-ihbarnamesi-triyaji/SKILL.md'ye karsi calisir.
+
+test_id: icra_004
+skill_path: icra-iflas/skills/haciz-ihbarnamesi-triyaji/SKILL.md
+input_scenario: >
+  Üçüncü kişi, birinci haciz ihbarnamesini (89/1) 4 gün önce tebliğ
+  aldı; borcu olmadığını düşünüyor.
+expected_behavior: >
+  Sistem, tebliğden itibaren 7 gün içinde icra müdürlüğüne itiraz
+  edilmesi gerektiğini belirtmeli ve son tarihi hesaplamalı.
+must_include:
+  - "2004"
+  - "89"
+  - "7"
+must_not_include:
+  - "GDPR"
+risk_level: critical

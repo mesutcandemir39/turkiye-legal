@@ -1,0 +1,16 @@
+{
+  "name": "sozlesme-inceleme-redline",
+  "displayName": "Sözleşme İnceleme ve Redline",
+  "version": "0.1.0",
+  "description": "Sözleşme İnceleme ve Redline alanında 11 beceri: bedel faiz odeme ve uyarlama, cezai sart ve tazminat on belirleme, eksik madde ve bosluk tespiti ve 8 tane daha. İlgili mevzuat: 6098 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "sozlesme",
+    "inceleme",
+    "redline",
+    "6098"
+  ]
+}

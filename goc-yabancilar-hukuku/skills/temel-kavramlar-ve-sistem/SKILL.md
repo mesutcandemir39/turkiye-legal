@@ -1,0 +1,64 @@
+---
+argument-hint: ''
+description: Yabancının statüsünü (vize, ikamet, koruma, çalışma, düzensiz göçmen)
+  belirleyip hangi rejim ve makamın uygulanacağını saptamak gerektiğinde; göç hukukunun
+  temel kavram ve kurum haritasına ihtiyaç duy
+name: temel-kavramlar-ve-sistem
+turkiye_legal:
+  attribution:
+    license: Apache-2.0
+    original_author: Mesut Can Demir
+    original_repository: https://github.com/mesutcandemir39/turkiye-legal
+  category: litigation
+  inputs:
+  - '[giriş tanımlanmadı — beceri gövdesinden çıkarılacak]'
+  jurisdiction:
+    country: TR
+    legal_system: civil_law
+    scope:
+    - TR
+  outputs:
+  - '[çıktı tanımlanmadı — beceri gövdesinden çıkarılacak]'
+  requires_human_review: false
+  risk_level: medium
+  sources:
+  - ad: Yabancılar ve Uluslararası Koruma Kanunu
+    numara: '6458'
+    tur: kanun
+  version: 0.1.0
+user-invocable: true
+---
+
+
+# Temel Kavramlar ve Sistematik
+
+## Görev
+Somut olayda yabancının hukuki statüsünü doğru sınıflandırmak, uygulanacak normu (6458 YUKK, 6735 İşgücü K., 5901 Vatandaşlık K.) ve yetkili makamı belirlemek; sonraki tüm işlemlerin dayanacağı statü zeminini kurmak.
+
+## Soğuk başlangıç (intake)
+1. Yabancının uyruğu ve Türkiye'ye giriş şekli/tarihi nedir (vizeli, vizesiz, düzensiz)?
+2. Hâlihazırda geçerli bir ikamet izni, çalışma izni veya koruma kaydı var mı; varsa türü ve bitiş tarihi?
+3. Eline tebliğ edilen bir idari işlem (ikamet ret, sınır dışı, gözetim, çalışma izni ret) var mı, tarihi?
+4. Talep nedir: kalışın düzenlenmesi, çalışma, koruma, uzaklaştırmaya itiraz, vatandaşlık?
+
+## Denetim şeması
+1. **Giriş ve vize ekseni**: YUKK m.11-17. Vize muafiyeti, vize ihlali, giriş yasağı (m.9) kontrol edilir.
+2. **Yasal kalış ekseni**: İkamet izni türü ayrımı — kısa dönem (m.31), aile (m.34), öğrenci (m.38), uzun dönem (m.42), insani (m.46), insan ticareti mağduru (m.48). Hangi türün şartlarını taşıdığı belirlenir; uzun dönem için kesintisiz 8 yıl ikamet (m.42/1) gibi eşikler değerlendirilir.
+3. **Koruma ekseni**: Uluslararası koruma (mülteci m.61, şartlı mülteci m.62, ikincil koruma m.63) ile geçici koruma (Geçici Koruma Yönetmeliği) ayrılır. Bu eksende olan yabancı için ikamet/sınır dışı rejimi farklı işler.
+4. **Çalışma ekseni**: 6735 m.6 vd. — çalışma izni ikamet yerine geçer mi (m.13), kim başvurabilir.
+5. **Düzensizlik ve yaptırım ekseni**: Statüsüz kalış sınır dışı (m.52) ve gözetim (m.57) riski doğurur; geri gönderme yasağı (m.4, m.55) süzgeci uygulanır.
+**Ara sonuç**: Yabancı tek bir eksene yerleştirilir; çoklu statü çatışması varsa lehe olan ve aktif koruma sağlayan statü esas alınır.
+
+## Çıktı modülleri
+- Statü tespit tablosu (eksen, dayanak madde, geçerlilik, riskler).
+- Yetkili makam ve yargı mercii haritası.
+- Bir sonraki adım önerisi ve yönlendirilecek uzman beceri.
+
+
+
+## Kaynak kuralı (katı)
+
+- **İçtihat yalnızca doğrulanmış künyeyle.** Her karar mahkeme + daire + **esas/karar numarası** + tarih + doğrulanabilir kaynak ile.
+- **MCP araçları varsa resmî metni onlardan çek.** `turkiye-legal-mevzuat-mcp` kuruluysa `madde_getir` / `kanun_metni_getir` ile getir; `turkiye-legal-ictihat-mcp` kuruluysa `ictihat_ara` / `karar_getir` ile.
+- **Varsayımları açıkça işaretle.**
+

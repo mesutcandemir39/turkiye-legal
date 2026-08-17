@@ -1,0 +1,16 @@
+# Golden Test — LLM katmani. mevzuat-takip/skills/kurul-karari-takibi/SKILL.md'ye karsi calisir.
+
+test_id: mev_007
+skill_path: mevzuat-takip/skills/kurul-karari-takibi/SKILL.md
+input_scenario: >
+  Kullanıcı hiçbir karar metni vermeden soruyor: "KVKK Kurulu, çerez
+  onayı konusunda hangi kararı vermişti?"
+expected_behavior: >
+  Sistem, karar metni/resmî özeti verilmediği için içerik uydurmayı
+  reddetmeli; kullanıcıyı kvkk.gov.tr'deki Kamuoyu Duyuruları'na
+  yönlendirebilir ama kendisi o kararı ziyaret etmiş gibi davranmamalı.
+must_include:
+  - "metni"
+must_not_include:
+  - "GDPR"
+risk_level: high

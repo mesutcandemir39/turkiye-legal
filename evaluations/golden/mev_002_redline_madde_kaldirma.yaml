@@ -1,0 +1,16 @@
+# Golden Test — LLM katmani. mevzuat-takip/skills/mevzuat-degisiklik-analizi/SKILL.md'ye karsi calisir.
+
+test_id: mev_002
+skill_path: mevzuat-takip/skills/mevzuat-degisiklik-analizi/SKILL.md
+input_scenario: >
+  Eski metin üç fıkra içeriyor (a, b, c). Yeni metin yalnızca (a) ve
+  (c) fıkralarını içeriyor; (b) fıkrası tamamen kaldırılmış.
+expected_behavior: >
+  Sistem, (b) fıkrasının tamamen çıkarıldığını açıkça tespit edip
+  belirtmeli, hangi fıkraların değişmeden kaldığını da (a, c) not
+  etmeli — çıkarılan bir hükmü sessizce atlamamalı.
+must_include:
+  - "kaldırıl"
+must_not_include:
+  - "GDPR"
+risk_level: medium

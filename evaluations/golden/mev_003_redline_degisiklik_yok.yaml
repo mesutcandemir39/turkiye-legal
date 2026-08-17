@@ -1,0 +1,15 @@
+# Golden Test — LLM katmani. mevzuat-takip/skills/mevzuat-degisiklik-analizi/SKILL.md'ye karsi calisir.
+
+test_id: mev_003
+skill_path: mevzuat-takip/skills/mevzuat-degisiklik-analizi/SKILL.md
+input_scenario: >
+  Kullanıcı eski ve yeni metin olarak birebir aynı iki paragrafı
+  veriyor (kopyala-yapıştır hatası veya gerçekten değişiklik yok).
+expected_behavior: >
+  Sistem, iki metin arasında anlamlı bir fark bulunmadığını açıkça
+  belirtmeli, uydurma bir değişiklik icat etmemeli.
+must_include:
+  - "fark"
+must_not_include:
+  - "GDPR"
+risk_level: low

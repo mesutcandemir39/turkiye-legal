@@ -1,0 +1,9 @@
+{
+  "plugin": "sozlesme",
+  "skill": "gizlilik-hizmet-sozlesmesi-taramasi",
+  "scenario": "Hizmet sağlayıcı ve müşteri arasında gizlilik anlaşması, bilgi güvenliği açıkları içeriyor",
+  "input": "İT danışmanlık şirketi ile müşteri arasında akdedilen gizlilik anlaşması, verilerin depolanacağı sunucuların konumunu ve güvenlik önlemlerini belirtmiyor. Ayrıca ihlal durumunda cezai şart yok.",
+  "expected_output": "Gizlilik anlaşması; TBK m.404-411 çerçevesinde güvenlik açıkları içeriyor: depo lokasyonu, şifreleme, erişim kontrolü, ihlal cezası belirtilmeli.",
+  "mcp_required": ["turkiye-legal-mevzuat-mcp"],
+  "golden_check": "TBK m.404-411'e atıf var mı? Risk alanları (konf süresi, ihlal cezası) doğru tanımlanmış mı?"
+}

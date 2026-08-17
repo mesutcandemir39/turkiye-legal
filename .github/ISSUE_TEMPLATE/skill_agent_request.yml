@@ -1,0 +1,90 @@
+name: "✨ Yeni Skill / Agent / Routine Talebi"
+description: "Yeni bir hukuki yetenek, iş akışı veya zamanlanmış rutin önerin."
+title: "[Talep]: "
+labels: ["type: skill-request", "status: needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Yeni bir hukuki skill, agent veya rutin mi öneriyorsunuz? Harika. Ne kadar netlik verirseniz,
+        birinin bunu uygulamaya alması o kadar kolaylaşır — bu formu doldurmak kod yazmak anlamına gelmez.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Ne öneriyorsunuz?
+      options:
+        - Yeni Skill (tekil görev, örn. "Kira sözleşmesi review")
+        - Yeni Agent (birden fazla skill'i birleştiren pipeline)
+        - Yeni Routine (periyodik/zamanlanmış iş)
+        - Mevcut bir plugin'e yeni skill eklenmesi
+        - Yeni bir plugin / pratik alanı
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Kısa başlık
+      placeholder: "Kira sözleşmesi (TBK m.299 vd.) risk taraması"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Hangi problemi çözüyor?
+      description: "Bir avukat veya kullanıcı bu skill olmadan hangi işi elle/yavaş yapıyor?"
+    validations:
+      required: true
+
+  - type: input
+    id: legal-basis
+    attributes:
+      label: Hangi kanuna/mevzuata dayanacak?
+      description: "Kanun numarası ve varsa ilgili maddeler"
+      placeholder: "6098 sayılı TBK, m. 299-356 (Kira Sözleşmesi)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: inputs-outputs
+    attributes:
+      label: Girdi / Çıktı
+      description: "Kullanıcı ne verecek (belge, metin, form), sistem ne üretecek (rapor, kontrol listesi, taslak)?"
+      placeholder: |
+        Girdi: Kira sözleşmesi metni (PDF/Word/metin)
+        Çıktı: Riskli hükümlerin listesi + gerekçe + ilgili madde atfı
+    validations:
+      required: true
+
+  - type: dropdown
+    id: risk-level
+    attributes:
+      label: Öngörülen risk seviyesi
+      description: "Bu konudaki hata ne kadar zarar verir? bkz. .claude/CLAUDE.md 'requires_human_review' kuralı"
+      options:
+        - "low — bilgilendirici, hak kaybı riski yok"
+        - "medium — dikkatli olunmalı ama düşük risk"
+        - "high — hatalı çıktı ciddi sonuç doğurabilir"
+        - "critical — hak kaybı, süre kaçırma veya cezai risk içerir"
+    validations:
+      required: true
+
+  - type: input
+    id: existing-plugin
+    attributes:
+      label: Hangi plugin altına eklenmeli? (varsa)
+      placeholder: "Örn: sozlesme, is-hukuku — emin değilseniz boş bırakın"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Katkı
+      options:
+        - label: Bu skill'in ilk taslağını (SKILL.md) kendim yazmak isterim
+          required: false
+        - label: Golden test senaryosu önermek isterim
+          required: false

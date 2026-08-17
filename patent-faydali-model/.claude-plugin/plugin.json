@@ -1,0 +1,16 @@
+{
+  "name": "patent-faydali-model",
+  "displayName": "Patent ve Faydalı Model",
+  "version": "0.1.0",
+  "description": "Patent ve Faydalı Model alanında 12 beceri: basvuru ve tescil sureci, calisan bulusu, dava usul gorev yetki ve 9 tane daha. İlgili mevzuat: 6769 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "patent",
+    "faydali",
+    "model",
+    "6769"
+  ]
+}

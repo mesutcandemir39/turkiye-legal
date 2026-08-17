@@ -1,0 +1,829 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "turkiye-legal",
+  "description": "Türkiye hukukuna özgü, açık kaynak Legal AI plugin ekosistemi — KVKK, iş hukuku, sözleşmeler, icra-iflas, mevzuat takibi ve daha fazlası.",
+  "owner": {
+    "name": "Mesut Can Demir"
+  },
+  "plugins": [
+    {
+      "name": "aile-hukuku",
+      "displayName": "Aile Hukuku",
+      "source": "./aile-hukuku",
+      "description": "Aile Hukuku alanında 10 beceri: bosanma sebepleri ve kusur, dilekce ve protokol taslagi, gorev yetki ve usul ve 7 tane daha. İlgili mevzuat: 4721, 6284 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "anayasa-hukuku",
+      "displayName": "Anayasa Hukuku",
+      "source": "./anayasa-hukuku",
+      "description": "Anayasa Hukuku alanında 11 beceri: adil yargilanma anayasal, anayasa dilekce basvuru taslagi, aym bireysel basvuru stratejisi ve 8 tane daha. İlgili mevzuat: 2709 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "anayasa-mahkemesi-bireysel-basvuru",
+      "displayName": "AYM Bireysel Başvuru",
+      "source": "./anayasa-mahkemesi-bireysel-basvuru",
+      "description": "AYM Bireysel Başvuru alanında 12 beceri: adil yargilanma hakki, basvuru formu ve dilekce, basvuru yollarinin tuketilmesi ve 9 tane daha. İlgili mevzuat: 2709, 6216 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "anonim-sirket-genel-kurul",
+      "displayName": "Anonim Şirket Genel Kurul",
+      "source": "./anonim-sirket-genel-kurul",
+      "description": "Anonim Şirket Genel Kurul alanında 11 beceri: azlik ve pay sahibi haklari, butlan ve yokluk, cagri gundem ve toplanti hazirligi ve 8 tane daha. İlgili mevzuat: 6102 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "atif-turk-hukuku",
+      "displayName": "Atıf ve Kaynak Hijyeni",
+      "source": "./atif-turk-hukuku",
+      "description": "Atıf ve Kaynak Hijyeni alanında 10 beceri: atif katmanlari ve kanit degeri, dilden norma yanlis atif onleme, dogrulama kontrol listesi teslim oncesi ve 7 tane daha.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "avukatlik-meslek-kurallari",
+      "displayName": "Avukatlık Meslek Kuralları",
+      "source": "./avukatlik-meslek-kurallari",
+      "description": "Avukatlık Meslek Kuralları alanında 11 beceri: avukatin yetkileri guvenceleri, avukatlik temel kavramlar, cikar catismasi ve 8 tane daha. İlgili mevzuat: 1136 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "bankacilik-hukuku",
+      "displayName": "Bankacılık Hukuku",
+      "source": "./bankacilik-hukuku",
+      "description": "Bankacılık Hukuku alanında 11 beceri: banka musteri iletisim risk, banka sirri mahremiyet, bankacilik dava gorev yetki ve 8 tane daha. İlgili mevzuat: 5411, 6098 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "basin-medya-hukuku",
+      "displayName": "Basın ve Medya Hukuku",
+      "source": "./basin-medya-hukuku",
+      "description": "Basın ve Medya Hukuku alanında 12 beceri: basin ceza sorumlulugu, cevap duzeltme tekzip, dava usul gorev yetki ve 9 tane daha. İlgili mevzuat: 4721, 5187, 5237 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "bilirkisi-rapor-inceleme",
+      "displayName": "Bilirkişi Raporu İncelemesi",
+      "source": "./bilirkisi-rapor-inceleme",
+      "description": "Bilirkişi Raporu İncelemesi alanında 11 beceri: bilirkisi ret tarafsizlik, celiski eksiklik tespiti, ceza idari bilirkisi ve 8 tane daha. İlgili mevzuat: 6100, 6754 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "bilisim-hukuku-siber",
+      "displayName": "Bilişim ve Siber Hukuk",
+      "source": "./bilisim-hukuku-siber",
+      "description": "Bilişim ve Siber Hukuk alanında 12 beceri: 5651 icerik erisim engelleme, bilisim suclari tck 243 245, dijital delil elde etme degerlendirme ve 9 tane daha. İlgili mevzuat: 5237, 5651, 6698 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "birlesme-devralma-ma",
+      "displayName": "Birleşme ve Devralma",
+      "source": "./birlesme-devralma-ma",
+      "description": "Birleşme ve Devralma alanında 12 beceri: beyan tekefful ve tazminat, deger bedel mekanizmasi, hukuki due diligence ve 9 tane daha. İlgili mevzuat: 4054, 6102, 6362 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "borclar-hukuku-genel",
+      "displayName": "Borçlar Hukuku — Genel",
+      "source": "./borclar-hukuku-genel",
+      "description": "Borçlar Hukuku — Genel alanında 13 beceri: borca aykirilik tazminat, borclu temerrudu, cezai sart ve teminat ve 10 tane daha. İlgili mevzuat: 6098 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "borclar-hukuku-ozel",
+      "displayName": "Borçlar Hukuku — Özel",
+      "source": "./borclar-hukuku-ozel",
+      "description": "Borçlar Hukuku — Özel alanında 11 beceri: dava gorev yetki arabuluculuk, eser sozlesmesi ayip temerrut, ispat ve delil ve 8 tane daha. İlgili mevzuat: 6098 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "cekirdek",
+      "displayName": "Çekirdek — Ortak Altyapı",
+      "source": "./cekirdek",
+      "description": "turkiye-legal'in tüm diğer plugin'lerinin dayandığı paylaşılan altyapı: kaynak hiyerarşisi kuralı, doğrulanmamış bilgi etiketleme protokolü ve deterministik hukuki süre hesaplayıcı.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "cevre-hukuku",
+      "displayName": "Çevre Hukuku",
+      "source": "./cevre-hukuku",
+      "description": "Çevre Hukuku alanında 11 beceri: atik yonetimi, ced sureci ve iptali, cevre ceza hukuku ve 8 tane daha. İlgili mevzuat: 2872, 3194 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "ceza-hukuku-genel",
+      "displayName": "Ceza Hukuku — Genel",
+      "source": "./ceza-hukuku-genel",
+      "description": "Ceza Hukuku — Genel alanında 11 beceri: hukuka uygunluk sebepleri, ictima suclarin birlesmesi, istirak faillik katki ve 8 tane daha. İlgili mevzuat: 5237 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "ceza-hukuku-ozel",
+      "displayName": "Ceza Hukuku — Özel",
+      "source": "./ceza-hukuku-ozel",
+      "description": "Ceza Hukuku — Özel alanında 11 beceri: belgede sahtecilik, cinsel suclar, hakaret ozel hayat suclari ve 8 tane daha. İlgili mevzuat: 5237 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "ceza-muhakemesi",
+      "displayName": "Ceza Muhakemesi",
+      "source": "./ceza-muhakemesi",
+      "description": "Ceza Muhakemesi alanında 13 beceri: arama el koyma iletisim, delil ve delil yasaklari, dilekce sablonlari ve 10 tane daha. İlgili mevzuat: 5271 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "dava-dilekce-atolyesi",
+      "displayName": "Dava Dilekçe Atölyesi",
+      "source": "./dava-dilekce-atolyesi",
+      "description": "Dava Dilekçe Atölyesi alanında 13 beceri: cevap replik duplik, ceza dilekceleri, dava dilekcesi hmk ve 10 tane daha. İlgili mevzuat: 2577, 5271, 6100 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "dava-dosya-takip",
+      "displayName": "Dava Dosyası Takibi",
+      "source": "./dava-dosya-takip",
+      "description": "Dava Dosyası Takibi alanında 11 beceri: delil dizini ve ispat yuku, dosya ozeti cikarma, durusma hazirlik ve ara karar takibi ve 8 tane daha. İlgili mevzuat: 5271, 6100 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "dava-takip",
+      "displayName": "Dava Takip",
+      "source": "./dava-takip",
+      "description": "6100 sayılı HMK kapsamında dava evrakı intake sınıflandırması, dilekçe yapı/kalite denetimi, karşı argüman üretimi, delil haritası çıkarma, müvekkile sade dil açıklaması ve duruşma hazırlığı sağlayan skill/agent'lar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "deniz-ticareti-hukuku",
+      "displayName": "Deniz Ticareti Hukuku",
+      "source": "./deniz-ticareti-hukuku",
+      "description": "Deniz Ticareti Hukuku alanında 12 beceri: belge konismento carter inceleme, catma deniz kazalari, dava usul gorev yetki tahkim ve 9 tane daha. İlgili mevzuat: 6102 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "e-ticaret-hukuku",
+      "displayName": "E-Ticaret Hukuku",
+      "source": "./e-ticaret-hukuku",
+      "description": "E-Ticaret Hukuku alanında 11 beceri: araci hizmet saglayici platform, e ticaret kvkk veri, e ticaret sozlesme taslagi ve 8 tane daha. İlgili mevzuat: 6502, 6563, 6698 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "eczacilik-ilac",
+      "displayName": "Eczacılık ve İlaç Hukuku",
+      "source": "./eczacilik-ilac",
+      "description": "Eczacılık ve İlaç Hukuku alanında 11 beceri: eczaci meslek disiplin sorumluluk, eczacilik temel kavramlar, eczane acilis nakil devir ve 8 tane daha. İlgili mevzuat: 1262, 6197 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "ekonomik-ceza",
+      "displayName": "Ekonomik Ceza Hukuku",
+      "source": "./ekonomik-ceza",
+      "description": "Ekonomik Ceza Hukuku alanında 11 beceri: aklama masak, elkoyma musadere malvarligi, ispat delil bilirkisi ve 8 tane daha. İlgili mevzuat: 213, 5237, 5549, 6362 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "enerji-hukuku",
+      "displayName": "Enerji Hukuku",
+      "source": "./enerji-hukuku",
+      "description": "Enerji Hukuku alanında 12 beceri: dogal gaz piyasasi, enerji ispat delil, enerji sure zamanasimi ve 9 tane daha. İlgili mevzuat: 4646, 6446 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "esya-hukuku",
+      "displayName": "Eşya Hukuku",
+      "source": "./esya-hukuku",
+      "description": "Eşya Hukuku alanında 11 beceri: dava usul gorev yetki tedbir, el atmanin onlenmesi mudahalenin meni, irtifak haklari ve 8 tane daha. İlgili mevzuat: 4721 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "fikri-mulkiyet",
+      "displayName": "Fikri Mülkiyet",
+      "source": "./fikri-mulkiyet",
+      "description": "Açık kaynak lisans uyumluluğu (MIT/GPL/Apache vb.) denetimini 5846 sayılı FSEK ve genel lisanslama kuralları çerçevesinde yapan skill.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "fikri-mulkiyet-dava",
+      "displayName": "Fikri Mülkiyet Davaları",
+      "source": "./fikri-mulkiyet-dava",
+      "description": "Fikri Mülkiyet Davaları alanında 12 beceri: ceza boyutu marka telif, gorev yetki yargi yolu, hukumsuzluk iptal davalari ve 9 tane daha. İlgili mevzuat: 5846, 6100, 6769 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "gayrimenkul-hukuku",
+      "displayName": "Gayrimenkul Hukuku",
+      "source": "./gayrimenkul-hukuku",
+      "description": "Gayrimenkul Hukuku alanında 10 beceri: arsa payi kat irtifaki, dava usul tedbir strateji, el atma ecrimisil ortakligin giderilmesi ve 7 tane daha. İlgili mevzuat: 4721, 6098, 634 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "girisim-startup-hukuku",
+      "displayName": "Girişim ve Startup Hukuku",
+      "source": "./girisim-startup-hukuku",
+      "description": "Girişim ve Startup Hukuku alanında 10 beceri: cikis exit rekabet vergi, girisim yapilanmasi cap table, hukuki durum tespiti due diligence ve 7 tane daha. İlgili mevzuat: 6098, 6102 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "goc-yabancilar-hukuku",
+      "displayName": "Göç ve Yabancılar Hukuku",
+      "source": "./goc-yabancilar-hukuku",
+      "description": "Göç ve Yabancılar Hukuku alanında 12 beceri: calisma izni, dilekce basvuru taslagi, idari dava yargi yolu ve 9 tane daha. İlgili mevzuat: 6458 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "gumruk-disticaret",
+      "displayName": "Gümrük ve Dış Ticaret",
+      "source": "./gumruk-disticaret",
+      "description": "Gümrük ve Dış Ticaret alanında 11 beceri: belge ispat dosya, dis ticaret mevzuati, ek tahakkuk ceza ve 8 tane daha. İlgili mevzuat: 4458 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "haksiz-fiil-tazminat",
+      "displayName": "Haksız Fiil ve Tazminat",
+      "source": "./haksiz-fiil-tazminat",
+      "description": "Haksız Fiil ve Tazminat alanında 12 beceri: dava dilekce ve ihtarname, dava gorev yetki ve ispat, destekten yoksun kalma ve cismani zarar ve 9 tane daha. İlgili mevzuat: 6098 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "hukuk-burosu-yonetimi",
+      "displayName": "Hukuk Bürosu Yönetimi",
+      "source": "./hukuk-burosu-yonetimi",
+      "description": "Hukuk Bürosu Yönetimi alanında 10 beceri: dosya arsiv ve imha, dosya ve sure yonetimi, is yuku ve kalite kontrol ve 7 tane daha. İlgili mevzuat: 1136, 6698 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "hukuk-felsefesi-genel-teori",
+      "displayName": "Hukuk Felsefesi ve Genel Teori",
+      "source": "./hukuk-felsefesi-genel-teori",
+      "description": "Hukuk Felsefesi ve Genel Teori alanında 10 beceri: argumantasyon ve altlama, dogal hukuk ve adalet, hak ve yukumluluk teorisi ve 7 tane daha.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "hukuk-metodolojisi",
+      "displayName": "Hukuk Metodolojisi",
+      "source": "./hukuk-metodolojisi",
+      "description": "Hukuk Metodolojisi alanında 11 beceri: anayasaya uygun yorum ve temel haklar, durustluk kurali ve hakkin kotuye kullanilmasi, gerekceli hukuki akil yurutme metni ve 8 tane daha. İlgili mevzuat: 4721 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "hukuk-muhakemesi",
+      "displayName": "Hukuk Muhakemesi",
+      "source": "./hukuk-muhakemesi",
+      "description": "Hukuk Muhakemesi alanında 11 beceri: cevap replik duplik, dava dilekcesi mimarisi, dava sarti arabuluculuk ve 8 tane daha. İlgili mevzuat: 6100 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "hukuki-mutalaa",
+      "displayName": "Hukuki Mütalaa",
+      "source": "./hukuki-mutalaa",
+      "description": "Hukuki Mütalaa alanında 12 beceri: altlama subsumption teknigi, cikar catismasi ve mutalaa etigi, gorev yetki ve yargi yolu ve 9 tane daha.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "icra-iflas",
+      "displayName": "İcra ve İflas",
+      "source": "./icra-iflas",
+      "description": "2004 sayılı İcra ve İflas Kanunu kapsamında icra dosyası triyajı, itiraz ve şikâyet süre analizi sağlayan skill'ler.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "icra-iflas-hukuku",
+      "displayName": "İcra ve İflas Hukuku",
+      "source": "./icra-iflas-hukuku",
+      "description": "İcra ve İflas Hukuku alanında 13 beceri: borclu savunma stratejisi ve icra suclari, haciz kiymet takdiri ve satis, iflas yollari ve masasi ve 10 tane daha. İlgili mevzuat: 2004 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "idare-hukuku-genel",
+      "displayName": "İdare Hukuku — Genel",
+      "source": "./idare-hukuku-genel",
+      "description": "İdare Hukuku — Genel alanında 12 beceri: dilekce ve basvuru taslagi, duzenleyici islem denetimi, gorev yetki yargi yolu ve 9 tane daha. İlgili mevzuat: 2577, 2709 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "idare-vergi",
+      "displayName": "İdare ve Vergi",
+      "source": "./idare-vergi",
+      "description": "2577 sayılı İYUK ve 213 sayılı VUK kapsamında idari işlem/dava triyajı sağlayan skill. Tier B — dar kapsamlı, topluluk katkısına açık.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "idari-yargilama",
+      "displayName": "İdari Yargılama",
+      "source": "./idari-yargilama",
+      "description": "İdari Yargılama alanında 12 beceri: dava acma sureleri, dava sartlari ehliyet menfaat, dilekce ve layiha taslagi ve 9 tane daha. İlgili mevzuat: 2577 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "ik-insan-kaynaklari",
+      "displayName": "İnsan Kaynakları",
+      "source": "./ik-insan-kaynaklari",
+      "description": "İnsan Kaynakları alanında 11 beceri: calisan kvkk uyumu, calismacosullarinda degisiklik m22, cikis ibra ve rekabet sonrasi ve 8 tane daha. İlgili mevzuat: 4857, 6698 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "imar-hukuku",
+      "displayName": "İmar Hukuku",
+      "source": "./imar-hukuku",
+      "description": "İmar Hukuku alanında 12 beceri: arazi arsa duzenlemesi dop, imar dava dilekce ve yd, imar para cezalari ve 9 tane daha. İlgili mevzuat: 2709, 3194 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "infaz-hukuku",
+      "displayName": "İnfaz Hukuku",
+      "source": "./infaz-hukuku",
+      "description": "İnfaz Hukuku alanında 11 beceri: adli para cezasi infazi, denetimli serbestlik, disiplin ve haklar ve 8 tane daha. İlgili mevzuat: 5275 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "is-hukuku",
+      "displayName": "İş Hukuku",
+      "source": "./is-hukuku",
+      "description": "4857 sayılı İş Kanunu kapsamında iş sözleşmesi review, fesih/ihbar-kıdem triyajı ve işe iade süre kontrolü sağlayan skill'ler.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "is-hukuku-bireysel",
+      "displayName": "İş Hukuku — Bireysel",
+      "source": "./is-hukuku-bireysel",
+      "description": "İş Hukuku — Bireysel alanında 11 beceri: belge taslak ihtar fesih sozlesme, dava usul gorev yetki arabuluculuk, fesih denetim semasi ve 8 tane daha. İlgili mevzuat: 4857, 6098 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "is-hukuku-toplu",
+      "displayName": "İş Hukuku — Toplu",
+      "source": "./is-hukuku-toplu",
+      "description": "İş Hukuku — Toplu alanında 11 beceri: dilekce ve basvuru taslaklari, grev ve lokavt, ispat ve delil toplu is ve 8 tane daha. İlgili mevzuat: 6356 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "is-sagligi-guvenligi",
+      "displayName": "İş Sağlığı ve Güvenliği",
+      "source": "./is-sagligi-guvenligi",
+      "description": "İş Sağlığı ve Güvenliği alanında 13 beceri: dava usul gorev yetki, dilekce tutanak taslaklari, idari para cezalari ve 10 tane daha. İlgili mevzuat: 6331 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "kabahatler-hukuku",
+      "displayName": "Kabahatler Hukuku",
+      "source": "./kabahatler-hukuku",
+      "description": "Kabahatler Hukuku alanında 11 beceri: basvuru dilekcesi taslagi, basvuru yolu sulh ceza, idari para cezasi denetim semasi ve 8 tane daha. İlgili mevzuat: 5326 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "kamu-ihale-hukuku",
+      "displayName": "Kamu İhale Hukuku",
+      "source": "./kamu-ihale-hukuku",
+      "description": "Kamu İhale Hukuku alanında 12 beceri: asiri dusuk teklif, ihale iptali ve itirazen sonuc, ihale sozlesmesi 4735 ve 9 tane daha. İlgili mevzuat: 4734, 4735 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "kat-mulkiyeti",
+      "displayName": "Kat Mülkiyeti",
+      "source": "./kat-mulkiyeti",
+      "description": "Kat Mülkiyeti alanında 12 beceri: aidat ve ortak gider, dava usul gorev yetki icra, devre mulk ve kat mulkiyetinin sona ermesi ve 9 tane daha. İlgili mevzuat: 4721, 634 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "kendini-temsil-asliye",
+      "displayName": "Kendini Temsil (Asliye)",
+      "source": "./kendini-temsil-asliye",
+      "description": "Kendini Temsil (Asliye) alanında 11 beceri: cevap dilekcesi ve savunma, dava dilekcesi hazirlama, durusma hazirligi ve on inceleme ve 8 tane daha. İlgili mevzuat: 6100 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "kira-hukuku",
+      "displayName": "Kira Hukuku",
+      "source": "./kira-hukuku",
+      "description": "Kira Hukuku alanında 12 beceri: gorev yetki arabuluculuk usul, ispat delil ve zamanasimi, kira bedeli tespit ve artis ve 9 tane daha. İlgili mevzuat: 6098 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "kisiler-hukuku",
+      "displayName": "Kişiler Hukuku",
+      "source": "./kisiler-hukuku",
+      "description": "Kişiler Hukuku alanında 10 beceri: ad soyad degistirme, dernekler hukuku, ehliyet ve temsil ve 7 tane daha. İlgili mevzuat: 4721 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "kiymetli-evrak",
+      "displayName": "Kıymetli Evrak",
+      "source": "./kiymetli-evrak",
+      "description": "Kıymetli Evrak alanında 11 beceri: aval musteselsil sorumluluk, bono police unsurlar, cek hukuku ve 8 tane daha. İlgili mevzuat: 5941, 6102 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "konkordato-yeniden-yapilandirma",
+      "displayName": "Konkordato ve Yeniden Yapılandırma",
+      "source": "./konkordato-yeniden-yapilandirma",
+      "description": "Konkordato ve Yeniden Yapılandırma alanında 11 beceri: alacaklilar toplantisi cogunluk, finansal yeniden yapilandirma, gecici kesin muhlet ve 8 tane daha. İlgili mevzuat: 2004 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "kvkk-uyum",
+      "displayName": "KVKK Uyum",
+      "source": "./kvkk-uyum",
+      "description": "6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında aydınlatma metni ve veri işleme süreçlerini denetleyen skill'ler.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "kvkk-uyum-checker",
+      "displayName": "KVKK Uyum Denetleyici",
+      "source": "./kvkk-uyum-checker",
+      "description": "KVKK Uyum Denetleyici alanında 10 beceri: aktarim ve verbis denetimi, aydinlatma acik riza denetimi, cerez pazarlama uyumu ve 7 tane daha. İlgili mevzuat: 6698 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "kvkk-veri-koruma",
+      "displayName": "KVKK ve Veri Koruma",
+      "source": "./kvkk-veri-koruma",
+      "description": "KVKK ve Veri Koruma alanında 11 beceri: aydinlatma yukumlulugu, ceza ve tazminat sorumlulugu, idari yaptirim dava ve 8 tane daha. İlgili mevzuat: 6698 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "marka-hukuku",
+      "displayName": "Marka Hukuku",
+      "source": "./marka-hukuku",
+      "description": "Marka Hukuku alanında 13 beceri: hukumsuzluk ve iptal, ihtiyati tedbir delil tespiti, karistirilma ihtimali nispi ret ve 10 tane daha. İlgili mevzuat: 6769 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "medeni-hukuk-baslangic",
+      "displayName": "Medeni Hukuk — Başlangıç Hükümleri",
+      "source": "./medeni-hukuk-baslangic",
+      "description": "Medeni Hukuk — Başlangıç Hükümleri alanında 11 beceri: baslangic hukumleri sistematigi, durustluk davasi usul gorev yetki, durustluk dilekce modulleri ve 8 tane daha. İlgili mevzuat: 4721 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "mevzuat-takip",
+      "displayName": "Mevzuat Takip",
+      "source": "./mevzuat-takip",
+      "description": "Mevzuat değişikliği analizi (redline), Yargıtay karar özeti, KVKK/Rekabet Kurulu karar takibi ve Resmî Gazete günlük takip rutini sağlayan skill ve agent'lar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "miras-hukuku",
+      "displayName": "Miras Hukuku",
+      "source": "./miras-hukuku",
+      "description": "Miras Hukuku alanında 11 beceri: dava usul gorev yetki ve sureler, denklestirme ve iade, miras iliskisinde isbat ve delil ve 8 tane daha. İlgili mevzuat: 4721 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "patent-faydali-model",
+      "displayName": "Patent ve Faydalı Model",
+      "source": "./patent-faydali-model",
+      "description": "Patent ve Faydalı Model alanında 12 beceri: basvuru ve tescil sureci, calisan bulusu, dava usul gorev yetki ve 9 tane daha. İlgili mevzuat: 6769 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "rekabet-hukuku",
+      "displayName": "Rekabet Hukuku",
+      "source": "./rekabet-hukuku",
+      "description": "Rekabet Hukuku alanında 11 beceri: birlesme devralma izni, hakim durum kotuye kullanma, idari para cezasi hesabi ve 8 tane daha. İlgili mevzuat: 4054 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "roma-hukuku",
+      "displayName": "Roma Hukuku",
+      "source": "./roma-hukuku",
+      "description": "Roma Hukuku alanında 10 beceri: akademik kaynak hijyeni, ayni sahsi hak eskidogmatik, eshya miras kokleri ve 7 tane daha.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "sade-hukuk-dili",
+      "displayName": "Sade Hukuk Dili",
+      "source": "./sade-hukuk-dili",
+      "description": "Sade Hukuk Dili alanında 11 beceri: dilekce sadelestirme, dogruluk denetimi risk, hukuki terim sozlugu ve 8 tane daha.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "saglik-hukuku",
+      "displayName": "Sağlık Hukuku",
+      "source": "./saglik-hukuku",
+      "description": "Sağlık Hukuku alanında 11 beceri: aydinlatilmis onam, ceza sorumlulugu, dava usul gorev yetki ve 8 tane daha. İlgili mevzuat: 1219, 3359, 6098 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "sebepsiz-zenginlesme",
+      "displayName": "Sebepsiz Zenginleşme",
+      "source": "./sebepsiz-zenginlesme",
+      "description": "Sebepsiz Zenginleşme alanında 11 beceri: dava gorev yetki ve ihtarname, gecerli olmayan sebep condictio indebiti, gerceklesmeyen ve sona eren sebep ve 8 tane daha. İlgili mevzuat: 6098 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "sermaye-piyasasi-hukuku",
+      "displayName": "Sermaye Piyasası Hukuku",
+      "source": "./sermaye-piyasasi-hukuku",
+      "description": "Sermaye Piyasası Hukuku alanında 12 beceri: bilgi suistimali iceriden ogrenenler, halka arz ve izahname, idari yaptirim ve iptal davasi ve 9 tane daha. İlgili mevzuat: 6362 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "sigorta-hukuku",
+      "displayName": "Sigorta Hukuku",
+      "source": "./sigorta-hukuku",
+      "description": "Sigorta Hukuku alanında 12 beceri: beyan yukumlulugu, can hayat sigortalari, dilekce basvuru taslagi ve 9 tane daha. İlgili mevzuat: 5684, 6102 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "sirketler-hukuku",
+      "displayName": "Şirketler Hukuku",
+      "source": "./sirketler-hukuku",
+      "description": "Şirketler Hukuku alanında 11 beceri: anonim limited kurulus, anonim sirket organlar yonetim kurulu, cikma cikarilma fesih tasfiye ve 8 tane daha. İlgili mevzuat: 6102 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "sosyal-guvenlik",
+      "displayName": "Sosyal Güvenlik",
+      "source": "./sosyal-guvenlik",
+      "description": "Sosyal Güvenlik alanında 12 beceri: basvuru dilekce ve itiraz, emeklilik aylik baglama, genel saglik sigortasi ve 9 tane daha. İlgili mevzuat: 5510 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "sozlesme",
+      "displayName": "Sözleşme İnceleme",
+      "source": "./sozlesme",
+      "description": "6098 sayılı Türk Borçlar Kanunu kapsamında genel sözleşme risk taraması ve genel işlem koşulları (GİK) denetimi sağlayan skill'ler.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "sozlesme-inceleme-redline",
+      "displayName": "Sözleşme İnceleme ve Redline",
+      "source": "./sozlesme-inceleme-redline",
+      "description": "Sözleşme İnceleme ve Redline alanında 11 beceri: bedel faiz odeme ve uyarlama, cezai sart ve tazminat on belirleme, eksik madde ve bosluk tespiti ve 8 tane daha. İlgili mevzuat: 6098 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "spor-hukuku",
+      "displayName": "Spor Hukuku",
+      "source": "./spor-hukuku",
+      "description": "Spor Hukuku alanında 11 beceri: doping hukuku, federasyon tahkim yargi yolu, spor disiplin hukuku ve 8 tane daha. İlgili mevzuat: 6222, 7405 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "tahkim-arabuluculuk",
+      "displayName": "Tahkim ve Arabuluculuk",
+      "source": "./tahkim-arabuluculuk",
+      "description": "Tahkim ve Arabuluculuk alanında 12 beceri: arabuluculuk anlasma tutanak, dava sarti arabuluculuk, hakem karari iptal davasi ve 9 tane daha. İlgili mevzuat: 4686, 6100, 6325 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "tapu-kadastro",
+      "displayName": "Tapu ve Kadastro",
+      "source": "./tapu-kadastro",
+      "description": "Tapu ve Kadastro alanında 11 beceri: el atmanin onlenmesi ve ecrimisil, gorev yetki ve husumet, ipotek ve tasinmaz rehni ve 8 tane daha. İlgili mevzuat: 2644, 3402, 4721 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "tasarim-hukuku",
+      "displayName": "Tasarım Hukuku",
+      "source": "./tasarim-hukuku",
+      "description": "Tasarım Hukuku alanında 11 beceri: gorev yetki ve usul, hak sahipligi ve calisan tasarimlari, hukumsuzluk davasi ve 8 tane daha. İlgili mevzuat: 6769 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "tasima-hukuku",
+      "displayName": "Taşıma Hukuku",
+      "source": "./tasima-hukuku",
+      "description": "Taşıma Hukuku alanında 11 beceri: cmr uluslararasi tasima, dava usul gorev yetki, gecikme ziya hasar talepleri ve 8 tane daha. İlgili mevzuat: 6102 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "telekomunikasyon-bilisim",
+      "displayName": "Telekomünikasyon ve Bilişim",
+      "source": "./telekomunikasyon-bilisim",
+      "description": "Telekomünikasyon ve Bilişim alanında 12 beceri: abonelik tuketici haklari, btk yaptirim savunma, icerik erisim engelleme 5651 ve 9 tane daha. İlgili mevzuat: 5651, 5809 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "telif-haklari",
+      "displayName": "Telif Hakları",
+      "source": "./telif-haklari",
+      "description": "Telif Hakları alanında 11 beceri: baglantili haklar meslek birlikleri, ceza sorumlulugu, dava usul gorev yetki ve 8 tane daha. İlgili mevzuat: 5846 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "ticaret-sirketler",
+      "displayName": "Ticaret ve Şirketler",
+      "source": "./ticaret-sirketler",
+      "description": "6102 sayılı TTK kapsamında genel kurul/karar belge kontrolü ve şirket belgesi triyajı sağlayan skill. Tier B — dar kapsamlı.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "ticari-isletme-hukuku",
+      "displayName": "Ticari İşletme Hukuku",
+      "source": "./ticari-isletme-hukuku",
+      "description": "Ticari İşletme Hukuku alanında 10 beceri: cari hesap, fatura teyit ve ticari defterler, haksiz rekabet denetimi ve 7 tane daha. İlgili mevzuat: 6102 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "tuketici-hukuku",
+      "displayName": "Tüketici Hukuku",
+      "source": "./tuketici-hukuku",
+      "description": "Tüketici Hukuku alanında 12 beceri: abonelik ve suregelen edim, ayipli hizmet denetimi, ayipli mal denetimi ve 9 tane daha. İlgili mevzuat: 6502 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "vergi-davalari",
+      "displayName": "Vergi Davaları",
+      "source": "./vergi-davalari",
+      "description": "Vergi Davaları alanında 14 beceri: dava dilekcesi ve layihalar, dilekce sablonlari, idari cozum uzlasma duzeltme ve 11 tane daha. İlgili mevzuat: 213, 2577 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "vergi-hukuku",
+      "displayName": "Vergi Hukuku",
+      "source": "./vergi-hukuku",
+      "description": "Vergi Hukuku alanında 12 beceri: gelir kurumlar vergisi, kdv ve dolayli vergiler, musavir iletisim ve rapor ve 9 tane daha. İlgili mevzuat: 193, 213, 3065, 5520 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    },
+    {
+      "name": "yapay-zeka-hukuku",
+      "displayName": "Yapay Zekâ Hukuku",
+      "source": "./yapay-zeka-hukuku",
+      "description": "Yapay Zekâ Hukuku alanında 12 beceri: ab yz tuzugu risk siniflandirma, algoritmik seffaflik aciklanabilirlik, dava usul gorev yetki ve 9 tane daha. İlgili mevzuat: 6098, 6698 sayılı kanunlar.",
+      "author": {
+        "name": "Mesut Can Demir"
+      }
+    }
+  ]
+}

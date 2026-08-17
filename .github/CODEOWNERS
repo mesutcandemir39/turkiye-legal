@@ -1,0 +1,36 @@
+# CODEOWNERS — turkiye-legal
+#
+# Bu dosya yetki sınırlarını çizer: hukuki içerik değişiklikleri hukuk
+# bakımcılarının, teknik/altyapı değişiklikleri geliştirici bakımcılarının
+# onayına tabidir. GitHub takım isimleri şimdilik placeholder'dır; proje
+# organizasyona taşındığında gerçek takımlarla değiştirilecektir
+# (bkz. docs/ARCHITECTURE_DECISIONS.md §8 Bekleyen Kararlar).
+#
+# NOT: Bu depo public ve açık kaynaktır, ancak hâlâ kişisel bir hesap
+# altındadır (organizasyon değil). GitHub Teams kişisel hesaplarda çalışmaz;
+# bu nedenle aşağıdaki @turkiye-legal/* referansları depo organizasyona
+# taşınana kadar fiilen devre dışıdır ve tüm PR'lar @mesutcandemir39
+# tarafından gözden geçirilir.
+
+# Varsayılan sahip — eşleşen daha spesifik kural yoksa
+* @mesutcandemir39
+
+# --- Teknik / altyapı: dev-maintainers ---
+/scripts/                    @turkiye-legal/dev-maintainers
+/.github/workflows/          @turkiye-legal/dev-maintainers
+/.devcontainer/              @turkiye-legal/dev-maintainers
+/evaluations/static/         @turkiye-legal/dev-maintainers
+/*.schema.json                @turkiye-legal/dev-maintainers
+
+# --- Hukuki içerik: legal-maintainers ---
+/**/skills/                  @turkiye-legal/legal-maintainers
+/**/agents/                  @turkiye-legal/legal-maintainers
+/**/references/              @turkiye-legal/legal-maintainers
+/sources/                    @turkiye-legal/legal-maintainers
+/evaluations/golden/         @turkiye-legal/legal-maintainers
+
+# --- Yönetişim ve lisans: her iki tarafın da onayı gerekir ---
+/LICENSE                     @mesutcandemir39
+/NOTICE                      @mesutcandemir39
+/GOVERNANCE.md                @mesutcandemir39
+/SECURITY.md                  @mesutcandemir39

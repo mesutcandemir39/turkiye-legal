@@ -1,0 +1,17 @@
+{
+  "name": "basin-medya-hukuku",
+  "displayName": "Basın ve Medya Hukuku",
+  "version": "0.1.0",
+  "description": "Basın ve Medya Hukuku alanında 12 beceri: basin ceza sorumlulugu, cevap duzeltme tekzip, dava usul gorev yetki ve 9 tane daha. İlgili mevzuat: 4721, 5187, 5237 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "basin",
+    "medya",
+    "hukuku",
+    "4721",
+    "5187"
+  ]
+}

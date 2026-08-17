@@ -1,0 +1,19 @@
+# Golden Test — LLM katmani. mevzuat-takip/skills/kurul-karari-takibi/SKILL.md'ye karsi calisir.
+
+test_id: mev_009
+skill_path: mevzuat-takip/skills/kurul-karari-takibi/SKILL.md
+input_scenario: >
+  Kullanıcı bir Rekabet Kurulu karar özeti veriyor: "Karar No:
+  24-15/220-90. İlgili teşebbüsün bayileriyle fiyat sabitleme
+  anlaşması yaptığı tespit edilmiştir. Kurul, 4054 sayılı Kanun m.4
+  kapsamında ihlal tespit etmiş ve idari para cezası uygulamıştır."
+expected_behavior: >
+  Sistem, verilen özetteki konuyu (fiyat sabitleme), Kurul'un
+  değerlendirmesini ve 4054 sayılı Kanun'a atfını birebir aktararak
+  özetlemeli, bunun bir Rekabet Kurulu kararı (idari kurul kararı,
+  yargı kararı değil) olduğunu netleştirmeli.
+must_include:
+  - "4054"
+must_not_include:
+  - "GDPR"
+risk_level: high

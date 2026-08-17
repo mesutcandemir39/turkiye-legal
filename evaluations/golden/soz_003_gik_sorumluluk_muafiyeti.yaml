@@ -1,0 +1,16 @@
+# Golden Test — LLM katmani. sozlesme/skills/riskli-hukum-taramasi/SKILL.md'ye karsi calisir.
+
+test_id: soz_003
+skill_path: sozlesme/skills/riskli-hukum-taramasi/SKILL.md
+input_scenario: >
+  Matbu bir hizmet sözleşmesinde "Şirket, kasıt veya ağır ihmali dahil
+  olmak üzere her türlü zarardan sorumlu tutulamaz" ifadesi geçiyor.
+expected_behavior: >
+  Sistem, kasıt veya ağır ihmalden doğan sorumluluğu önceden kaldıran
+  bir hükmün TBK'ya aykırı ve GİK bağlamında geçersiz/yazılmamış
+  sayılma riski taşıdığını açıkça işaretlemeli.
+must_include:
+  - "6098"
+must_not_include:
+  - "GDPR"
+risk_level: high

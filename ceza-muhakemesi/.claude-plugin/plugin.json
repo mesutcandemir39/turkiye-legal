@@ -1,0 +1,15 @@
+{
+  "name": "ceza-muhakemesi",
+  "displayName": "Ceza Muhakemesi",
+  "version": "0.1.0",
+  "description": "Ceza Muhakemesi alanında 13 beceri: arama el koyma iletisim, delil ve delil yasaklari, dilekce sablonlari ve 10 tane daha. İlgili mevzuat: 5271 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ceza",
+    "muhakemesi",
+    "5271"
+  ]
+}

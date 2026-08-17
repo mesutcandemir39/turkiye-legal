@@ -1,0 +1,19 @@
+# Golden Test — LLM katmani. icra-iflas/skills/haciz-ihbarnamesi-triyaji/SKILL.md'ye karsi calisir.
+
+test_id: icra_006
+skill_path: icra-iflas/skills/haciz-ihbarnamesi-triyaji/SKILL.md
+input_scenario: >
+  Üçüncü kişi, birinci ihbarnameye süresinde itiraz etmediği için
+  ikinci haciz ihbarnamesini (89/2) 2 gün önce tebliğ aldı.
+expected_behavior: >
+  Sistem, ikinci ihbarnameye karşı da tebliğden itibaren 7 gün içinde
+  icra müdürlüğüne itiraz edilebileceğini (İİK m.89/2 son cümle)
+  belirtmeli ve bunun hâlâ dava değil idari itiraz yolu olduğunu
+  netleştirmeli.
+must_include:
+  - "2004"
+  - "89"
+  - "7"
+must_not_include:
+  - "GDPR"
+risk_level: critical

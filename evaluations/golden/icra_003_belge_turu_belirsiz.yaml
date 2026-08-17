@@ -1,0 +1,17 @@
+# Golden Test — LLM katmani. icra-iflas/skills/icra-dosya-triyaji/SKILL.md'ye karsi calisir.
+
+test_id: icra_003
+skill_path: icra-iflas/skills/icra-dosya-triyaji/SKILL.md
+input_scenario: >
+  Kullanıcı yalnızca "icra dairesinden bir belge geldi, 5 gün önce
+  tebliğ aldım" diyor; belgenin ödeme emri mi yoksa icra dairesi işlemi
+  mi olduğunu belirtmiyor.
+expected_behavior: >
+  Sistem, belge türü belirsiz olduğunda tahmin etmemeli; hem itiraz
+  (İİK m.62) hem şikâyet (İİK m.16) yollarını göstermeli ve kullanıcıya
+  belge türünü netleştirmesini istemeli.
+must_include:
+  - "2004"
+must_not_include:
+  - "GDPR"
+risk_level: critical

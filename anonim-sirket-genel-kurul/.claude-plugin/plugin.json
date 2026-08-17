@@ -1,0 +1,17 @@
+{
+  "name": "anonim-sirket-genel-kurul",
+  "displayName": "Anonim Şirket Genel Kurul",
+  "version": "0.1.0",
+  "description": "Anonim Şirket Genel Kurul alanında 11 beceri: azlik ve pay sahibi haklari, butlan ve yokluk, cagri gundem ve toplanti hazirligi ve 8 tane daha. İlgili mevzuat: 6102 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "anonim",
+    "sirket",
+    "genel",
+    "kurul",
+    "6102"
+  ]
+}

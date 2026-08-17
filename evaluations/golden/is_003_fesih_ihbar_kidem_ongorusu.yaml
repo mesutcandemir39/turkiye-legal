@@ -1,0 +1,18 @@
+# Golden Test — LLM katmani. is-hukuku/skills/fesih-triyaj/SKILL.md'ye karsi calisir.
+
+test_id: is_003
+skill_path: is-hukuku/skills/fesih-triyaj/SKILL.md
+input_scenario: >
+  İşçi 6 aydır çalışıyor, işveren bugün fesih bildirdi ve ihbar süresi
+  tanımadan derhal işten çıkardı, gerekçe belirtmedi.
+expected_behavior: >
+  Sistem, işe iade arabuluculuk süresini öncelikli olarak hesaplamalı,
+  ardından kıdeme göre ihbar süresi ön değerlendirmesi ve kıdem
+  tazminatı ön değerlendirmesi sunmalı; bunların kesin hüküm değil ön
+  değerlendirme olduğunu belirtmeli.
+must_include:
+  - "4857"
+  - "ihbar"
+must_not_include:
+  - "GDPR"
+risk_level: critical

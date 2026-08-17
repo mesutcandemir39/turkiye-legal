@@ -1,0 +1,90 @@
+name: "⚖️ Hukuki Hata Bildirimi"
+description: "Bir skill yanlış kanun maddesi söylüyor, güncel olmayan mevzuat kullanıyor, sahte karar numarası üretiyor veya hukuken yanıltıcı bir çıktı veriyor."
+title: "[Hukuki Hata]: "
+labels: ["type: legal-error", "status: legal-approval-needed", "priority: high"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Öncelikle teşekkürler.
+
+        Bu, bu projedeki **en kritik** geri bildirim türüdür. Bir yapay zeka sisteminin yanlış hukuki bilgi
+        üretmesi gerçek hak kayıplarına yol açabilir. Terminal veya GitHub kullanmadıysanız endişelenmeyin —
+        bu formu doldurmak için tarayıcıdan başka bir şeye ihtiyacınız yok.
+
+        Eğer bildirdiğiniz sorun **gizli tutulması gereken** bir güvenlik açığıysa (ör. sistemin kasıtlı
+        olarak yanıltılabildiği bir "prompt injection" açığı), bu formu DEĞİL, `SECURITY.md`'deki gizli
+        bildirim kanalını kullanın.
+
+  - type: input
+    id: skill-path
+    attributes:
+      label: Hangi skill / agent?
+      description: "Mümkünse dosya yolunu yapıştırın. Emin değilseniz komutu/çağrıyı yazmanız yeterli."
+      placeholder: "kvkk-uyum/skills/aydinlatma-review/SKILL.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: wrong-output
+    attributes:
+      label: Sistem tam olarak ne söyledi?
+      description: Yanlış çıktıyı mümkün olduğunca birebir yapıştırın.
+      placeholder: "Sistem '... Kanunu m. XX uyarınca ...' dedi, ancak bu madde ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct-info
+    attributes:
+      label: Doğrusu ne olmalıydı?
+      description: Doğru hukuki bilgiyi, mümkünse kaynağıyla birlikte belirtin.
+      placeholder: "Doğru kanun/madde: ... — Kaynak: Resmî Gazete tarih/sayı veya resmi kurum linki"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: error-type
+    attributes:
+      label: Hata türü nedir?
+      options:
+        - Yanlış kanun/madde numarası
+        - Güncel olmayan mevzuat (yürürlükten kalkmış hüküm)
+        - Sahte veya var olmayan içtihat/karar numarası
+        - Yanlış hukuki yorum / sonuç
+        - Süre/deadline hesap hatası
+        - Yabancı hukuk sistemine ait bilgi karışması (örn. GDPR yerine KVKK olmalıyken)
+        - "requires_human_review eksik veya yanlış ayarlanmış"
+        - Diğer
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Ne kadar ciddi?
+      description: "Hak kaybına yol açabilecek bir hata mı, yoksa bilgilendirici bir eksiklik mi?"
+      options:
+        - "Kritik — hak kaybına veya yanlış hukuki işleme yol açabilir"
+        - "Yüksek — yanıltıcı ama doğrudan zarar riski düşük"
+        - "Orta — eksik bilgi, yanlış değil"
+        - "Düşük — üslup/terminoloji önerisi"
+    validations:
+      required: true
+
+  - type: input
+    id: source-link
+    attributes:
+      label: Doğrulayıcı kaynak (varsa)
+      description: "Resmî Gazete, mevzuat.gov.tr, kazanci veya benzeri resmi bir bağlantı"
+      placeholder: "https://www.mevzuat.gov.tr/..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contact
+    attributes:
+      label: İletişim
+      options:
+        - label: Bu konuda gerekirse PR açarak katkı sağlamak isterim (opsiyonel)
+          required: false

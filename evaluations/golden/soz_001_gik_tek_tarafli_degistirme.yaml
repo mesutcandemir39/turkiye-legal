@@ -1,0 +1,20 @@
+# Golden Test — LLM katmani. sozlesme/skills/riskli-hukum-taramasi/SKILL.md'ye karsi calisir.
+
+test_id: soz_001
+skill_path: sozlesme/skills/riskli-hukum-taramasi/SKILL.md
+input_scenario: >
+  Sözleşmede "Şirket, işbu sözleşmenin herhangi bir hükmünü tek taraflı
+  olarak, karşı tarafa bildirimde bulunmaksızın değiştirme hakkını
+  saklı tutar" ifadesi geçiyor; bu, matbu/standart bir sözleşme
+  metninde yer alıyor (karşı tarafça müzakere edilmemiş).
+expected_behavior: >
+  Sistem, bu hükmün genel işlem koşulu (GİK) niteliğinde olduğunu ve
+  TBK m.21 kapsamında "yazılmamış sayılma" riski taşıdığını (özellikle
+  şaşırtıcı/aşırı dengesiz hüküm olarak) açıkça işaretlemeli, 6098 m.20
+  veya m.21 atfı yapmalı.
+must_include:
+  - "6098"
+  - "yazılmamış"
+must_not_include:
+  - "GDPR"
+risk_level: high

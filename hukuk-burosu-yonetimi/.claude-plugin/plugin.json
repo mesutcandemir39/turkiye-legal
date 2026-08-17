@@ -1,0 +1,17 @@
+{
+  "name": "hukuk-burosu-yonetimi",
+  "displayName": "Hukuk Bürosu Yönetimi",
+  "version": "0.1.0",
+  "description": "Hukuk Bürosu Yönetimi alanında 10 beceri: dosya arsiv ve imha, dosya ve sure yonetimi, is yuku ve kalite kontrol ve 7 tane daha. İlgili mevzuat: 1136, 6698 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "hukuk",
+    "burosu",
+    "yonetimi",
+    "1136",
+    "6698"
+  ]
+}

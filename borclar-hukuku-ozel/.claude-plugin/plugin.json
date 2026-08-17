@@ -1,0 +1,16 @@
+{
+  "name": "borclar-hukuku-ozel",
+  "displayName": "Borçlar Hukuku — Özel",
+  "version": "0.1.0",
+  "description": "Borçlar Hukuku — Özel alanında 11 beceri: dava gorev yetki arabuluculuk, eser sozlesmesi ayip temerrut, ispat ve delil ve 8 tane daha. İlgili mevzuat: 6098 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "borclar",
+    "hukuku",
+    "ozel",
+    "6098"
+  ]
+}

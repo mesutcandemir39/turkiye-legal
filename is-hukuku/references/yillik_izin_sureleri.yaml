@@ -1,0 +1,36 @@
+# Yıllık Ücretli İzin Süreleri Tablosu — 4857 sayılı İş Kanunu m.53
+#
+# is-hukuku/skills/yillik-izin-hesaplayici/SKILL.md'nin dayandigi
+# deterministik veridir.
+kaynak:
+  tur: kanun
+  numara: "4857"
+  ad: "İş Kanunu"
+  madde: "53"
+dogrulama_notu: "2026-08-17 tarihinde bağımsız web kaynaklarıyla doğrulandı."
+
+on_kosul:
+  kural: >
+    Yıllık ücretli izin hakkı, işyerinde işe başladığı günden itibaren
+    (deneme süresi dahil) EN AZ BİR YIL çalışmış olan işçiye tanınır.
+    1 yıldan az kıdemi olan işçinin bu kanun kapsamında yıllık izin hakkı
+    henüz doğmamıştır.
+
+kidem_esikleri:
+  - { kidem_alt_sinir_yil: 1, kidem_ust_sinir_yil: 5, izin_gun: 14, aciklama: "1 yıldan 5 yıla kadar (5 yıl dahil)" }
+  - { kidem_alt_sinir_yil: 5, kidem_ust_sinir_yil: 15, izin_gun: 20, aciklama: "5 yıldan fazla, 15 yıldan az" }
+  - { kidem_alt_sinir_yil: 15, izin_gun: 26, aciklama: "15 yıl ve daha fazla (15 yıl dahil)" }
+
+yas_istisnasi:
+  kural: >
+    18 yaşından küçük ve 50 yaşından büyük işçiler için yıllık ücretli izin
+    süresi, kıdeme bakılmaksızın 20 günden az olamaz. Bu istisna, kıdem
+    tablosundaki değerden büyük olan uygulanır (işçi lehine).
+
+kapsam_disi:
+  - konu: "İzin süresine hafta tatili, ulusal bayram, genel tatil günlerinin dahil edilip edilmeyeceği"
+    neden: >
+      Bu, izin kullanım tarihine ve somut olaya bağlı ayrı bir hesaplamadır
+      (m.56) ve bu ilk sürümde ele alınmamıştır.
+  - konu: "Yıllık izin ücretinin hesaplanması"
+    neden: "Ücret hesaplama ayrı bir konudur, bu skill yalnız gün sayısını hesaplar."

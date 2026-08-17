@@ -1,0 +1,17 @@
+{
+  "name": "bilirkisi-rapor-inceleme",
+  "displayName": "Bilirkişi Raporu İncelemesi",
+  "version": "0.1.0",
+  "description": "Bilirkişi Raporu İncelemesi alanında 11 beceri: bilirkisi ret tarafsizlik, celiski eksiklik tespiti, ceza idari bilirkisi ve 8 tane daha. İlgili mevzuat: 6100, 6754 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "bilirkisi",
+    "rapor",
+    "inceleme",
+    "6100",
+    "6754"
+  ]
+}

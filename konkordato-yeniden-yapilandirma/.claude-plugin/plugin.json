@@ -1,0 +1,16 @@
+{
+  "name": "konkordato-yeniden-yapilandirma",
+  "displayName": "Konkordato ve Yeniden Yapılandırma",
+  "version": "0.1.0",
+  "description": "Konkordato ve Yeniden Yapılandırma alanında 11 beceri: alacaklilar toplantisi cogunluk, finansal yeniden yapilandirma, gecici kesin muhlet ve 8 tane daha. İlgili mevzuat: 2004 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "konkordato",
+    "yeniden",
+    "yapilandirma",
+    "2004"
+  ]
+}

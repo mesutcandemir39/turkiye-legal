@@ -1,0 +1,16 @@
+{
+  "name": "eczacilik-ilac",
+  "displayName": "Eczacılık ve İlaç Hukuku",
+  "version": "0.1.0",
+  "description": "Eczacılık ve İlaç Hukuku alanında 11 beceri: eczaci meslek disiplin sorumluluk, eczacilik temel kavramlar, eczane acilis nakil devir ve 8 tane daha. İlgili mevzuat: 1262, 6197 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "eczacilik",
+    "ilac",
+    "1262",
+    "6197"
+  ]
+}

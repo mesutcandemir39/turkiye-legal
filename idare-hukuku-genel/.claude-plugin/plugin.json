@@ -1,0 +1,17 @@
+{
+  "name": "idare-hukuku-genel",
+  "displayName": "İdare Hukuku — Genel",
+  "version": "0.1.0",
+  "description": "İdare Hukuku — Genel alanında 12 beceri: dilekce ve basvuru taslagi, duzenleyici islem denetimi, gorev yetki yargi yolu ve 9 tane daha. İlgili mevzuat: 2577, 2709 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "idare",
+    "hukuku",
+    "genel",
+    "2577",
+    "2709"
+  ]
+}

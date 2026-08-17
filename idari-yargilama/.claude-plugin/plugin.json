@@ -1,0 +1,15 @@
+{
+  "name": "idari-yargilama",
+  "displayName": "İdari Yargılama",
+  "version": "0.1.0",
+  "description": "İdari Yargılama alanında 12 beceri: dava acma sureleri, dava sartlari ehliyet menfaat, dilekce ve layiha taslagi ve 9 tane daha. İlgili mevzuat: 2577 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "idari",
+    "yargilama",
+    "2577"
+  ]
+}

@@ -1,0 +1,43 @@
+name: Hoş Geldin Mesajı
+
+# İlk kez Issue veya PR açan katkıcıya sıcak, yönlendirici bir mesaj bırakır.
+# Özellikle hiç GitHub kullanmamış hukukçu katkıcılar için tasarlanmıştır.
+
+# GÜVENLİK NOTU: pull_request_target burada BİLİNÇLİ ve GÜVENLİ bir istisnadır.
+# security.yml'deki "pull_request_target kullanılmaz" kuralı, fork kodunu secrets
+# erişimli bir bağlamda ÇALIŞTIRMAYI hedefler. Bu workflow hiçbir PR kodunu
+# checkout etmez / çalıştırmaz — yalnızca actions/first-interaction ile PR
+# metadata'sına bakıp yorum yazar. Token sızıntısı riski yoktur.
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@1c4688942c71f71d4f5502a26ea67c331730fa4d # v3.1.0 (SHA gercek API ile dogrulandi)
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          issue_message: |
+            👋 Merhaba ve hoş geldiniz! `turkiye-legal`'e ilk katkınız/bildiriminiz için teşekkürler.
+
+            Bir hukukçu olarak ilk kez GitHub kullanıyorsanız endişelenmeyin — hiçbir adımda terminal
+            veya kod bilgisi gerekmez. [`CONTRIBUTING.md`](../blob/main/CONTRIBUTING.md) dosyasının
+            **"Hukukçular İçin Katkı Rehberi"** bölümü size adım adım yol gösterir.
+
+            Bir bakımcı yakında bu konuyu inceleyecek. Sabrınız için şimdiden teşekkürler. ⚖️
+          pr_message: |
+            👋 Merhaba ve hoş geldiniz! İlk Pull Request'iniz için teşekkürler.
+
+            Lütfen [PR şablonundaki](../blob/main/.github/PULL_REQUEST_TEMPLATE.md) ilgili checklist'i
+            (teknik veya hukuki) doldurduğunuzdan emin olun — bu, incelemenin hızlanmasına yardımcı olur.
+
+            Otomatik kontroller (CI) birazdan çalışacak. Bir sorun görürseniz endişelenmeyin, geri
+            bildirim doğrudan bu PR'a yazılacak. Katkınız için teşekkürler! ⚖️

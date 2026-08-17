@@ -1,0 +1,16 @@
+{
+  "name": "avukatlik-meslek-kurallari",
+  "displayName": "Avukatlık Meslek Kuralları",
+  "version": "0.1.0",
+  "description": "Avukatlık Meslek Kuralları alanında 11 beceri: avukatin yetkileri guvenceleri, avukatlik temel kavramlar, cikar catismasi ve 8 tane daha. İlgili mevzuat: 1136 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "avukatlik",
+    "meslek",
+    "kurallari",
+    "1136"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "deniz-ticareti-hukuku",
+  "displayName": "Deniz Ticareti Hukuku",
+  "version": "0.1.0",
+  "description": "Deniz Ticareti Hukuku alanında 12 beceri: belge konismento carter inceleme, catma deniz kazalari, dava usul gorev yetki tahkim ve 9 tane daha. İlgili mevzuat: 6102 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "deniz",
+    "ticareti",
+    "hukuku",
+    "6102"
+  ]
+}

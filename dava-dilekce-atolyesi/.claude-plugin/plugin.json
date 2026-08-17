@@ -1,0 +1,17 @@
+{
+  "name": "dava-dilekce-atolyesi",
+  "displayName": "Dava Dilekçe Atölyesi",
+  "version": "0.1.0",
+  "description": "Dava Dilekçe Atölyesi alanında 13 beceri: cevap replik duplik, ceza dilekceleri, dava dilekcesi hmk ve 10 tane daha. İlgili mevzuat: 2577, 5271, 6100 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "dava",
+    "dilekce",
+    "atolyesi",
+    "2577",
+    "5271"
+  ]
+}

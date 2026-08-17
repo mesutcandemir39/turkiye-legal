@@ -1,0 +1,40 @@
+# İhbar Süreleri Tablosu — 4857 sayılı İş Kanunu m.17
+#
+# Bu tablo, is-hukuku/skills/fesih-triyaj/SKILL.md'nin dayandigi deterministik
+# veridir. Model bu sureleri kendi bilgisinden UYETMEZ, bu tablodan okur.
+kaynak:
+  tur: kanun
+  numara: "4857"
+  ad: "İş Kanunu"
+  madde: "17"
+dogrulama_notu: "2026-08-17 tarihinde bağımsız web kaynaklarıyla doğrulandı."
+
+kidem_esikleri:
+  - { kidem_ust_sinir_ay: 6, ihbar_suresi_hafta: 2, aciklama: "İşi 6 aydan az sürmüş işçi" }
+  - { kidem_alt_sinir_ay: 6, kidem_ust_sinir_ay: 18, ihbar_suresi_hafta: 4, aciklama: "İşi 6 ay - 1,5 yıl arası sürmüş işçi" }
+  - { kidem_alt_sinir_ay: 18, kidem_ust_sinir_ay: 36, ihbar_suresi_hafta: 6, aciklama: "İşi 1,5 yıl - 3 yıl arası sürmüş işçi" }
+  - { kidem_alt_sinir_ay: 36, ihbar_suresi_hafta: 8, aciklama: "İşi 3 yıldan fazla sürmüş işçi" }
+
+kidem_tazminati:
+  kural: "Çalışılan her tam yıl için 30 günlük brüt ücret tutarında kıdem tazminatı; bir yıldan artan süreler oranlanır."
+  kaynak:
+    tur: kanun
+    numara: "1475"
+    ad: "İş Kanunu (mülga — yalnız m.14 yürürlükte)"
+    madde: "14"
+  dogrulama_notu: "2026-08-17 tarihinde bağımsız web kaynaklarıyla doğrulandı. NOT: 1475 sayılı Kanun büyük ölçüde 4857 ile yürürlükten kalkmıştır; yalnız kıdem tazminatını düzenleyen m.14 yürürlüktedir."
+
+ise_iade_suresi:
+  kural: >
+    Geçerli sebep gösterilmeyen veya gösterilen sebebin geçerli olmadığı
+    iddiasıyla işe iade talebi, fesih bildiriminin TEBLİĞ TARİHİNDEN itibaren
+    BİR AY içinde zorunlu arabuluculuğa başvurularak yapılmalıdır.
+  sure: "1 ay (tebliğ tarihinden itibaren)"
+  arabuluculuk_sonrasi: "Anlaşma sağlanamazsa, son tutanak tarihinden itibaren 2 hafta içinde iş mahkemesinde dava açılabilir."
+  kaynak:
+    tur: kanun
+    numara: "4857"
+    ad: "İş Kanunu"
+    madde: "20"
+  dogrulama_notu: "2026-08-17 tarihinde bağımsız web kaynaklarıyla doğrulandı."
+  onem: KRITIK — bu süre kaçırılırsa işe iade hakkı kaybedilir.

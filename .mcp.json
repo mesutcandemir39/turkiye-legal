@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "turkiye-legal-mevzuat": {
+      "command": "uv",
+      "args": ["run", "--directory", "mcp/mevzuat", "turkiye-legal-mevzuat"]
+    },
+    "turkiye-legal-ictihat": {
+      "command": "uv",
+      "args": ["run", "--directory", "mcp/ictihat", "turkiye-legal-ictihat"]
+    }
+  }
+}

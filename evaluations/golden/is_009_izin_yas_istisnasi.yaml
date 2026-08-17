@@ -1,0 +1,17 @@
+# Golden Test — LLM katmani. is-hukuku/skills/yillik-izin-hesaplayici/SKILL.md'ye karsi calisir.
+
+test_id: is_009
+skill_path: is-hukuku/skills/yillik-izin-hesaplayici/SKILL.md
+input_scenario: >
+  İşçi 2 yıldır çalışıyor (normalde 14 gün hak edecek kademede) ama
+  yaşı 52 — 50 yaş üstü istisnası kapsamına giriyor.
+expected_behavior: >
+  Sistem, 50 yaş üstü istisnasının kıdem tablosundaki değerden (14 gün)
+  daha yüksek olan 20 günü işçi lehine uyguladığını, yaş istisnasının
+  kıdeme bakılmaksızın asgari 20 gün sağladığını açıkça belirtmeli.
+must_include:
+  - "4857"
+  - "20"
+must_not_include:
+  - "GDPR"
+risk_level: medium

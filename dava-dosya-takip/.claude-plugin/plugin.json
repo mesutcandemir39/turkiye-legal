@@ -1,0 +1,17 @@
+{
+  "name": "dava-dosya-takip",
+  "displayName": "Dava Dosyası Takibi",
+  "version": "0.1.0",
+  "description": "Dava Dosyası Takibi alanında 11 beceri: delil dizini ve ispat yuku, dosya ozeti cikarma, durusma hazirlik ve ara karar takibi ve 8 tane daha. İlgili mevzuat: 5271, 6100 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "dava",
+    "dosya",
+    "takip",
+    "5271",
+    "6100"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "plugin": "kvkk-uyum",
+  "skill": "aydinlatma-review",
+  "scenario": "Veri sorumlusu müşteriye gönderilen aydınlatma metni, KVKK m.10 gerekliliklerini tam karşılamıyor",
+  "input": "E-ticaret sitesi, kayıt formunda 'Veriler gizli tutulacaktır' yazdı fakat hangi amaçlarla işleneceği, ne kadar süre tutuluacağı, kimlere aktarılacağı belirtilmemiş.",
+  "expected_output": "KVKK m.10 ihlali: aydınlatma metni eksik. Gerekli unsurlar (işleme amaçları, yasal dayanak, alıcılar, haklar) eklenmelidir.",
+  "mcp_required": ["turkiye-legal-mevzuat-mcp"],
+  "golden_check": "KVKK m.10'a atıf yapıldı mı? Tüm eksik unsurlar listelenmiş mi?"
+}

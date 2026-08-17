@@ -1,0 +1,62 @@
+name: "🐛 Teknik Hata Bildirimi"
+description: "Bir script çöktü, workflow hata verdi, validator yanlış çalıştı veya benzeri bir teknik/yazılımsal sorun bildirin."
+title: "[Bug]: "
+labels: ["type: bug", "status: needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Teknik/yazılımsal bir sorun bildiriyorsunuz. Bir skill'in **yanlış hukuki içerik** ürettiğini bildirmek istiyorsanız
+        lütfen bunun yerine **"⚖️ Hukuki Hata Bildirimi"** şablonunu kullanın — o daha uygun bir gözden geçirme sürecine gider.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Ne oldu?
+      description: Sorunu kısaca açıklayın. Beklediğiniz davranış neydi, gerçekte ne oldu?
+      placeholder: "validate_skills.py komutu ... hatası ile çöküyor"
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Nasıl tekrar üretebiliriz?
+      description: Adım adım tekrar üretme talimatı. Mümkünse tam komut ve hata çıktısını yapıştırın.
+      placeholder: |
+        1. `python scripts/validate/validate_skills.py --strict` çalıştırıldı
+        2. Şu hata alındı: ...
+      render: shell
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Hangi alanla ilgili?
+      options:
+        - Validator / doğrulama script'i (scripts/validate/)
+        - GitHub Actions workflow
+        - Generator script (scripts/generate/)
+        - Golden test / evaluation sistemi
+        - Plugin kurulum (marketplace.json / plugin.json)
+        - Devcontainer / geliştirme ortamı
+        - Diğer
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Ortam
+      placeholder: "Örn: Python 3.11, macOS 14, Claude Code 2.x"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Kontrol listesi
+      options:
+        - label: Bu hatanın daha önce bildirilmediğini kontrol ettim (açık issue'larda arattım)
+          required: true

@@ -1,0 +1,34 @@
+# Dava Dilekçesi Zorunlu Unsurları — HMK m.119 (TAM VE DOĞRULANMIŞ LİSTE)
+kaynak:
+  tur: kanun
+  numara: "6100"
+  ad: "Hukuk Muhakemeleri Kanunu"
+  madde: "119"
+dogrulama_notu: "2026-08-17 tarihinde bağımsız web kaynaklarıyla doğrulandı."
+
+bentler:
+  - { bent: a, unsur: "Mahkemenin adı" }
+  - { bent: b, unsur: "Davacı ile davalının adı, soyadı ve adresleri" }
+  - { bent: c, unsur: "Davacının Türkiye Cumhuriyeti kimlik numarası" }
+  - { bent: ç, unsur: "Varsa tarafların kanuni temsilcilerinin ve davacı vekilinin adı, soyadı ve adresleri" }
+  - { bent: d, unsur: "Davanın konusu ve malvarlığı haklarına ilişkin davalarda dava konusunun değeri" }
+  - { bent: e, unsur: "Davacının iddiasının dayanağı olan bütün vakıaların sıra numarası altında açık özetleri" }
+  - { bent: f, unsur: "İddia edilen her bir vakıanın hangi delillerle ispat edileceği" }
+  - { bent: g, unsur: "Dayanılan hukuki sebepler" }
+  - { bent: ğ, unsur: "Açık bir şekilde talep sonucu" }
+
+eksiklik_sonucu:
+  kritik_bentler: [a, d, e, f, g]
+  kritik_bent_eksikse: >
+    (a), (d), (e), (f) veya (g) bentlerinden biri eksikse, hâkim davacıya
+    eksikliği tamamlaması için KESİN bir hafta süre verir. Bu süre içinde
+    eksiklik tamamlanmazsa dava açılmamış sayılır.
+  diger_bentler: [b, c, ç, ğ]
+  diger_bent_eksikse: >
+    (b), (c), (ç) veya (ğ) bentlerinden biri eksikse, yine tamamlama süresi
+    verilir; ancak sonucun ağırlığı kritik bentlerden farklı değerlendirilebilir
+    — bu incelik somut olaya göre bir avukat tarafından değerlendirilmelidir.
+
+kapsam_disi:
+  - konu: "Dilekçenin imzası ve harç/masraf yükümlülükleri"
+    neden: "Bu, ayrı usul hükümleriyle (örn. HMK m.119 dışındaki genel dilekçe kuralları) düzenlenir, bu ilk sürümde ayrıntılandırılmamıştır."

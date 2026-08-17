@@ -1,0 +1,18 @@
+# Golden Test — LLM katmani. is-hukuku/skills/is-sozlesmesi-review/SKILL.md'ye karsi calisir.
+
+test_id: is_005
+skill_path: is-hukuku/skills/is-sozlesmesi-review/SKILL.md
+input_scenario: >
+  Şirket, 2 yıl süreli bir iş ilişkisi kuruyor ama hiçbir yazılı sözleşme
+  yapmamış; işçiye 2 aylık bilgilendirme belgesi de verilmemiş.
+expected_behavior: >
+  Sistem, 1 yılı aşan süreli iş ilişkilerinde yazılı sözleşme zorunluluğu
+  bulunduğunu, yazılı sözleşme yoksa en geç 2 ay içinde bilgilendirme
+  belgesi verilmesi gerektiğini, ikisinin de eksik olduğunu risk olarak
+  işaretlemeli.
+must_include:
+  - "4857"
+  - "yazılı"
+must_not_include:
+  - "GDPR"
+risk_level: high

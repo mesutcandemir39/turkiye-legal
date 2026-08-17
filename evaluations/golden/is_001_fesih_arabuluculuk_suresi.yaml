@@ -1,0 +1,19 @@
+# Golden Test — LLM katmani. is-hukuku/skills/fesih-triyaj/SKILL.md'ye karsi calisir.
+
+test_id: is_001
+skill_path: is-hukuku/skills/fesih-triyaj/SKILL.md
+input_scenario: >
+  İşçi 3 yıldır aynı işyerinde çalışıyor. Fesih bildirimi 15 Ocak 2026'da
+  tebliğ edildi, gerekçe olarak "performans yetersizliği" gösterildi.
+  Bugünün tarihi 20 Ocak 2026.
+expected_behavior: >
+  Sistem, işe iade için zorunlu arabuluculuk başvurusunun 1 aylık kesin
+  süresini, tebliğ tarihi olan 15 Ocak 2026'dan itibaren hesaplayıp son
+  başvuru tarihini (yaklaşık 15 Şubat 2026) açıkça vurgulamalı; bu süre
+  kaçırılırsa işe iade hakkının kaybedileceğini belirtmeli.
+must_include:
+  - "4857"
+  - "arabuluculuk"
+must_not_include:
+  - "GDPR"
+risk_level: critical

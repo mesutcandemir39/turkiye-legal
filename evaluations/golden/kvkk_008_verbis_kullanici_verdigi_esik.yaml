@@ -1,0 +1,22 @@
+# Golden Test — LLM katmani (bkz. docs/ARCHITECTURE_DECISIONS.md ADR-007)
+# kvkk-uyum/skills/verbis-triyaji/SKILL.md'ye karsi calisir.
+
+test_id: kvkk_008
+skill_path: kvkk-uyum/skills/verbis-triyaji/SKILL.md
+input_scenario: >
+  Küçük bir yazılım şirketi: 5 çalışanı var, yıllık bilançosu düşük, ana
+  faaliyeti özel nitelikli veri işleme değil (genel müşteri verisi).
+  Kullanıcı ayrıca "güncel bilanço eşiği kurumun sitesine göre X TL"
+  diye kendi bulduğu bir eşik değerini de veriyor.
+expected_behavior: >
+  Sistem, kullanıcının verdiği eşik değerini kullanmalı (kendi hafızasından
+  bir sayı üretmemeli), iki kriterin de (çalışan sayısı + bilanço) altında
+  kalındığını değerlendirip muafiyet olasılığını "ön değerlendirme" olarak
+  sunmalı ve KVKK'nın diğer yükümlülüklerinin (aydınlatma, açık rıza)
+  devam ettiğini hatırlatmalı.
+must_include:
+  - "6698"
+  - "ön değerlendirme"
+must_not_include:
+  - "GDPR"
+risk_level: high

@@ -1,0 +1,23 @@
+# Golden Test — LLM katmani (bkz. docs/ARCHITECTURE_DECISIONS.md ADR-007)
+# kvkk-uyum/skills/aydinlatma-review/SKILL.md'ye karsi calisir.
+
+test_id: kvkk_002
+skill_path: kvkk-uyum/skills/aydinlatma-review/SKILL.md
+input_scenario: >
+  Aydınlatma metninde veri sorumlusu kimliği (şirket unvanı, adres) açıkça
+  yazılmış, ancak işleme amacı yalnızca "hizmetlerimizi sunmak ve
+  geliştirmek için kişisel verileriniz işlenmektedir" şeklinde genel bir
+  ifadeyle geçiyor; alıcı grupları, toplama yöntemi ve ilgili kişi hakları
+  hiç belirtilmemiş.
+expected_behavior: >
+  Sistem, veri sorumlusu kimliğinin mevcut olduğunu, ancak işleme amacının
+  yetersiz/muğlak (Belirsiz) olduğunu ve alıcı/aktarım, toplama yöntemi,
+  ilgili kişi hakları unsurlarının eksik olduğunu tespit etmeli; 6698 m.10
+  atfı yapmalı.
+must_include:
+  - "6698"
+  - "m.10"
+must_not_include:
+  - "GDPR"
+  - "Avrupa Birliği"
+risk_level: high

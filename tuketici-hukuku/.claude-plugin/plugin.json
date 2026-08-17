@@ -1,0 +1,15 @@
+{
+  "name": "tuketici-hukuku",
+  "displayName": "Tüketici Hukuku",
+  "version": "0.1.0",
+  "description": "Tüketici Hukuku alanında 12 beceri: abonelik ve suregelen edim, ayipli hizmet denetimi, ayipli mal denetimi ve 9 tane daha. İlgili mevzuat: 6502 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "tuketici",
+    "hukuku",
+    "6502"
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "generated_from": "SKILL.md frontmatter (turkiye_legal blogu)",
+  "skills": [
+    {
+      "plugin": "skills",
+      "skill": "sure-hesapla",
+      "path": "cekirdek/skills/sure-hesapla/SKILL.md",
+      "category": "meta",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 2
+    },
+    {
+      "plugin": "skills",
+      "skill": "surum-kontrolu",
+      "path": "cekirdek/skills/surum-kontrolu/SKILL.md",
+      "category": "meta",
+      "risk_level": "low",
+      "requires_human_review": false,
+      "sources_count": 0
+    },
+    {
+      "plugin": "skills",
+      "skill": "veri-maskeleme",
+      "path": "cekirdek/skills/veri-maskeleme/SKILL.md",
+      "category": "meta",
+      "risk_level": "medium",
+      "requires_human_review": true,
+      "sources_count": 0
+    },
+    {
+      "plugin": "skills",
+      "skill": "delil-haritasi-cikarma",
+      "path": "dava-takip/skills/delil-haritasi-cikarma/SKILL.md",
+      "category": "litigation",
+      "risk_level": "medium",
+      "requires_human_review": true,
+      "sources_count": 0
+    },
+    {
+      "plugin": "skills",
+      "skill": "dilekce-kalite-skoru",
+      "path": "dava-takip/skills/dilekce-kalite-skoru/SKILL.md",
+      "category": "litigation",
+      "risk_level": "medium",
+      "requires_human_review": true,
+      "sources_count": 1
+    },
+    {
+      "plugin": "skills",
+      "skill": "dilekce-yapi-kontrolu",
+      "path": "dava-takip/skills/dilekce-yapi-kontrolu/SKILL.md",
+      "category": "litigation",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 1
+    },
+    {
+      "plugin": "skills",
+      "skill": "karsi-arguman-uretimi",
+      "path": "dava-takip/skills/karsi-arguman-uretimi/SKILL.md",
+      "category": "litigation",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 0
+    },
+    {
+      "plugin": "skills",
+      "skill": "sade-dil-anlatimi",
+      "path": "dava-takip/skills/sade-dil-anlatimi/SKILL.md",
+      "category": "client_communication",
+      "risk_level": "medium",
+      "requires_human_review": true,
+      "sources_count": 0
+    },
+    {
+      "plugin": "skills",
+      "skill": "oss-lisans-uyumluluk",
+      "path": "fikri-mulkiyet/skills/oss-lisans-uyumluluk/SKILL.md",
+      "category": "ip",
+      "risk_level": "medium",
+      "requires_human_review": true,
+      "sources_count": 2
+    },
+    {
+      "plugin": "skills",
+      "skill": "haciz-ihbarnamesi-triyaji",
+      "path": "icra-iflas/skills/haciz-ihbarnamesi-triyaji/SKILL.md",
+      "category": "enforcement",
+      "risk_level": "critical",
+      "requires_human_review": true,
+      "sources_count": 1
+    },
+    {
+      "plugin": "skills",
+      "skill": "icra-dosya-triyaji",
+      "path": "icra-iflas/skills/icra-dosya-triyaji/SKILL.md",
+      "category": "enforcement",
+      "risk_level": "critical",
+      "requires_human_review": true,
+      "sources_count": 2
+    },
+    {
+      "plugin": "skills",
+      "skill": "idari-islem-triyaji",
+      "path": "idare-vergi/skills/idari-islem-triyaji/SKILL.md",
+      "category": "administrative",
+      "risk_level": "critical",
+      "requires_human_review": true,
+      "sources_count": 2
+    },
+    {
+      "plugin": "skills",
+      "skill": "fazla-mesai-hesaplayici",
+      "path": "is-hukuku/skills/fazla-mesai-hesaplayici/SKILL.md",
+      "category": "employment",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 1
+    },
+    {
+      "plugin": "skills",
+      "skill": "fesih-triyaj",
+      "path": "is-hukuku/skills/fesih-triyaj/SKILL.md",
+      "category": "employment",
+      "risk_level": "critical",
+      "requires_human_review": true,
+      "sources_count": 2
+    },
+    {
+      "plugin": "skills",
+      "skill": "is-sozlesmesi-review",
+      "path": "is-hukuku/skills/is-sozlesmesi-review/SKILL.md",
+      "category": "employment",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 1
+    },
+    {
+      "plugin": "skills",
+      "skill": "yillik-izin-hesaplayici",
+      "path": "is-hukuku/skills/yillik-izin-hesaplayici/SKILL.md",
+      "category": "employment",
+      "risk_level": "medium",
+      "requires_human_review": true,
+      "sources_count": 1
+    },
+    {
+      "plugin": "skills",
+      "skill": "acik-riza-denetimi",
+      "path": "kvkk-uyum/skills/acik-riza-denetimi/SKILL.md",
+      "category": "privacy",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 1
+    },
+    {
+      "plugin": "skills",
+      "skill": "aydinlatma-review",
+      "path": "kvkk-uyum/skills/aydinlatma-review/SKILL.md",
+      "category": "privacy",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 1
+    },
+    {
+      "plugin": "skills",
+      "skill": "verbis-triyaji",
+      "path": "kvkk-uyum/skills/verbis-triyaji/SKILL.md",
+      "category": "privacy",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 1
+    },
+    {
+      "plugin": "skills",
+      "skill": "kurul-karari-takibi",
+      "path": "mevzuat-takip/skills/kurul-karari-takibi/SKILL.md",
+      "category": "legal_research",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 2
+    },
+    {
+      "plugin": "skills",
+      "skill": "mevzuat-degisiklik-analizi",
+      "path": "mevzuat-takip/skills/mevzuat-degisiklik-analizi/SKILL.md",
+      "category": "legal_research",
+      "risk_level": "medium",
+      "requires_human_review": true,
+      "sources_count": 0
+    },
+    {
+      "plugin": "skills",
+      "skill": "yargitay-karar-ozeti",
+      "path": "mevzuat-takip/skills/yargitay-karar-ozeti/SKILL.md",
+      "category": "legal_research",
+      "risk_level": "critical",
+      "requires_human_review": true,
+      "sources_count": 0
+    },
+    {
+      "plugin": "skills",
+      "skill": "gizlilik-hizmet-sozlesmesi-taramasi",
+      "path": "sozlesme/skills/gizlilik-hizmet-sozlesmesi-taramasi/SKILL.md",
+      "category": "commercial",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 1
+    },
+    {
+      "plugin": "skills",
+      "skill": "kira-sozlesmesi-kontrolu",
+      "path": "sozlesme/skills/kira-sozlesmesi-kontrolu/SKILL.md",
+      "category": "commercial",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 1
+    },
+    {
+      "plugin": "skills",
+      "skill": "riskli-hukum-taramasi",
+      "path": "sozlesme/skills/riskli-hukum-taramasi/SKILL.md",
+      "category": "commercial",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 2
+    },
+    {
+      "plugin": "skills",
+      "skill": "genel-kurul-belge-kontrolu",
+      "path": "ticaret-sirketler/skills/genel-kurul-belge-kontrolu/SKILL.md",
+      "category": "corporate",
+      "risk_level": "high",
+      "requires_human_review": true,
+      "sources_count": 3
+    }
+  ]
+}

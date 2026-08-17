@@ -1,0 +1,16 @@
+{
+  "name": "cekirdek",
+  "displayName": "Çekirdek — Ortak Altyapı",
+  "version": "0.1.0",
+  "description": "turkiye-legal'in tüm diğer plugin'lerinin dayandığı paylaşılan altyapı: kaynak hiyerarşisi kuralı, doğrulanmamış bilgi etiketleme protokolü ve deterministik hukuki süre hesaplayıcı.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "temel",
+    "sure-hesabi",
+    "kaynak-hiyerarsisi",
+    "protokol"
+  ]
+}

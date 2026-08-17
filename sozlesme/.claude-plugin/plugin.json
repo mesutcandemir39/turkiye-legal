@@ -1,0 +1,16 @@
+{
+  "name": "sozlesme",
+  "displayName": "Sözleşme İnceleme",
+  "version": "0.1.0",
+  "description": "6098 sayılı Türk Borçlar Kanunu kapsamında genel sözleşme risk taraması ve genel işlem koşulları (GİK) denetimi sağlayan skill'ler.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "sozlesme",
+    "6098",
+    "tbk",
+    "genel-islem-kosullari"
+  ]
+}

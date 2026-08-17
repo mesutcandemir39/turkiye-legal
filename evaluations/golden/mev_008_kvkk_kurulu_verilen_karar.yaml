@@ -1,0 +1,20 @@
+# Golden Test — LLM katmani. mevzuat-takip/skills/kurul-karari-takibi/SKILL.md'ye karsi calisir.
+
+test_id: mev_008
+skill_path: mevzuat-takip/skills/kurul-karari-takibi/SKILL.md
+input_scenario: >
+  Kullanıcı gerçek bir KVKK Kurulu karar özeti veriyor: "Karar Tarihi:
+  12.03.2024, Karar No: 2024/312. İlgili veri sorumlusu, açık rıza
+  almadan müşteri verilerini pazarlama amacıyla işlemiştir. Kurul,
+  veri sorumlusuna 500.000 TL idari para cezası uygulanmasına karar
+  vermiştir."
+expected_behavior: >
+  Sistem, verilen karar özetindeki konuyu, Kurul'un değerlendirmesini
+  ve idari para cezası sonucunu (500.000 TL) birebir aktararak
+  özetlemeli; bu kararın idari kurul kararı olduğunu, içtihat
+  niteliğinde bağlayıcı olmadığını belirtmeli.
+must_include:
+  - "500.000"
+must_not_include:
+  - "GDPR"
+risk_level: high

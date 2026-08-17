@@ -1,0 +1,16 @@
+{
+  "name": "kvkk-veri-koruma",
+  "displayName": "KVKK ve Veri Koruma",
+  "version": "0.1.0",
+  "description": "KVKK ve Veri Koruma alanında 11 beceri: aydinlatma yukumlulugu, ceza ve tazminat sorumlulugu, idari yaptirim dava ve 8 tane daha. İlgili mevzuat: 6698 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "kvkk",
+    "veri",
+    "koruma",
+    "6698"
+  ]
+}

@@ -1,0 +1,48 @@
+name: "🚀 Genel Teknik Özellik Talebi"
+description: "Skill/agent içeriği DEĞİL; validator, workflow, script, generator veya altyapıyla ilgili bir öneri."
+title: "[Özellik]: "
+labels: ["type: enhancement", "status: needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hukuki bir yetenek önermek istiyorsanız lütfen **"✨ Yeni Skill / Agent / Routine Talebi"** şablonunu kullanın.
+        Bu form; script, CI/CD, validator, geliştirici deneyimi gibi teknik altyapı önerileri içindir.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Ne öneriyorsunuz?
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Neden gerekli?
+      description: "Hangi sorunu çözüyor veya hangi iş akışını kolaylaştırıyor?"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Hangi alanla ilgili?
+      options:
+        - Validator / doğrulama script'i
+        - GitHub Actions / CI-CD
+        - Generator script (marketplace.json, index.json vb.)
+        - Golden test / evaluation altyapısı
+        - Devcontainer / geliştirici deneyimi
+        - Dokümantasyon
+        - Diğer
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Katkı
+      options:
+        - label: Bu özelliği kendim implemente etmek isterim
+          required: false

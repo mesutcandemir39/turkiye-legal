@@ -1,0 +1,17 @@
+{
+  "name": "yapay-zeka-hukuku",
+  "displayName": "Yapay Zekâ Hukuku",
+  "version": "0.1.0",
+  "description": "Yapay Zekâ Hukuku alanında 12 beceri: ab yz tuzugu risk siniflandirma, algoritmik seffaflik aciklanabilirlik, dava usul gorev yetki ve 9 tane daha. İlgili mevzuat: 6098, 6698 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "yapay",
+    "zeka",
+    "hukuku",
+    "6098",
+    "6698"
+  ]
+}

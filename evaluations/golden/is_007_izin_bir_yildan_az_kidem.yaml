@@ -1,0 +1,17 @@
+# Golden Test — LLM katmani. is-hukuku/skills/yillik-izin-hesaplayici/SKILL.md'ye karsi calisir.
+
+test_id: is_007
+skill_path: is-hukuku/skills/yillik-izin-hesaplayici/SKILL.md
+input_scenario: >
+  İşçi 7 ay önce işe başladı, bugün yıllık izin hakkını soruyor. Yaşı 30.
+expected_behavior: >
+  Sistem, 1 yıllık kıdem şartının henüz dolmadığını, bu nedenle 4857
+  m.53 kapsamında yıllık izin hakkının HENÜZ DOĞMADIĞINI açıkça
+  belirtmeli — "0 gün" gibi yanıltıcı bir ifade kullanmamalı, "hak
+  henüz doğmadı" demeli.
+must_include:
+  - "4857"
+  - "m.53"
+must_not_include:
+  - "GDPR"
+risk_level: medium

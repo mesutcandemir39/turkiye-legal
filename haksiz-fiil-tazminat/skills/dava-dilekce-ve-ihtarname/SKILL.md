@@ -1,0 +1,63 @@
+---
+argument-hint: ''
+description: Tazminat talebi için ihtarname, dava dilekçesi veya talep sonucu taslağı
+  hazırlanması istendiğinde; vakıa-hukuki sebep-talep mimarisini kurmak için kullanılır.
+name: dava-dilekce-ve-ihtarname
+turkiye_legal:
+  attribution:
+    license: Apache-2.0
+    original_author: Mesut Can Demir
+    original_repository: https://github.com/mesutcandemir39/turkiye-legal
+  category: litigation
+  inputs:
+  - '[giriş tanımlanmadı — beceri gövdesinden çıkarılacak]'
+  jurisdiction:
+    country: TR
+    legal_system: civil_law
+    scope:
+    - TR
+  outputs:
+  - '[çıktı tanımlanmadı — beceri gövdesinden çıkarılacak]'
+  requires_human_review: false
+  risk_level: medium
+  sources:
+  - ad: Türk Borçlar Kanunu
+    numara: '6098'
+    tur: kanun
+  version: 0.1.0
+user-invocable: true
+---
+
+
+# Dava Dilekçesi ve İhtarname Taslağı
+
+## Görev
+Haksız fiil tazminatı için HMK m.119'a uygun dava dilekçesi, dava öncesi ihtarname ve talep sonucu taslağı üretmek; vakıa-hukuki sebep-talep mimarisini kurmak ve delilleri vakıalara bağlamak. Eksik/belirsiz veriler `[doldurulacak]` yer tutucularıyla işaretlenir.
+
+## Soğuk başlangıç (intake)
+- Taraf bilgileri, olayın özeti ve talep edilen kalemler (maddi/manevi, tutar) nedir?
+- Hangi sorumluluk normu dayanak (m.49 / objektif sorumluluk)?
+- Faiz türü ve başlangıç tarihi ne istenecek?
+- Eldeki deliller ve henüz toplanmamış olanlar neler?
+
+## Denetim şeması
+1. **İhtarname (dava öncesi).** Olay-zarar-talep özetlenir, belirli süre verilir, temerrüt ve faiz başlangıcı için ihtarın tarihi/içeriği netleştirilir; noterden keşide önerilir. Zamanaşımını kesmez ama temerrüt için önemlidir.
+2. **Dilekçe zorunlu unsurları (HMK m.119).** Mahkeme, taraflar ve adresler, dava konusu/değeri, açık vakıalar, dayanılan hukuki sebepler, her vakıanın hangi delille ispatlanacağı, açık talep sonucu, imza.
+3. **Vakıa-altlama.** Maddi olay kronolojik ve sade anlatılır; her vakıa haksız fiil unsuruyla (fiil, hukuka aykırılık, kusur, zarar, illiyet) eşleştirilir; gereksiz hukuki tartışma vakıa bölümüne taşınmaz.
+4. **Hukuki sebepler.** TBK m.49 (ve varsa m.66-71 objektif sorumluluk), zarar kalemleri için m.51-56, gerekiyorsa TMK m.24-25; usul için HMK ve yetki m.16.
+5. **Talep sonucu.** Kalem bazlı (maddi/manevi) tutar; belirsiz alacaksa HMK m.107 ifadesi; faiz türü-başlangıcı; yargılama gideri ve vekâlet ücreti.
+6. **Ara sonuç.** Delil listesi vakıalara bağlanır; eksik veriler `[doldurulacak]` ile, doğrulama bekleyen içtihat `[DOĞRULANMADI]` ile işaretlenir; uydurma karar numarası yazılmaz.
+
+## Çıktı modülleri
+- İhtarname taslağı (süre + temerrüt unsurları).
+- HMK m.119 yapılı dava dilekçesi iskeleti.
+- Talep sonucu ve delil listesi taslağı.
+
+
+
+## Kaynak kuralı (katı)
+
+- **İçtihat yalnızca doğrulanmış künyeyle.** Her karar mahkeme + daire + **esas/karar numarası** + tarih + doğrulanabilir kaynak ile.
+- **MCP araçları varsa resmî metni onlardan çek.** `turkiye-legal-mevzuat-mcp` kuruluysa `madde_getir` / `kanun_metni_getir` ile getir; `turkiye-legal-ictihat-mcp` kuruluysa `ictihat_ara` / `karar_getir` ile.
+- **Varsayımları açıkça işaretle.**
+

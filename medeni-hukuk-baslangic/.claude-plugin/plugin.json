@@ -1,0 +1,16 @@
+{
+  "name": "medeni-hukuk-baslangic",
+  "displayName": "Medeni Hukuk — Başlangıç Hükümleri",
+  "version": "0.1.0",
+  "description": "Medeni Hukuk — Başlangıç Hükümleri alanında 11 beceri: baslangic hukumleri sistematigi, durustluk davasi usul gorev yetki, durustluk dilekce modulleri ve 8 tane daha. İlgili mevzuat: 4721 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "medeni",
+    "hukuk",
+    "baslangic",
+    "4721"
+  ]
+}

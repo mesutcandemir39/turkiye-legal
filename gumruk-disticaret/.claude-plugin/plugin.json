@@ -1,0 +1,15 @@
+{
+  "name": "gumruk-disticaret",
+  "displayName": "Gümrük ve Dış Ticaret",
+  "version": "0.1.0",
+  "description": "Gümrük ve Dış Ticaret alanında 11 beceri: belge ispat dosya, dis ticaret mevzuati, ek tahakkuk ceza ve 8 tane daha. İlgili mevzuat: 4458 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "gumruk",
+    "disticaret",
+    "4458"
+  ]
+}

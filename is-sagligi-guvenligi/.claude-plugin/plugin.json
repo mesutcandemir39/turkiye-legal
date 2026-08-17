@@ -1,0 +1,15 @@
+{
+  "name": "is-sagligi-guvenligi",
+  "displayName": "İş Sağlığı ve Güvenliği",
+  "version": "0.1.0",
+  "description": "İş Sağlığı ve Güvenliği alanında 13 beceri: dava usul gorev yetki, dilekce tutanak taslaklari, idari para cezalari ve 10 tane daha. İlgili mevzuat: 6331 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "sagligi",
+    "guvenligi",
+    "6331"
+  ]
+}

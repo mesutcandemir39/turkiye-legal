@@ -1,0 +1,15 @@
+{
+  "name": "sebepsiz-zenginlesme",
+  "displayName": "Sebepsiz Zenginleşme",
+  "version": "0.1.0",
+  "description": "Sebepsiz Zenginleşme alanında 11 beceri: dava gorev yetki ve ihtarname, gecerli olmayan sebep condictio indebiti, gerceklesmeyen ve sona eren sebep ve 8 tane daha. İlgili mevzuat: 6098 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "sebepsiz",
+    "zenginlesme",
+    "6098"
+  ]
+}

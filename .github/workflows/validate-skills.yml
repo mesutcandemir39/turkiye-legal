@@ -1,0 +1,69 @@
+name: Skill Metadata Doğrulama
+
+# ci.yml'den ayrı tutulur: bu workflow yalnız değişen skill/agent dosyalarına
+# odaklanır ve PR'a doğrudan yorum bırakır — hızlı, hedefli geri bildirim içindir.
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "**/skills/**/SKILL.md"
+      - "**/agents/**/*.md"
+      - "**/.claude-plugin/plugin.json"
+      - "sources/**"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate-changed-skills:
+    name: Değişen skill/agent dosyalarını doğrula
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.3.0
+        with:
+          python-version: "3.11"
+
+      - name: Bağımlılıkları kur
+        run: pip install --require-hashes -r scripts/requirements.lock.txt
+
+      - name: Değişen dosyaları tespit et
+        id: changed
+        run: |
+          git diff --name-only origin/${{ github.base_ref }}...HEAD \
+            -- '**/skills/**/SKILL.md' '**/agents/**/*.md' > changed_files.txt
+          cat changed_files.txt
+
+      - name: Şema + kaynak + risk tutarlılığı doğrula
+        id: validate
+        run: |
+          python scripts/validate/validate_skills.py --strict --files-from changed_files.txt
+          python scripts/validate/validate_sources.py --files-from changed_files.txt
+
+      # Topluluk Skill Güven Kapısı — bkz. docs/TOPLULUK_SKILL_GUVENI.md, ADR-015.
+      # legal-builder-hub'ın (anthropics/claude-for-legal) calisma-zamani guven
+      # katmaninin, GitHub PR surecindeki mekanik esdegeri.
+      - name: Topluluk skill güven kapısı
+        id: trust_gate
+        run: python scripts/validate/trust_gate.py --files-from changed_files.txt
+
+      - name: Sonucu PR'a yorum olarak bırak
+        if: always()
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        with:
+          script: |
+            const fs = require('fs');
+            const conclusion = '${{ steps.validate.outcome }}' === 'success' ? '✅ Geçti' : '❌ Başarısız';
+            const trustConclusion = '${{ steps.trust_gate.outcome }}' === 'success' ? '✅ TRUSTED' : '⛔ REJECTED';
+            const body = `### Skill Metadata Doğrulama: ${conclusion}\n### Topluluk Skill Güven Kapısı: ${trustConclusion}\n\nDetaylar için üstteki "Checks" sekmesine bakın. Güven kapısı kriterleri: [docs/TOPLULUK_SKILL_GUVENI.md](../blob/main/docs/TOPLULUK_SKILL_GUVENI.md).\n\n_Bu otomatik bir denetimdir; hukuki doğruluk için ayrıca CODEOWNERS gereği bir hukuk bakımcısı incelemesi gerekir._`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });

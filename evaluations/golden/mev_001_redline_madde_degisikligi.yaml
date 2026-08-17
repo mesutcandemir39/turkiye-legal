@@ -1,0 +1,17 @@
+# Golden Test — LLM katmani. mevzuat-takip/skills/mevzuat-degisiklik-analizi/SKILL.md'ye karsi calisir.
+
+test_id: mev_001
+skill_path: mevzuat-takip/skills/mevzuat-degisiklik-analizi/SKILL.md
+input_scenario: >
+  Eski metin: "Başvuru süresi 30 gündür." Yeni metin: "Başvuru süresi
+  60 gündür ve elektronik ortamda da yapılabilir." Kullanıcı bu iki
+  cümleyi eski/yeni metin olarak veriyor.
+expected_behavior: >
+  Sistem, sürenin 30 günden 60 güne çıkarıldığını ve elektronik başvuru
+  imkânının eklendiğini madde madde özetlemeli, bu değişikliğin pratik
+  etkisini (daha uzun süre, ek başvuru kanalı) kısaca değerlendirmeli.
+must_include:
+  - "60"
+must_not_include:
+  - "GDPR"
+risk_level: medium

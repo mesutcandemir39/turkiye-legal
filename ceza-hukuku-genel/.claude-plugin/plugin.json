@@ -1,0 +1,16 @@
+{
+  "name": "ceza-hukuku-genel",
+  "displayName": "Ceza Hukuku — Genel",
+  "version": "0.1.0",
+  "description": "Ceza Hukuku — Genel alanında 11 beceri: hukuka uygunluk sebepleri, ictima suclarin birlesmesi, istirak faillik katki ve 8 tane daha. İlgili mevzuat: 5237 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ceza",
+    "hukuku",
+    "genel",
+    "5237"
+  ]
+}

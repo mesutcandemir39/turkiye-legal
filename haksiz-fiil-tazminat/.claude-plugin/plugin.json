@@ -1,0 +1,16 @@
+{
+  "name": "haksiz-fiil-tazminat",
+  "displayName": "Haksız Fiil ve Tazminat",
+  "version": "0.1.0",
+  "description": "Haksız Fiil ve Tazminat alanında 12 beceri: dava dilekce ve ihtarname, dava gorev yetki ve ispat, destekten yoksun kalma ve cismani zarar ve 9 tane daha. İlgili mevzuat: 6098 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "haksiz",
+    "fiil",
+    "tazminat",
+    "6098"
+  ]
+}

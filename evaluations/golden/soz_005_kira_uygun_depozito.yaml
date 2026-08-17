@@ -1,0 +1,16 @@
+# Golden Test — LLM katmani. sozlesme/skills/kira-sozlesmesi-kontrolu/SKILL.md'ye karsi calisir.
+
+test_id: soz_005
+skill_path: sozlesme/skills/kira-sozlesmesi-kontrolu/SKILL.md
+input_scenario: >
+  Çatılı işyeri kira sözleşmesinde aylık kira 15.000 TL, güvence
+  bedeli 30.000 TL (2 aylık kira) olarak belirlenmiş.
+expected_behavior: >
+  Sistem, güvence bedelinin TBK m.342'deki üç aylık kira sınırının
+  altında kaldığını, bu maddeye aykırılık bulunmadığını belirtmeli.
+must_include:
+  - "6098"
+must_not_include:
+  - "GDPR"
+  - "aşıyor"
+risk_level: medium

@@ -1,0 +1,9 @@
+{
+  "plugin": "is-hukuku",
+  "skill": "fesih-triyaji",
+  "scenario": "İşçi, işvereni aleyhine işe iade davası açmış, işveren haksız fesih süresi sonrasında yeni işleme başlamış",
+  "input": "Kaykay fabrikasında çalışan işçi, daha iyi iş bulduğu için istifa etmiştir. Fakat işveren baskısıyla imzaladığı istifa dilekçesi vardır. İşçi 3 ay sonra dava açıyor.",
+  "expected_output": "Haksız fesih (İK m.24-30) dönemde işe iade süresi başlamış; dava açılış tarihi itibariyle akama incelenecek. TBK sorumluluk ve işe iade talebinin uyumu denetlenecek.",
+  "mcp_required": ["turkiye-legal-mevzuat-mcp"],
+  "golden_check": "İK m.24-30 ve m.20'ye atıf var mı? Haksız fesih süresi (1 yıl) doğru hesaplanmış mı?"
+}

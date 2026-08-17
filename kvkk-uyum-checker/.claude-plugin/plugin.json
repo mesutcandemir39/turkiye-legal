@@ -1,0 +1,16 @@
+{
+  "name": "kvkk-uyum-checker",
+  "displayName": "KVKK Uyum Denetleyici",
+  "version": "0.1.0",
+  "description": "KVKK Uyum Denetleyici alanında 10 beceri: aktarim ve verbis denetimi, aydinlatma acik riza denetimi, cerez pazarlama uyumu ve 7 tane daha. İlgili mevzuat: 6698 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "kvkk",
+    "uyum",
+    "checker",
+    "6698"
+  ]
+}

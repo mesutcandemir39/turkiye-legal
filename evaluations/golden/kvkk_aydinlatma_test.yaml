@@ -1,0 +1,33 @@
+# Golden Test — LLM katmani (bkz. docs/ARCHITECTURE_DECISIONS.md ADR-007)
+#
+# kvkk-uyum/skills/aydinlatma-review/SKILL.md'ye karsi calisir. ANTHROPIC_API_KEY
+# tanimli degilse SKIPPED raporlanir (bkz. evaluations/golden/conftest.py) —
+# asla sessizce PASS denmez.
+#
+# Alan aciklamalari:
+#   test_id            : benzersiz kimlik, plugin_konu_sira formatinda
+#   skill_path         : test edilecek SKILL.md'nin repo-goreli yolu
+#   input_scenario      : test girdisinin insan-okunur aciklamasi
+#   input_file          : (opsiyonel) gercek girdi dosyasinin yolu
+#   expected_behavior   : modelin ne yapmasi beklendiginin aciklamasi
+#   must_include        : ciktida KESIN gecmesi gereken ifadeler
+#   must_not_include    : ciktida KESINLIKLE gecmemesi gereken ifadeler
+#   risk_level          : bu senaryonun test ettigi risk seviyesi
+
+test_id: kvkk_001
+skill_path: kvkk-uyum/skills/aydinlatma-review/SKILL.md
+input_scenario: >
+  Eksik bir aydınlatma metni verildi — veri sorumlusunun kimliği belirtilmemiş,
+  yalnızca "şirketimiz" ifadesi kullanılmış.
+input_file: kvkk-uyum/skills/aydinlatma-review/references/eksik_aydinlatma_ornegi.md
+expected_behavior: >
+  Sistem, veri sorumlusu kimliğinin eksik olduğunu tespit etmeli ve 6698 sayılı
+  Kanun m.10 kapsamında bu eksikliği açıkça belirtmeli.
+must_include:
+  - "6698"
+  - "Veri Sorumlusu"
+  - "Aydınlatma Yükümlülüğü"
+must_not_include:
+  - "GDPR"
+  - "Avrupa Birliği"
+risk_level: high

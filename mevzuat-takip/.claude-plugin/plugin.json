@@ -1,0 +1,19 @@
+{
+  "name": "mevzuat-takip",
+  "displayName": "Mevzuat Takip",
+  "version": "0.1.0",
+  "description": "Mevzuat değişikliği analizi (redline), Yargıtay karar özeti, KVKK/Rekabet Kurulu karar takibi ve Resmî Gazete günlük takip rutini sağlayan skill ve agent'lar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mevzuat",
+    "resmi-gazete",
+    "yargitay",
+    "redline",
+    "degisiklik-analizi",
+    "kvkk-kurulu",
+    "rekabet-kurulu"
+  ]
+}

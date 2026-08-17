@@ -1,0 +1,68 @@
+---
+argument-hint: ''
+description: Yapay zekâ kaynaklı bir uyuşmazlık yargıya veya Kurula taşınırken görevli
+  merci, yetkili mahkeme, başvuru yolu, dava türü, ihtiyati tedbir ve süreler belirlendiğinde
+  ve usul yol haritası çıkarıldığınd
+name: dava-usul-gorev-yetki
+turkiye_legal:
+  attribution:
+    license: Apache-2.0
+    original_author: Mesut Can Demir
+    original_repository: https://github.com/mesutcandemir39/turkiye-legal
+  category: litigation
+  inputs:
+  - '[giriş tanımlanmadı — beceri gövdesinden çıkarılacak]'
+  jurisdiction:
+    country: TR
+    legal_system: civil_law
+    scope:
+    - TR
+  outputs:
+  - '[çıktı tanımlanmadı — beceri gövdesinden çıkarılacak]'
+  requires_human_review: false
+  risk_level: medium
+  sources:
+  - ad: Kişisel Verilerin Korunması Kanunu
+    numara: '6698'
+    tur: kanun
+  - ad: Türk Borçlar Kanunu
+    numara: '6098'
+    tur: kanun
+  version: 0.1.0
+user-invocable: true
+---
+
+
+# Yapay Zekâ Uyuşmazlıklarında Dava, Usul ve Görev-Yetki
+
+## Görev
+Yapay zekâ kaynaklı uyuşmazlıkta doğru merci, dava türü, yetkili mahkeme ve süreyi tespit ederek usul yol haritası ve gerekirse ihtiyati tedbir stratejisi çıkarmak.
+
+## Soğuk başlangıç (intake)
+1. Uyuşmazlığın özü: KVKK ihlali, sözleşmeye aykırılık, haksız fiil/tazminat, fikri hak, kamu işlemi?
+2. Taraflar tacir/tüketici mi; aralarında tahkim veya yetki sözleşmesi var mı?
+3. Bir Kurul/idare işlemi mi tebliğ edildi, tebliğ tarihi nedir?
+4. Acil koruma (içerik kaldırma, delil tespiti, yürütmenin durdurulması) gerekiyor mu?
+
+## Denetim şeması
+1. **Yol ayrımı**: KVKK ihlalinde önce m.13 veri sorumlusuna başvuru, ardından m.14 Kurula şikâyet; Kurul kararına karşı idari yargı (İYUK m.7, kural 60 gün). Tazminat talebi için adli yargıda dava (TBK temelli). Ara sonuç: idari mi adli mi.
+2. **Görev-yetki (adli)**: Sözleşme/haksız fiilde HMK genel hükümleri (m.5 vd.); ticari işte ticaret mahkemesi (TTK m.4, m.5/A dava şartı arabuluculuk); tüketici işleminde tüketici mahkemesi/hakem heyeti (6502); fikri hakta FSHM; kişilik hakkında asliye hukuk.
+3. **Dava türü ve talep**: Tespit, eda (tazminat), men/ref (kişilik hakkı TMK m.25, FSEK m.66-67) veya iptal (kamu işlemi). Talep sonucu net ve HMK m.119 unsurlarıyla kurulur.
+4. **İhtiyati koruma**: HMK m.389 vd. ihtiyati tedbir (içerik/erişim), m.400 vd. delil tespiti (model çıktısı/log), kamu işleminde İYUK m.27 yürütmenin durdurulması.
+5. **İspat ve bilirkişi**: YZ uyuşmazlıkları teknik bilirkişi gerektirir (HMK m.266); log, model dokümanı ve çıktı kayıtları erkenden güvenceye alınmalı.
+
+İçtihat ve görev tartışmaları için karararama portalları; künyeyi [DOĞRULANMADI] işaretle, esas/karar numarası uydurma.
+
+## Çıktı modülleri
+- Merci/dava türü/süre yol haritası.
+- İhtiyati tedbir-delil tespiti stratejisi.
+- Görev-yetki ve arabuluculuk kontrol notu.
+
+
+
+## Kaynak kuralı (katı)
+
+- **İçtihat yalnızca doğrulanmış künyeyle.** Her karar mahkeme + daire + **esas/karar numarası** + tarih + doğrulanabilir kaynak ile.
+- **MCP araçları varsa resmî metni onlardan çek.** `turkiye-legal-mevzuat-mcp` kuruluysa `madde_getir` / `kanun_metni_getir` ile getir; `turkiye-legal-ictihat-mcp` kuruluysa `ictihat_ara` / `karar_getir` ile.
+- **Varsayımları açıkça işaretle.**
+

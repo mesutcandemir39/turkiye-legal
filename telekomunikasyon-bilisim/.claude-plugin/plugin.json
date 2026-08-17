@@ -1,0 +1,16 @@
+{
+  "name": "telekomunikasyon-bilisim",
+  "displayName": "Telekomünikasyon ve Bilişim",
+  "version": "0.1.0",
+  "description": "Telekomünikasyon ve Bilişim alanında 12 beceri: abonelik tuketici haklari, btk yaptirim savunma, icerik erisim engelleme 5651 ve 9 tane daha. İlgili mevzuat: 5651, 5809 sayılı kanunlar.",
+  "author": {
+    "name": "Mesut Can Demir"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "telekomunikasyon",
+    "bilisim",
+    "5651",
+    "5809"
+  ]
+}
